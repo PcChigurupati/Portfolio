@@ -102,9 +102,10 @@
     </section>
 
     <!-- EXPERTISE -->
-    <section class="section-light expertise-section" id="expertise">
+    <section class="section-dark expertise-section expertise-section-dark ambient-dark" id="expertise">
+      <div class="section-tech-grid" aria-hidden="true"></div>
       <div class="page-shell">
-        <div class="section-heading reveal">
+        <div class="section-heading section-heading-dark reveal">
           <div>
             <span class="section-index mono">02</span>
             <p class="mono eyebrow">CORE EXPERTISE</p>
@@ -129,11 +130,20 @@
             <p>SS316L, Ti-6Al-4V, ULTEM 9085, tensile, compression, bending, nanoindentation, microscopy, SEM, profilometry, micro-mechanical property mapping.</p>
           </article>
 
-          <article class="bento-card bento-accent reveal" data-delay="100">
-            <div class="card-number mono">C / 03</div>
-            <div class="card-icon" aria-hidden="true">∿</div>
-            <h3>NDT &amp; Process Monitoring</h3>
-            <p>Ultrasonic testing, Resonant Ultrasound Spectroscopy, thermography, acoustic emission, eddy current, in-situ monitoring, defect and stiffness evaluation.</p>
+          <article class="bento-card bento-thermal reveal" data-delay="100">
+            <div class="thermal-field" aria-hidden="true">
+              <span class="thermal-hot thermal-hot-a"></span>
+              <span class="thermal-hot thermal-hot-b"></span>
+              <span class="thermal-scanline"></span>
+              <span class="thermal-scale"><i></i><i></i><i></i><i></i></span>
+            </div>
+            <div class="thermal-content">
+              <div class="card-number mono">C / 03</div>
+              <div class="card-icon" aria-hidden="true">∿</div>
+              <h3>NDT &amp; Process Monitoring</h3>
+              <p>Ultrasonic testing, Resonant Ultrasound Spectroscopy, thermography, acoustic emission, eddy current, in-situ monitoring, defect and stiffness evaluation.</p>
+              <div class="thermal-readout mono"><span>THERMOGRAPHIC CONTRAST</span><strong>ΔT / DEFECT RESPONSE</strong></div>
+            </div>
           </article>
 
           <article class="bento-card reveal" data-delay="140">
@@ -163,182 +173,165 @@
             <span class="section-index mono">03</span>
             <p class="mono eyebrow">SELECTED ENGINEERING WORK</p>
           </div>
-          <h2>Case studies, not just<br><em>project titles.</em></h2>
-          <p class="section-copy">Each project shows the engineering problem, my contribution, the methods I used, and why the work matters.</p>
+          <h2>Explore the work.<br><em>Open the engineering.</em></h2>
+          <p class="section-copy">Each project opens like a technical dossier—problem, contribution, methods, outcome, and a project-specific visualization.</p>
         </div>
 
-        <article class="feature-project reveal">
-          <div class="feature-project-copy">
-            <div class="project-meta mono"><span>FEATURED / 01</span><span>METAL AM · L-PBF · ML</span></div>
-            <h3>Detecting the engineering signature of L-PBF process interruptions.</h3>
-            <p class="project-lead">Investigating how unplanned process interruptions and parameter changes create measurable local property variation in metal additive-manufactured components.</p>
-
-            <div class="case-grid">
-              <div><span class="case-label mono">PROBLEM</span><p>Interruptions alter local thermal history and can introduce property variation that may not be obvious through visual inspection.</p></div>
-              <div><span class="case-label mono">MY ROLE</span><p>Experimental planning, build preparation, fabrication, mechanical-property mapping, characterization, statistics, and technical reporting.</p></div>
-              <div><span class="case-label mono">METHODS</span><p>L-PBF, SS316L/Ti-6Al-4V, nanoindentation, SEM, profilometry, tensile testing, ANOVA/Tukey analysis, machine learning.</p></div>
-              <div><span class="case-label mono">OUTCOME</span><p>Developed a data-driven workflow for identifying interruption-affected regions from mechanical-property variation; peer-reviewed journal publication in 2026.</p></div>
+        <div class="project-accordion">
+          <article class="project-dossier open reveal">
+            <button class="project-toggle" type="button" aria-expanded="true">
+              <span class="project-number mono">01</span>
+              <span class="project-heading">
+                <span class="project-kicker mono">METAL AM · L-PBF · ML</span>
+                <strong>Detecting the engineering signature of L-PBF process interruptions</strong>
+              </span>
+              <span class="project-brief">Property variation, interruption regions, qualification-oriented analysis.</span>
+              <span class="project-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="project-detail">
+              <div class="project-detail-inner">
+                <div class="project-detail-copy">
+                  <div class="case-grid">
+                    <div><span class="case-label mono">PROBLEM</span><p>Interruptions alter local thermal history and can create property variation that may not be obvious through visual inspection.</p></div>
+                    <div><span class="case-label mono">MY ROLE</span><p>Experimental planning, build preparation, fabrication, mechanical-property mapping, characterization, statistics, and technical reporting.</p></div>
+                    <div><span class="case-label mono">METHODS</span><p>L-PBF, SS316L/Ti-6Al-4V, nanoindentation, SEM, profilometry, tensile testing, ANOVA/Tukey analysis, and machine learning.</p></div>
+                    <div><span class="case-label mono">OUTCOME</span><p>Developed a data-driven workflow for identifying interruption-affected regions; peer-reviewed journal publication in 2026.</p></div>
+                  </div>
+                </div>
+                <div class="project-visual project-visual-lpbf">
+                  <div class="visual-label mono">AM BUILD → NDT VERIFY</div>
+                  <svg viewBox="0 0 620 300" role="img" aria-label="L-PBF build and ultrasonic inspection schematic">
+                    <defs>
+                      <linearGradient id="lpbfFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#75b8e8" stop-opacity=".34"/><stop offset="1" stop-color="#75b8e8" stop-opacity=".05"/></linearGradient>
+                    </defs>
+                    <g class="viz-grid"><path d="M20 55H600M20 105H600M20 155H600M20 205H600M20 255H600"/><path d="M90 25V275M170 25V275M250 25V275M330 25V275M410 25V275M490 25V275M570 25V275"/></g>
+                    <rect x="55" y="236" width="245" height="18" rx="3" class="viz-platform"/>
+                    <path d="M98 236V204Q102 179 125 168Q148 157 155 136Q164 109 188 99Q218 87 241 105Q266 123 272 158Q277 183 277 236Z" fill="url(#lpbfFill)" class="viz-part"/>
+                    <g class="viz-layers"><path d="M103 224H273M103 212H273M106 200H271M111 188H269M118 176H266M127 164H263M140 152H258M151 140H252M161 128H244M173 116H233M187 104H221"/></g>
+                    <g class="viz-head"><rect x="112" y="47" width="155" height="15" rx="3"/><rect x="180" y="62" width="19" height="35" rx="3"/><path d="M184 97H195L191 111H188Z"/><line x1="190" y1="111" x2="190" y2="139" class="viz-laser"/><ellipse cx="190" cy="141" rx="8" ry="3.5" class="viz-hot"/></g>
+                    <g class="viz-ndt"><rect x="393" y="65" width="112" height="17" rx="3"/><rect x="377" y="81" width="37" height="23" rx="4"/><rect x="395" y="193" width="150" height="52" rx="4" class="viz-specimen"/><path d="M390 104Q370 132 365 170M390 104Q391 137 391 179M390 104Q419 134 430 176" class="viz-wave"/><line x1="448" y1="219" x2="461" y2="207" class="viz-defect"/><circle cx="455" cy="213" r="5" class="viz-hot"/><circle cx="455" cy="213" r="15" class="viz-ring"/></g>
+                    <g class="viz-flow"><line x1="315" y1="149" x2="351" y2="149"/><polyline points="342,141 351,149 342,157"/></g>
+                    <text x="60" y="279" class="viz-text">LAYER-BY-LAYER BUILD</text><text x="389" y="279" class="viz-text">ULTRASONIC DEFECT RESPONSE</text>
+                  </svg>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="feature-project-visual">
-            <div class="signal-plot am-ndt-console">
-              <div class="plot-label mono">AM PROCESS / NDT INSPECTION LOOP</div>
-
-              <svg class="am-ndt-svg" viewBox="0 0 720 430" role="img" aria-label="Animated schematic of metal additive manufacturing and ultrasonic nondestructive evaluation">
-                <defs>
-                  <linearGradient id="partBlueprint" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#75b8e8" stop-opacity=".30"/>
-                    <stop offset="100%" stop-color="#75b8e8" stop-opacity=".07"/>
-                  </linearGradient>
-                  <linearGradient id="scanSweepFill" x1="0" x2="1">
-                    <stop offset="0%" stop-color="#75b8e8" stop-opacity="0"/>
-                    <stop offset="50%" stop-color="#75b8e8" stop-opacity=".28"/>
-                    <stop offset="100%" stop-color="#75b8e8" stop-opacity="0"/>
-                  </linearGradient>
-                  <filter id="softCopperGlow">
-                    <feGaussianBlur stdDeviation="3" result="blur"/>
-                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                  </filter>
-                </defs>
-
-                <!-- engineering grid -->
-                <g class="schematic-grid">
-                  <path d="M30 70H690M30 130H690M30 190H690M30 250H690M30 310H690M30 370H690"/>
-                  <path d="M90 35V395M170 35V395M250 35V395M330 35V395M410 35V395M490 35V395M570 35V395M650 35V395"/>
-                </g>
-
-                <!-- AM cell -->
-                <g class="am-cell">
-                  <text x="54" y="62" class="schematic-caption">01 / BUILD</text>
-                  <rect x="54" y="84" width="348" height="258" rx="5" class="cell-frame"/>
-                  <line x1="85" y1="300" x2="368" y2="300" class="platform-line"/>
-                  <rect x="96" y="300" width="260" height="22" rx="3" class="platform-block"/>
-
-                  <!-- powder / layer surface -->
-                  <line x1="96" y1="286" x2="356" y2="286" class="powder-surface"/>
-                  <g class="powder-dots">
-                    <circle cx="110" cy="281" r="1.5"/><circle cx="126" cy="284" r="1.2"/><circle cx="144" cy="280" r="1.4"/><circle cx="166" cy="283" r="1.2"/><circle cx="188" cy="280" r="1.4"/><circle cx="210" cy="284" r="1.2"/><circle cx="232" cy="281" r="1.4"/><circle cx="258" cy="283" r="1.2"/><circle cx="283" cy="280" r="1.4"/><circle cx="310" cy="283" r="1.2"/><circle cx="338" cy="281" r="1.4"/>
-                  </g>
-
-                  <!-- printed component -->
-                  <path class="blueprint-part" d="M155 286 L155 258 Q160 236 180 226 Q202 216 208 198 Q218 171 241 161 Q270 149 294 165 Q318 182 326 214 Q332 238 332 286 Z"/>
-                  <g class="part-layers">
-                    <line x1="160" y1="275" x2="327" y2="275"/><line x1="160" y1="264" x2="327" y2="264"/><line x1="164" y1="253" x2="325" y2="253"/><line x1="170" y1="242" x2="322" y2="242"/><line x1="180" y1="231" x2="318" y2="231"/><line x1="193" y1="220" x2="314" y2="220"/><line x1="204" y1="209" x2="310" y2="209"/><line x1="211" y1="198" x2="305" y2="198"/><line x1="219" y1="187" x2="298" y2="187"/><line x1="232" y1="176" x2="287" y2="176"/><line x1="246" y1="165" x2="275" y2="165"/>
-                  </g>
-
-                  <!-- laser / energy source -->
-                  <g class="energy-head">
-                    <rect x="174" y="100" width="142" height="18" rx="3" class="gantry-wire"/>
-                    <rect x="235" y="118" width="22" height="42" rx="3" class="head-wire"/>
-                    <path d="M239 160 L253 160 L248 174 L244 174 Z" class="nozzle-wire"/>
-                    <line x1="246" y1="174" x2="246" y2="201" class="laser-beam"/>
-                    <ellipse cx="246" cy="203" rx="10" ry="4" class="melt-pool" filter="url(#softCopperGlow)"/>
-                    <circle cx="232" cy="208" r="1.8" class="spark spark-a"/><circle cx="260" cy="210" r="1.5" class="spark spark-b"/><circle cx="250" cy="216" r="1.3" class="spark spark-c"/>
-                  </g>
-
-                  <text x="74" y="328" class="tiny-label">LAYER-BY-LAYER DEPOSITION</text>
-                </g>
-
-                <!-- process handoff -->
-                <g class="handoff-arrow">
-                  <line x1="414" y1="214" x2="470" y2="214"/>
-                  <polyline points="458,205 470,214 458,223"/>
-                  <text x="416" y="194" class="tiny-label">INSPECT</text>
-                </g>
-
-                <!-- NDT cell -->
-                <g class="ndt-cell">
-                  <text x="486" y="62" class="schematic-caption">02 / VERIFY</text>
-                  <rect x="470" y="84" width="196" height="258" rx="5" class="cell-frame"/>
-
-                  <!-- probe and specimen -->
-                  <rect x="507" y="116" width="78" height="18" rx="3" class="probe-wire"/>
-                  <rect x="530" y="134" width="32" height="22" rx="4" class="probe-face"/>
-                  <rect x="504" y="228" width="126" height="66" rx="4" class="test-piece"/>
-                  <line x1="546" y1="156" x2="546" y2="228" class="coupling-line"/>
-
-                  <!-- ultrasonic waves -->
-                  <path d="M546 160 Q524 180 512 205" class="ut-wave wave-one"/>
-                  <path d="M546 160 Q546 184 546 212" class="ut-wave wave-two"/>
-                  <path d="M546 160 Q570 181 583 205" class="ut-wave wave-three"/>
-
-                  <!-- defect -->
-                  <line x1="558" y1="262" x2="571" y2="251" class="defect-notch"/>
-                  <circle cx="565" cy="256" r="4" class="defect-core"/>
-                  <circle cx="565" cy="256" r="13" class="defect-ring defect-ring-one"/>
-                  <circle cx="565" cy="256" r="22" class="defect-ring defect-ring-two"/>
-
-                  <!-- moving scan -->
-                  <rect x="500" y="221" width="138" height="80" class="scan-zone"/>
-                  <rect x="500" y="221" width="42" height="80" fill="url(#scanSweepFill)" class="scan-sweep"/>
-
-                  <!-- A scan -->
-                  <g class="ascan-panel">
-                    <rect x="488" y="310" width="160" height="52" rx="4" class="ascan-box"/>
-                    <path d="M498 346 L508 345 L518 346 L528 343 L538 346 L548 342 L556 334 L563 315 L570 338 L578 345 L590 343 L602 346 L620 344 L638 346" class="ascan-wave"/>
-                    <line x1="563" y1="315" x2="563" y2="352" class="peak-marker"/>
-                    <text x="498" y="324" class="tiny-label">A-SCAN / DEFECT RESPONSE</text>
-                  </g>
-                </g>
-
-                <!-- status ribbon -->
-                <g class="status-ribbon">
-                  <circle cx="58" cy="397" r="4" class="status-dot"/>
-                  <text x="70" y="401" class="status-text">AM BUILD</text>
-                  <line x1="140" y1="397" x2="195" y2="397"/>
-                  <circle cx="205" cy="397" r="4" class="status-dot status-dot-blue"/>
-                  <text x="217" y="401" class="status-text">NDT SCAN</text>
-                  <line x1="292" y1="397" x2="347" y2="397"/>
-                  <circle cx="357" cy="397" r="4" class="status-dot"/>
-                  <text x="369" y="401" class="status-text">DEFECT FLAG</text>
-                  <text x="612" y="401" class="status-live">LIVE</text>
-                </g>
-              </svg>
-
-              <div class="plot-foot mono"><span>PROCESS → INSPECTION → DECISION</span><span>AM + NDT DIGITAL THREAD</span></div>
-            </div>
-          </div>
-        </article>
-
-        <div class="project-list">
-          <article class="project-row reveal">
-            <div class="project-row-index mono">02</div>
-            <div class="project-row-title">
-              <p class="mono">WAAM · ULTRASONICS · MATERIALS</p>
-              <h3>Ultrasound-Assisted WAAM of SS316L</h3>
-            </div>
-            <p>Dissertation research connecting ultrasonic treatment, acoustic streaming/cavitation concepts, microstructure, solidification behavior, and mechanical properties in wire-arc additive manufacturing.</p>
-            <div class="project-stack mono">WAAM · SS316L · SEM · MECHANICAL TESTING</div>
           </article>
 
-          <article class="project-row reveal">
-            <div class="project-row-index mono">03</div>
-            <div class="project-row-title">
-              <p class="mono">POLYMER AM · AEROSPACE-STYLE TESTING</p>
-              <h3>ULTEM 9085 Process &amp; Part Qualification</h3>
+          <article class="project-dossier reveal">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="project-number mono">02</span>
+              <span class="project-heading"><span class="project-kicker mono">WAAM · ULTRASONICS · MATERIALS</span><strong>Ultrasound-Assisted WAAM of SS316L</strong></span>
+              <span class="project-brief">Acoustic treatment, solidification behavior, microstructure, and properties.</span>
+              <span class="project-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="project-detail">
+              <div class="project-detail-inner">
+                <div class="project-detail-copy"><div class="case-grid">
+                  <div><span class="case-label mono">PROBLEM</span><p>WAAM thermal history and heat accumulation influence solidification, microstructure, and resulting mechanical behavior.</p></div>
+                  <div><span class="case-label mono">MY ROLE</span><p>Dissertation research spanning experimental planning, deposition, characterization, mechanical testing, and interpretation.</p></div>
+                  <div><span class="case-label mono">METHODS</span><p>WAAM, SS316L, ultrasound-assisted deposition, SEM/microscopy, mechanical testing, and acoustic streaming/cavitation concepts.</p></div>
+                  <div><span class="case-label mono">FOCUS</span><p>Connect ultrasonic treatment to melt-pool behavior, solidification response, microstructure, and performance.</p></div>
+                </div></div>
+                <div class="project-visual project-visual-waam">
+                  <div class="visual-label mono">WAAM / ACOUSTIC ENERGY COUPLING</div>
+                  <svg viewBox="0 0 620 300" role="img" aria-label="Wire arc additive manufacturing with ultrasonic treatment schematic">
+                    <g class="viz-grid"><path d="M20 55H600M20 105H600M20 155H600M20 205H600M20 255H600"/><path d="M90 25V275M170 25V275M250 25V275M330 25V275M410 25V275M490 25V275M570 25V275"/></g>
+                    <rect x="75" y="230" width="470" height="20" rx="3" class="viz-platform"/>
+                    <g class="waam-beads"><path d="M145 223Q185 203 225 223T305 223T385 223T465 223"/><path d="M165 209Q200 190 235 209T305 209T375 209T445 209"/><path d="M190 195Q220 177 250 195T310 195T370 195T430 195"/></g>
+                    <g class="waam-torch"><path d="M260 52L324 52L310 128L275 128Z"/><line x1="292" y1="20" x2="292" y2="134" class="wire-feed"/><path d="M283 128L301 128L296 157L288 157Z"/><line x1="292" y1="157" x2="292" y2="180" class="viz-laser"/><ellipse cx="292" cy="183" rx="18" ry="6" class="viz-hot"/></g>
+                    <g class="ultra-source"><rect x="472" y="143" width="73" height="26" rx="4"/><line x1="472" y1="156" x2="430" y2="183"/><path d="M458 157q-16 13 0 26M447 151q-27 19 0 38M436 145q-38 25 0 50" class="viz-wave"/></g>
+                    <text x="103" y="277" class="viz-text">LAYER DEPOSITION / THERMAL HISTORY</text><text x="409" y="117" class="viz-text">ULTRASONIC INPUT</text>
+                  </svg>
+                </div>
+              </div>
             </div>
-            <p>Fabrication and evaluation of high-performance FDM specimens using dimensional inspection, mechanical testing, thermography/NDE concepts, and defect-focused analysis.</p>
-            <div class="project-stack mono">FDM · ULTEM 9085 · TESTING · NDE</div>
           </article>
 
-          <article class="project-row reveal">
-            <div class="project-row-index mono">04</div>
-            <div class="project-row-title">
-              <p class="mono">NDT · SIGNAL PROCESSING</p>
-              <h3>Ultrasonic &amp; Resonance-Based Part Evaluation</h3>
+          <article class="project-dossier reveal">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="project-number mono">03</span>
+              <span class="project-heading"><span class="project-kicker mono">POLYMER AM · AEROSPACE-STYLE TESTING</span><strong>ULTEM 9085 Process &amp; Part Qualification</strong></span>
+              <span class="project-brief">FDM fabrication, mechanical testing, dimensional inspection, and thermographic contrast.</span>
+              <span class="project-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="project-detail">
+              <div class="project-detail-inner">
+                <div class="project-detail-copy"><div class="case-grid">
+                  <div><span class="case-label mono">PROBLEM</span><p>High-performance polymer AM requires repeatable print quality and confidence that interruptions or defects do not compromise part behavior.</p></div>
+                  <div><span class="case-label mono">MY ROLE</span><p>Specimen fabrication, dimensional inspection, mechanical testing, defect-focused evaluation, and qualification-style documentation.</p></div>
+                  <div><span class="case-label mono">METHODS</span><p>Stratasys FDM, ULTEM 9085, tensile/compression/impact testing, microscopy, thermography, and NDE concepts.</p></div>
+                  <div><span class="case-label mono">APPLICATION</span><p>Aerospace-oriented process and part evaluation with emphasis on anisotropy, print quality, and defect visibility.</p></div>
+                </div></div>
+                <div class="project-visual thermal-project">
+                  <div class="visual-label mono">THERMOGRAPHIC CONTRAST / ULTEM 9085</div>
+                  <div class="thermal-panel">
+                    <div class="thermal-specimen"><span class="thermal-defect"></span><span class="thermal-scan"></span></div>
+                    <div class="thermal-legend mono"><span>COOL</span><i></i><span>HOT</span></div>
+                    <div class="thermal-stats mono"><span>ROI A</span><strong>ΔT 3.8°C</strong><span>CONTRAST / FLAGGED</span></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p>Using ultrasonic time-of-flight and resonant response to study stiffness, density-related behavior, and defect-sensitive changes in additively manufactured parts.</p>
-            <div class="project-stack mono">UT · RUS · TOF · SIGNAL ANALYSIS</div>
           </article>
 
-          <article class="project-row reveal">
-            <div class="project-row-index mono">05</div>
-            <div class="project-row-title">
-              <p class="mono">INDUSTRY 4.0 · MACHINE VISION</p>
-              <h3>Data-Driven Inspection &amp; Digital Manufacturing</h3>
+          <article class="project-dossier reveal">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="project-number mono">04</span>
+              <span class="project-heading"><span class="project-kicker mono">NDT · SIGNAL PROCESSING</span><strong>Ultrasonic &amp; Resonance-Based Part Evaluation</strong></span>
+              <span class="project-brief">Time-of-flight, stiffness response, RUS, signal processing, and defect-sensitive behavior.</span>
+              <span class="project-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="project-detail">
+              <div class="project-detail-inner">
+                <div class="project-detail-copy"><div class="case-grid">
+                  <div><span class="case-label mono">PROBLEM</span><p>AM parts need nondestructive methods that can detect stiffness, density-related, and defect-sensitive changes without sectioning the component.</p></div>
+                  <div><span class="case-label mono">MY ROLE</span><p>Ultrasonic acquisition, peak selection, TOF analysis, wave-velocity calculations, RUS interpretation, and automated processing.</p></div>
+                  <div><span class="case-label mono">METHODS</span><p>Ultrasonics, 2.25 MHz transducers, RUS, filtering, peak detection, time-of-flight, velocity, and Python signal analysis.</p></div>
+                  <div><span class="case-label mono">OUTPUT</span><p>Quantitative NDT workflows linking signal response to stiffness and manufacturing-history variation.</p></div>
+                </div></div>
+                <div class="project-visual project-visual-signal">
+                  <div class="visual-label mono">ULTRASONIC A-SCAN / RESONANCE RESPONSE</div>
+                  <svg viewBox="0 0 620 300" role="img" aria-label="Ultrasonic and resonance signal analysis visualization">
+                    <g class="viz-grid"><path d="M30 50H590M30 100H590M30 150H590M30 200H590M30 250H590"/><path d="M90 25V270M170 25V270M250 25V270M330 25V270M410 25V270M490 25V270M570 25V270"/></g>
+                    <path d="M35 222 L70 219 L95 222 L120 215 L140 220 L160 194 L172 86 L184 212 L205 220 L235 218 L265 221 L290 212 L305 162 L318 214 L350 220 L388 216 L420 220 L455 214 L470 188 L481 220 L520 218 L560 221 L590 219" class="signal-trace"/>
+                    <line x1="172" y1="65" x2="172" y2="240" class="signal-marker"/><line x1="305" y1="145" x2="305" y2="240" class="signal-marker signal-marker-secondary"/>
+                    <text x="145" y="52" class="viz-text">FIRST ARRIVAL</text><text x="281" y="132" class="viz-text">SECOND PEAK</text>
+                    <g class="resonance-bars"><rect x="395" y="80" width="13" height="76"/><rect x="420" y="112" width="13" height="44"/><rect x="445" y="64" width="13" height="92"/><rect x="470" y="98" width="13" height="58"/><rect x="495" y="128" width="13" height="28"/></g>
+                    <text x="394" y="177" class="viz-text">RUS MODES</text>
+                  </svg>
+                </div>
+              </div>
             </div>
-            <p>Research contributions spanning sensor-based quality inspection, machine vision for geometric accuracy, digital-twin concepts, and manufacturing analytics.</p>
-            <div class="project-stack mono">VISION · IOT · DIGITAL TWIN · DATA</div>
+          </article>
+
+          <article class="project-dossier reveal">
+            <button class="project-toggle" type="button" aria-expanded="false">
+              <span class="project-number mono">05</span>
+              <span class="project-heading"><span class="project-kicker mono">INDUSTRY 4.0 · MACHINE VISION</span><strong>Data-Driven Inspection &amp; Digital Manufacturing</strong></span>
+              <span class="project-brief">Machine vision, sensor-based inspection, digital twins, analytics, and automated decision support.</span>
+              <span class="project-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="project-detail">
+              <div class="project-detail-inner">
+                <div class="project-detail-copy"><div class="case-grid">
+                  <div><span class="case-label mono">PROBLEM</span><p>Manufacturing inspection data is often fragmented across sensors, images, test systems, and manual analysis workflows.</p></div>
+                  <div><span class="case-label mono">MY ROLE</span><p>Research contributions in machine vision, sensor-based quality inspection, digital-twin concepts, and manufacturing analytics.</p></div>
+                  <div><span class="case-label mono">METHODS</span><p>Computer vision, imaging, Python, statistical analysis, data visualization, IoT concepts, and digital manufacturing workflows.</p></div>
+                  <div><span class="case-label mono">VALUE</span><p>Connect physical manufacturing data to automated inspection, visualization, and engineering decision-making.</p></div>
+                </div></div>
+                <div class="project-visual project-visual-digital">
+                  <div class="visual-label mono">PHYSICAL PROCESS ↔ DIGITAL THREAD</div>
+                  <svg viewBox="0 0 620 300" role="img" aria-label="Digital manufacturing network and machine vision schematic">
+                    <g class="viz-grid"><path d="M30 50H590M30 100H590M30 150H590M30 200H590M30 250H590"/><path d="M90 25V270M170 25V270M250 25V270M330 25V270M410 25V270M490 25V270M570 25V270"/></g>
+                    <g class="digital-links"><path d="M126 151L245 92L336 151L472 88M126 151L250 218L336 151L475 219M245 92L250 218M472 88L475 219"/></g>
+                    <g class="digital-nodes"><circle cx="126" cy="151" r="28"/><circle cx="245" cy="92" r="22"/><circle cx="250" cy="218" r="22"/><circle cx="336" cy="151" r="32"/><circle cx="472" cy="88" r="22"/><circle cx="475" cy="219" r="22"/></g>
+                    <g class="digital-labels"><text x="105" y="155">AM</text><text x="225" y="96">VISION</text><text x="229" y="222">NDT</text><text x="309" y="155">DATA</text><text x="449" y="92">TWIN</text><text x="451" y="223">QC</text></g>
+                    <circle cx="336" cy="151" r="48" class="digital-pulse"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </article>
         </div>
       </div>
