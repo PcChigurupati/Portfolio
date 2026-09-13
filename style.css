@@ -2426,7 +2426,7 @@ html{
   display:flex !important;
   flex-wrap:wrap;
   align-items:center;
-  gap:18px !important;
+  gap:16px !important;
 
   margin:24px 0 28px !important;
 
@@ -2445,15 +2445,15 @@ html{
   align-items:center;
   justify-content:center;
 
-  width:120px !important;
-  height:120px !important;
-  min-width:120px !important;
-  min-height:120px !important;
+  width:165px !important;
+  height:95px !important;
+  min-width:165px !important;
+  min-height:95px !important;
 
-  padding:0 !important;
+  padding:0 14px !important;
 
   border:1.5px solid rgba(201,145,79,.55) !important;
-  border-radius:50% !important;
+  border-radius:6px !important;
 
   background:rgba(12,23,41,.45) !important;
   color:#c6cfda !important;
@@ -2519,14 +2519,14 @@ html{
   }
 
   .discipline-floater{
-    width:88px !important;
-    height:88px !important;
-    min-width:88px !important;
-    min-height:88px !important;
+    width:135px !important;
+    height:78px !important;
+    min-width:135px !important;
+    min-height:78px !important;
 
     font-size:7px !important;
     line-height:1.2 !important;
 
-    padding:0 !important;
+    padding:0 10px !important;
   }
 }
