@@ -224,3 +224,48 @@ if (document.readyState === 'loading') {
 } else {
   initProjectImagePreview();
 }
+
+
+// Reliable "PC" back-to-top control
+document.querySelectorAll('[data-scroll-top="true"]').forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Works even if #top positioning/cached CSS behaves unexpectedly.
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+
+    // Close mobile nav if open.
+    const navLinks = document.querySelector('.nav-links');
+    const navToggle = document.querySelector('.nav-toggle');
+    navLinks?.classList.remove('open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Magnetic portrait chips.
+// The chip follows the pointer slightly, then springs back when the pointer leaves.
+if (window.matchMedia('(pointer:fine)').matches) {
+  document.querySelectorAll('[data-magnetic="true"]').forEach(chip => {
+    const strength = 0.18;
+
+    chip.addEventListener('pointermove', (event) => {
+      const rect = chip.getBoundingClientRect();
+      const x = event.clientX - (rect.left + rect.width / 2);
+      const y = event.clientY - (rect.top + rect.height / 2);
+
+      chip.style.setProperty('--mag-x', `${x * strength}px`);
+      chip.style.setProperty('--mag-y', `${y * strength}px`);
+      chip.classList.add('is-magnetic');
+    });
+
+    chip.addEventListener('pointerleave', () => {
+      chip.style.setProperty('--mag-x', '0px');
+      chip.style.setProperty('--mag-y', '0px');
+      chip.classList.remove('is-magnetic');
+    });
+  });
+}

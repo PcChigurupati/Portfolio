@@ -1656,3 +1656,186 @@ body.image-preview-open{
     line-height:1.7;
   }
 }
+
+
+/* =========================================================
+   MAGNETIC HERO CHIPS + RELIABLE PC HOME CONTROL
+   ========================================================= */
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+.brand{
+  cursor:pointer;
+}
+.brand-mark{
+  width:44px !important;
+  height:44px !important;
+  min-width:44px !important;
+  border-radius:999px !important;
+  display:grid !important;
+  place-items:center !important;
+}
+
+/* Remove the older label-card look completely */
+.hero-portrait-card .portrait-index,
+.hero-portrait-card .portrait-caption{
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+
+/* Keep chips anchored to the portrait, not in document flow */
+.hero-portrait-card{
+  position:relative !important;
+  overflow:visible !important;
+}
+
+.hero-portrait-card .portrait-image{
+  position:relative;
+  z-index:1;
+}
+
+.hero-portrait-card .portrait-index.chip-rd{
+  position:absolute !important;
+  z-index:7;
+  top:18px !important;
+  left:18px !important;
+  width:auto !important;
+  max-width:calc(100% - 36px);
+  margin:0 !important;
+}
+
+.portrait-chip-layer{
+  position:absolute !important;
+  z-index:7;
+  inset:0 !important;
+  display:block !important;
+  pointer-events:none;
+}
+
+/* "Magnetic button" / interactive floating chip */
+.magnetic-chip{
+  --mag-x:0px;
+  --mag-y:0px;
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  width:max-content;
+  max-width:calc(100% - 36px);
+  min-height:36px;
+  padding:9px 13px !important;
+  border:1px solid rgba(117,184,232,.34) !important;
+  border-radius:999px !important;
+  background:rgba(7,16,30,.76) !important;
+  color:#c4ceda !important;
+  font-family:var(--mono);
+  font-size:8px !important;
+  font-weight:500;
+  line-height:1.1;
+  letter-spacing:.075em;
+  white-space:nowrap;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.22),
+    inset 0 0 0 1px rgba(255,255,255,.015) !important;
+  transform:translate3d(var(--mag-x),var(--mag-y),0);
+  transition:
+    transform .34s cubic-bezier(.2,.8,.2,1),
+    color .2s ease,
+    border-color .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+  will-change:transform;
+  pointer-events:auto;
+  cursor:default;
+}
+
+.magnetic-chip::before{
+  content:"";
+  width:5px;
+  height:5px;
+  flex:0 0 5px;
+  margin-right:8px;
+  border-radius:50%;
+  background:var(--copper);
+  box-shadow:0 0 10px rgba(201,145,79,.6);
+}
+
+.magnetic-chip:hover,
+.magnetic-chip.is-magnetic{
+  color:#f1f5f8 !important;
+  border-color:rgba(201,145,79,.72) !important;
+  background:rgba(13,26,46,.90) !important;
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.30),
+    0 0 0 4px rgba(201,145,79,.035) !important;
+}
+
+/* Three deliberately different anchor points */
+.chip-rd{
+  top:18px !important;
+  left:18px !important;
+}
+
+.chip-manufacturing{
+  position:absolute !important;
+  left:18px !important;
+  bottom:18px !important;
+}
+
+.chip-ndt{
+  position:absolute !important;
+  right:18px !important;
+  bottom:18px !important;
+}
+
+@media (max-width:760px){
+  .brand-mark{
+    width:40px !important;
+    height:40px !important;
+    min-width:40px !important;
+  }
+
+  .magnetic-chip{
+    min-height:30px;
+    max-width:calc(100% - 20px);
+    padding:7px 10px !important;
+    font-size:6.5px !important;
+    letter-spacing:.055em;
+  }
+
+  .magnetic-chip::before{
+    width:4px;
+    height:4px;
+    flex-basis:4px;
+    margin-right:6px;
+  }
+
+  .hero-portrait-card .portrait-index.chip-rd{
+    top:10px !important;
+    left:10px !important;
+    max-width:calc(100% - 20px);
+  }
+
+  .chip-manufacturing{
+    left:10px !important;
+    bottom:10px !important;
+  }
+
+  .chip-ndt{
+    right:10px !important;
+    bottom:10px !important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .magnetic-chip{
+    transform:none !important;
+    transition:none !important;
+  }
+  html{scroll-behavior:auto}
+}
