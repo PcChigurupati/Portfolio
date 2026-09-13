@@ -539,3 +539,241 @@ strong{font-weight:700}
 
 
 @media (min-width:1700px){.section-symbol{width:58px;height:58px}}
+
+
+/* ===== EXPERTISE — recruiter-focused, balanced layout ===== */
+.expertise-grid{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:12px;
+  grid-auto-rows:auto;
+}
+.expertise-grid .expertise-card{
+  grid-column:span 2;
+  min-height:310px;
+  padding:30px;
+  background:linear-gradient(180deg,rgba(22,34,59,.92),rgba(16,26,48,.96));
+  border:1px solid rgba(244,240,231,.14);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.expertise-grid .expertise-card-wide{
+  grid-column:span 3;
+  min-height:285px;
+}
+.expertise-grid .expertise-card::after{
+  content:"";
+  position:absolute;
+  width:160px;
+  height:160px;
+  right:-92px;
+  bottom:-92px;
+  border:1px solid rgba(117,184,232,.10);
+  border-radius:50%;
+}
+.expertise-grid .card-number{
+  color:var(--copper);
+  font-size:9px;
+  letter-spacing:.14em;
+  margin-bottom:54px;
+}
+.expertise-grid h3{
+  margin:0 0 16px;
+  font-size:30px;
+  line-height:1.03;
+  color:var(--cream);
+}
+.expertise-grid p{
+  margin:0;
+  color:#aeb8c9;
+  font-size:13px;
+  line-height:1.75;
+  max-width:46ch;
+}
+.expertise-grid .tag-row{
+  margin-top:auto;
+  padding-top:28px;
+  gap:8px;
+}
+.expertise-grid .tag-row span{
+  border:1px solid rgba(117,184,232,.18);
+  color:#8fa5bd;
+  background:rgba(117,184,232,.025);
+  padding:6px 8px;
+  font-size:8px;
+  letter-spacing:.04em;
+}
+.expertise-section .section-heading{
+  margin-bottom:54px;
+}
+.expertise-section .section-copy{
+  max-width:420px;
+  line-height:1.75;
+}
+
+/* remove old one-off expertise sizing */
+.expertise-grid .bento-large,
+.expertise-grid .bento-wide{
+  grid-column:auto;
+  grid-row:auto;
+  min-height:unset;
+}
+
+/* ===== AMBIENT ICON SYSTEM — normalized, clean, and visible ===== */
+.section-symbol{
+  position:absolute;
+  z-index:2;
+  width:46px;
+  height:46px;
+  padding:9px;
+  border-radius:50%;
+  color:#79c7f2;
+  background:rgba(9,17,31,.78);
+  border:1px solid rgba(121,199,242,.34);
+  box-shadow:0 0 0 4px rgba(121,199,242,.035),0 8px 28px rgba(0,0,0,.16);
+  pointer-events:none;
+  animation:symbolFloat 8s ease-in-out infinite;
+}
+.section-symbol.symbol-copper{
+  color:#d6a25d;
+  border-color:rgba(214,162,93,.34);
+  background:rgba(9,17,31,.78);
+  box-shadow:0 0 0 4px rgba(214,162,93,.035),0 8px 28px rgba(0,0,0,.16);
+}
+.section-symbol svg{
+  width:100%;
+  height:100%;
+  display:block;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.55;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+}
+.section-symbol:nth-of-type(even){animation-delay:-2.3s}
+.section-symbol:nth-of-type(3n){animation-delay:-4.1s}
+
+/* Keep them just outside the content shell rather than floating into the page */
+.section-symbol-hero-rocket{left:calc(50% + 610px);top:20%}
+.section-symbol-hero-sensor{right:calc(50% + 610px);top:58%}
+.section-symbol-hero-lattice{right:calc(50% + 618px);top:26%}
+.section-symbol-hero-wave{left:calc(50% + 600px);bottom:15%}
+.section-symbol-rocket{left:calc(50% + 612px);top:18%}
+.section-symbol-sensor{right:calc(50% + 612px);top:24%}
+.section-symbol-microscope{left:calc(50% + 612px);bottom:18%}
+.section-symbol-ultrasound{right:calc(50% + 600px);bottom:16%}
+.section-symbol-probe{left:calc(50% + 612px);top:17%}
+.section-symbol-laser{right:calc(50% + 612px);bottom:19%}
+.section-symbol-layers{right:calc(50% + 598px);top:22%}
+.section-symbol-wave{left:calc(50% + 612px);bottom:15%}
+.section-symbol-data{right:calc(50% + 612px);top:20%}
+.section-symbol-code{left:calc(50% + 600px);top:21%}
+.section-symbol-gear{left:calc(50% + 612px);top:14%}
+.section-symbol-caliper{right:calc(50% + 612px);bottom:18%}
+.section-symbol-atom{right:calc(50% + 612px);bottom:14%}
+.section-symbol-document{left:calc(50% + 612px);top:19%}
+.section-symbol-cap{left:calc(50% + 612px);bottom:14%}
+.section-symbol-book{right:calc(50% + 612px);top:18%}
+.section-symbol-triangle{left:calc(50% + 600px);top:20%}
+.section-symbol-circuit{left:calc(50% + 612px);top:18%}
+.section-symbol-location{right:calc(50% + 612px);bottom:18%}
+.section-symbol-chat{left:calc(50% + 600px);bottom:22%}
+
+@media (max-width:1180px){
+  .section-symbol{display:none}
+}
+@media (max-width:900px){
+  .expertise-grid{grid-template-columns:1fr 1fr}
+  .expertise-grid .expertise-card,
+  .expertise-grid .expertise-card-wide{grid-column:span 1}
+}
+@media (max-width:640px){
+  .expertise-grid{grid-template-columns:1fr}
+  .expertise-grid .expertise-card,
+  .expertise-grid .expertise-card-wide{min-height:auto}
+  .expertise-grid .card-number{margin-bottom:34px}
+}
+
+
+/* =========================================================
+   CURATED AMBIENT ENGINEERING ICON SYSTEM
+   ========================================================= */
+.section-symbol{
+  position:absolute;
+  z-index:2;
+  width:46px;
+  height:46px;
+  padding:9px;
+  border-radius:50%;
+  color:#7cc9f3;
+  background:rgba(8,16,30,.82);
+  border:1px solid rgba(124,201,243,.36);
+  box-shadow:
+    0 0 0 4px rgba(124,201,243,.035),
+    0 10px 30px rgba(0,0,0,.14);
+  pointer-events:none;
+  animation:curatedSymbolFloat 8s ease-in-out infinite;
+}
+.section-symbol.symbol-copper{
+  color:#d6a25d;
+  border-color:rgba(214,162,93,.38);
+  box-shadow:
+    0 0 0 4px rgba(214,162,93,.035),
+    0 10px 30px rgba(0,0,0,.14);
+}
+.section-symbol svg{
+  display:block;
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.55;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+@keyframes curatedSymbolFloat{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-7px,0)}
+}
+
+/* Hero */
+.section-symbol-hero-rocket{left:calc(50% + 610px);top:23%}
+.section-symbol-hero-lattice{right:calc(50% + 610px);bottom:18%}
+
+/* Intro */
+.section-symbol-intro-sensor{right:calc(50% + 610px);top:22%}
+.section-symbol-intro-crystal{left:calc(50% + 610px);bottom:18%}
+
+/* Expertise */
+.section-symbol-expertise-microscope{left:calc(50% + 610px);top:22%}
+.section-symbol-expertise-probe{right:calc(50% + 610px);bottom:16%}
+
+/* Projects */
+.section-symbol-projects-layers{right:calc(50% + 610px);top:18%}
+.section-symbol-projects-probe{left:calc(50% + 610px);bottom:16%}
+
+/* Code */
+.section-symbol-code-wave{left:calc(50% + 610px);top:20%}
+.section-symbol-code-brackets{right:calc(50% + 610px);bottom:20%}
+
+/* Experience */
+.section-symbol-experience-gear{right:calc(50% + 610px);top:18%}
+.section-symbol-experience-caliper{left:calc(50% + 610px);bottom:18%}
+
+/* Research */
+.section-symbol-research-crystal{left:calc(50% + 610px);top:20%}
+.section-symbol-research-wave{right:calc(50% + 610px);bottom:17%}
+
+/* Education */
+.section-symbol-education-cap{right:calc(50% + 610px);top:20%}
+.section-symbol-education-triangle{left:calc(50% + 610px);bottom:17%}
+
+/* Contact */
+.section-symbol-contact-circuit{left:calc(50% + 610px);top:22%}
+.section-symbol-contact-location{right:calc(50% + 610px);bottom:18%}
+
+@media (max-width:1180px){
+  .section-symbol{display:none!important}
+}

@@ -1,356 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0a1020" />
-  <meta name="description" content="Portfolio of Poojith Chowdary Chigurupati — Advanced Manufacturing Engineer, Ph.D. candidate, researcher, and programmer working across additive manufacturing, materials, NDT, and computational engineering." />
-  <title>Poojith Chigurupati — Advanced Manufacturing × Materials × NDT × Data</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#0a1020" name="theme-color"/>
+<meta content="Portfolio of Poojith Chowdary Chigurupati — Advanced Manufacturing Engineer, Ph.D. candidate, researcher, and programmer working across additive manufacturing, materials, NDT, and computational engineering." name="description"/>
+<title>Poojith Chigurupati — Advanced Manufacturing × Materials × NDT × Data</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
+<div aria-hidden="true" class="cursor-glow"></div>
+<header class="site-header" id="top">
+<nav aria-label="Primary navigation" class="nav-shell">
+<a aria-label="Poojith Chigurupati home" class="brand" href="#top">
+<span class="brand-mark">PC</span>
+<span class="brand-copy">Poojith Chigurupati</span>
+</a>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="Open menu" class="nav-toggle">
+<span></span><span></span>
+</button>
+<div class="nav-links" id="nav-links">
+<a href="#expertise">Expertise</a>
+<a href="#projects">Projects</a>
+<a href="#code">Code</a>
+<a href="#experience">Experience</a>
+<a href="#research">Research</a>
+<a href="#education">Education</a>
+<a class="nav-contact" href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero section-dark"><div aria-hidden="true" class="section-symbol section-symbol-hero-rocket symbol-copper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M12 3c3.8 2.1 5.8 5.5 5.8 9.8L14.4 17H9.6l-3.4-4.2C6.2 8.5 8.2 5.1 12 3Z"></path>
+<circle cx="12" cy="9" r="1.7"></circle>
+<path d="M8.2 13.4 4.7 15l1.8-4M15.8 13.4 19.3 15l-1.8-4M10 17l-1 4 3-2 3 2-1-4"></path>
+</svg></div><div aria-hidden="true" class="section-symbol section-symbol-hero-lattice"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="m6 5 6-3 6 3v7l-6 3-6-3Z"></path>
+<path d="m6 5 6 3 6-3M12 8v7M6 12l6-4 6 4"></path>
+<circle cx="6" cy="5" r=".8"></circle><circle cx="12" cy="2" r=".8"></circle><circle cx="18" cy="5" r=".8"></circle>
+<circle cx="6" cy="12" r=".8"></circle><circle cx="12" cy="15" r=".8"></circle><circle cx="18" cy="12" r=".8"></circle>
+<path d="M8 16h8M7 19h10M6 22h12"></path>
+</svg></div>
+<div aria-hidden="true" class="hero-orbit orbit-a"></div>
+<div aria-hidden="true" class="hero-orbit orbit-b"></div>
 
-  <header class="site-header" id="top">
-    <nav class="nav-shell" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Poojith Chigurupati home">
-        <span class="brand-mark">PC</span>
-        <span class="brand-copy">Poojith Chigurupati</span>
-      </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
-        <span></span><span></span>
-      </button>
 
-      <div class="nav-links" id="nav-links">
-        <a href="#expertise">Expertise</a>
-        <a href="#projects">Projects</a>
-        <a href="#code">Code</a>
-        <a href="#experience">Experience</a>
-        <a href="#research">Research</a>
-        <a href="#education">Education</a>
-        <a class="nav-contact" href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero section-dark">
-      <div class="hero-orbit orbit-a" aria-hidden="true"></div>
-      <div class="hero-orbit orbit-b" aria-hidden="true"></div>
-      <div class="section-symbol section-symbol-hero-rocket symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M34 8c10 5 15 15 15 28L38 47 27 36c0-13 5-23 15-28z"/><circle cx="34" cy="22" r="4"/><path d="M27 36 17 40l6-10M38 47l-4 10 10-6M31 33l6 6"/></svg></div>
-      <div class="section-symbol section-symbol-hero-sensor" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="5"/><path d="M20 22a17 17 0 0 0 0 20M44 22a17 17 0 0 1 0 20M14 16a25 25 0 0 0 0 32M50 16a25 25 0 0 1 0 32"/><path d="M32 37v15M25 52h14"/></svg></div>
-      <div class="section-symbol section-symbol-hero-lattice" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 18h28v28H18z"/><path d="M18 18l28 28M46 18 18 46M32 18v28M18 32h28"/></svg></div>
-      <div class="section-symbol section-symbol-hero-wave symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M6 34c6 0 6-10 12-10s6 10 12 10 6-10 12-10 6 10 12 10 6-10 12-10"/></svg></div>
+<div class="page-shell hero-layout">
+<div class="hero-copy reveal">
+<p class="kicker"><span class="signal-dot"></span> Advanced Manufacturing Engineer · Ph.D. Candidate</p>
+<h1>Poojith Chowdary <em>Chigurupati</em></h1>
+<p class="hero-title">Manufacturing <span>×</span> Materials <span>×</span> NDT <span>×</span> Computational Engineering</p>
+<p class="hero-intro">I connect how a part is <strong>made</strong>, how its material <strong>behaves</strong>, how its quality is <strong>measured</strong>, and how engineering data can be <strong>automated and interpreted</strong>.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="#projects">Explore selected work <span>↘</span></a>
+<a class="button button-secondary" href="#code">See computational work</a>
+</div>
+<div class="hero-links mono">
+<a href="mailto:Poojithchigurupati99@gmail.com"><svg aria-hidden="true" class="inline-link-icon" viewBox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M4 7l8 6 8-6"></path></svg><span>Email</span></a>
+<a href="https://www.linkedin.com/in/poojith-chowdary-chigurupati-46b5041a4" rel="noopener" target="_blank"><svg aria-hidden="true" class="inline-link-icon" viewBox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M8 10v7M8 7.2v.1M12 17v-4.2c0-1.8 1.2-3 2.8-3s2.7 1.1 2.7 3V17M12 11v6"></path></svg><span>LinkedIn</span></a>
+<a href="https://scholar.google.com/citations?user=KPpHr_8AAAAJ&amp;hl=en" rel="noopener" target="_blank"><svg aria-hidden="true" class="inline-link-icon" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5M22 9v6"></path></svg><span>Google Scholar</span></a>
+</div>
+</div>
+<div class="hero-visual hero-tech-cluster reveal" data-delay="120">
+<div aria-hidden="true" class="hero-orbit-line orbit-line-a"></div>
+<div aria-hidden="true" class="hero-orbit-line orbit-line-b"></div>
+<div class="portrait-card hero-portrait-card">
+<div aria-label="Portrait of Poojith Chigurupati" class="portrait-image" role="img"></div>
+<div class="portrait-index mono">ADVANCED MANUFACTURING / R&amp;D</div>
+<div class="portrait-caption">
+<span>Manufacturing × Materials</span>
+<span>NDT × Data</span>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="Career highlights" class="page-shell metrics reveal" data-delay="180">
+<div class="metric"><strong>4+</strong><span>Years engineering &amp; research</span></div>
+<div class="metric"><strong>7</strong><span>Publications &amp; thesis works</span></div>
+<div class="metric"><strong>3.90</strong><span>Ph.D. GPA</span></div>
+<div class="metric"><strong>2027</strong><span>Expected Ph.D. completion</span></div>
+</div>
+</section>
+<!-- POSITIONING -->
+<section class="section-light intro-section"><div aria-hidden="true" class="section-symbol section-symbol-intro-sensor"><svg aria-hidden="true" viewBox="0 0 24 24">
+<circle cx="12" cy="11" r="2.3"></circle>
+<path d="M7.7 6.8a6 6 0 0 0 0 8.4M16.3 6.8a6 6 0 0 1 0 8.4"></path>
+<path d="M4.7 3.9a10 10 0 0 0 0 14.2M19.3 3.9a10 10 0 0 1 0 14.2"></path>
+<path d="M12 13.5V21M9 21h6"></path>
+</svg></div><div aria-hidden="true" class="section-symbol section-symbol-intro-crystal symbol-copper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="m12 3 6 4v10l-6 4-6-4V7Z"></path>
+<path d="m6 7 6 4 6-4M12 11v10M6 17l6-6 6 6"></path>
+</svg></div>
 
-      <div class="page-shell hero-layout">
-        <div class="hero-copy reveal">
-          <p class="kicker"><span class="signal-dot"></span> Advanced Manufacturing Engineer · Ph.D. Candidate</p>
-          <h1>Poojith Chowdary <em>Chigurupati</em></h1>
-          <p class="hero-title">Manufacturing <span>×</span> Materials <span>×</span> NDT <span>×</span> Computational Engineering</p>
-          <p class="hero-intro">I connect how a part is <strong>made</strong>, how its material <strong>behaves</strong>, how its quality is <strong>measured</strong>, and how engineering data can be <strong>automated and interpreted</strong>.</p>
+<div class="page-shell intro-grid">
+<div class="section-label reveal">
+<span class="section-index mono">01</span>
+<p class="mono">PROFILE</p>
+</div>
+<div class="intro-statement reveal" data-delay="80">
+<p class="eyebrow">ENGINEERING AT THE INTERSECTION</p>
+<h2>Not just additive manufacturing.<br/><em>An integrated engineering skill set.</em></h2>
+<p>I am an Advanced Manufacturing Engineering Ph.D. candidate with multidisciplinary experience spanning additive manufacturing, materials characterization, mechanical testing, nondestructive evaluation, process monitoring, programming, statistics, machine learning, laboratory operations, and engineering education.</p>
+<p>My work follows the complete engineering loop: <strong>design → fabricate → monitor → test → inspect → analyze → automate → communicate.</strong> That lets me approach manufacturing problems from both the physical and computational sides.</p>
+</div>
+</div>
+</section>
+<!-- EXPERTISE -->
+<section class="section-dark expertise-section expertise-section-dark ambient-dark" id="expertise"><div aria-hidden="true" class="section-symbol section-symbol-expertise-microscope symbol-copper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M9 3h5v4H9zM11.5 7v3l-3 3"></path>
+<path d="M8.5 13a5 5 0 0 0 5 5H18M5 21h14"></path>
+<path d="m14 10 3 3M7 6l4 4M15.5 13.5l-2.5 2.5"></path>
+</svg></div><div aria-hidden="true" class="section-symbol section-symbol-expertise-probe"><svg aria-hidden="true" viewBox="0 0 24 24">
+<rect height="5" rx="1" width="7" x="3" y="5"></rect>
+<path d="M10 7.5h3l2 2"></path>
+<path d="M16 10.5c3 1.6 3 4.4 0 6M18.5 8.5c5 2.8 5 7.2 0 10"></path>
+<path d="M3 20h12M13.5 11.5l-3 5"></path>
+</svg></div>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects">Explore selected work <span>↘</span></a>
-            <a class="button button-secondary" href="#code">See computational work</a>
-          </div>
 
-          <div class="hero-links mono">
-            <a href="mailto:Poojithchigurupati99@gmail.com"><svg class="inline-link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg><span>Email</span></a>
-            <a href="https://www.linkedin.com/in/poojith-chowdary-chigurupati-46b5041a4" target="_blank" rel="noopener"><svg class="inline-link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7.2v.1M12 17v-4.2c0-1.8 1.2-3 2.8-3s2.7 1.1 2.7 3V17M12 11v6"/></svg><span>LinkedIn</span></a>
-            <a href="https://scholar.google.com/citations?user=KPpHr_8AAAAJ&hl=en" target="_blank" rel="noopener"><svg class="inline-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5M22 9v6"/></svg><span>Google Scholar</span></a>
-          </div>
-        </div>
+<div class="page-shell">
+<div class="section-heading section-heading-dark reveal">
+<div>
+<span class="section-index mono">02</span>
+<p class="mono eyebrow">CORE CAPABILITIES</p>
+</div>
+<h2>From process to proof.<br/><em>One connected engineering workflow.</em></h2>
+<p class="section-copy">
+            I work across fabrication, characterization, nondestructive inspection, data analysis,
+            and technical communication—so engineering decisions stay connected to the physics of the process.
+          </p>
+</div>
+<div class="bento-grid expertise-grid">
+<article class="bento-card expertise-card reveal">
+<div class="card-number mono">A / 01</div>
+<h3>Advanced Manufacturing</h3>
+<p>Plan and execute AM builds across L-PBF, WAAM, FDM / FFF, and SLA—from build preparation and parameter studies to process interruptions, heat treatment, and post-processing.</p>
+<div class="tag-row"><span>L-PBF</span><span>WAAM</span><span>FDM</span><span>SLA</span></div>
+</article>
+<article class="bento-card expertise-card reveal" data-delay="60">
+<div class="card-number mono">B / 02</div>
+<h3>Materials Characterization</h3>
+<p>Connect process history to material response using tensile and compression testing, nanoindentation, microscopy / SEM, profilometry, and micro-mechanical property mapping.</p>
+<div class="tag-row"><span>SS316L</span><span>Ti-6Al-4V</span><span>ULTEM 9085</span><span>SEM</span></div>
+</article>
+<article class="bento-card expertise-card reveal" data-delay="100">
+<div class="card-number mono">C / 03</div>
+<h3>NDT &amp; Process Monitoring</h3>
+<p>Evaluate part integrity without destructive sectioning using ultrasonics, RUS, thermography, acoustic emission, eddy current, and in-situ monitoring.</p>
+<div class="tag-row"><span>UT</span><span>RUS</span><span>THERMOGRAPHY</span><span>AE</span></div>
+</article>
+<article class="bento-card expertise-card expertise-card-wide reveal" data-delay="140">
+<div class="card-number mono">D / 04</div>
+<h3>Computational Engineering</h3>
+<p>Turn raw test and sensor data into engineering decisions with Python and MATLAB workflows for signal processing, automated test reduction, statistics, visualization, machine learning, and machine vision.</p>
+<div class="tag-row"><span>PYTHON</span><span>MATLAB</span><span>SIGNAL PROCESSING</span><span>ML</span></div>
+</article>
+<article class="bento-card expertise-card expertise-card-wide reveal" data-delay="180">
+<div class="card-number mono">E / 05</div>
+<h3>Technical Leadership &amp; Communication</h3>
+<p>Carry technical work from experiment planning and laboratory operations through operator training, mentoring, course instruction, technical writing, conference presentation, and cross-functional problem solving.</p>
+<div class="tag-row"><span>RESEARCH</span><span>LAB OPS</span><span>TEACHING</span><span>MENTORING</span></div>
+</article>
+</div>
+</div>
+</section>
+<!-- PROJECTS -->
+<section class="section-dark projects-section ambient-dark" id="projects"><div aria-hidden="true" class="section-symbol section-symbol-projects-layers symbol-copper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="m12 4 8 4-8 4-8-4Z"></path>
+<path d="m4 12 8 4 8-4M4 16l8 4 8-4"></path>
+<path d="M12 1v3"></path>
+</svg></div><div aria-hidden="true" class="section-symbol section-symbol-projects-probe"><svg aria-hidden="true" viewBox="0 0 24 24">
+<rect height="5" rx="1" width="7" x="3" y="5"></rect>
+<path d="M10 7.5h3l2 2"></path>
+<path d="M16 10.5c3 1.6 3 4.4 0 6M18.5 8.5c5 2.8 5 7.2 0 10"></path>
+<path d="M3 20h12M13.5 11.5l-3 5"></path>
+</svg></div>
 
-        <div class="hero-visual hero-tech-cluster reveal" data-delay="120">
-          <div class="hero-orbit-line orbit-line-a" aria-hidden="true"></div>
-          <div class="hero-orbit-line orbit-line-b" aria-hidden="true"></div>
 
-          <div class="portrait-card hero-portrait-card">
-            <div class="portrait-image" role="img" aria-label="Portrait of Poojith Chigurupati"></div>
-            <div class="portrait-index mono">ADVANCED MANUFACTURING / R&amp;D</div>
-            <div class="portrait-caption">
-              <span>Manufacturing × Materials</span>
-              <span>NDT × Data</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="page-shell metrics reveal" data-delay="180" aria-label="Career highlights">
-        <div class="metric"><strong>4+</strong><span>Years engineering &amp; research</span></div>
-        <div class="metric"><strong>7</strong><span>Publications &amp; thesis works</span></div>
-        <div class="metric"><strong>3.90</strong><span>Ph.D. GPA</span></div>
-        <div class="metric"><strong>2027</strong><span>Expected Ph.D. completion</span></div>
-      </div>
-    </section>
+<div class="page-shell">
+<div class="section-heading section-heading-dark reveal">
+<div>
+<span class="section-index mono">03</span>
+<p class="mono eyebrow">SELECTED ENGINEERING WORK</p>
+</div>
+<h2>Explore the work.<br/><em>Open the engineering.</em></h2>
+<p class="section-copy">Each project opens like a technical dossier—problem, contribution, methods, outcome, and a project-specific visualization.</p>
+</div>
+<div class="project-accordion">
+<details class="project-dossier reveal" name="project-dossiers" open="">
+<summary class="project-toggle">
+<span class="project-number mono">01</span>
+<span class="project-heading">
+<span class="project-kicker mono">METAL AM · L-PBF · ML</span>
+<strong>Detecting the engineering signature of L-PBF process interruptions</strong>
+</span>
+<span class="project-brief">Property variation, interruption regions, qualification-oriented analysis.</span>
+<span aria-hidden="true" class="project-toggle-icon"></span>
+</summary>
+<div class="project-detail">
+<div class="project-detail-inner">
+<div class="project-detail-copy">
+<div class="case-grid">
+<div><span class="case-label mono">PROBLEM</span><p>Interruptions alter local thermal history and can create property variation that may not be obvious through visual inspection.</p></div>
+<div><span class="case-label mono">MY ROLE</span><p>Experimental planning, build preparation, fabrication, mechanical-property mapping, characterization, statistics, and technical reporting.</p></div>
+<div><span class="case-label mono">METHODS</span><p>L-PBF, SS316L/Ti-6Al-4V, nanoindentation, SEM, profilometry, tensile testing, ANOVA/Tukey analysis, and machine learning.</p></div>
+<div><span class="case-label mono">OUTCOME</span><p>Developed a data-driven workflow for identifying interruption-affected regions; peer-reviewed journal publication in 2026.</p></div>
+</div>
+</div>
+<div class="project-visual project-visual-lpbf project-visual-image">
+<div class="visual-label mono">ADDITIVE MANUFACTURING / NDT MONITORING</div>
+<img alt="Additive manufacturing and ultrasonic NDT monitoring visualization showing layer-by-layer deposition, defect localization, and signal response." loading="lazy" src="assets/visuals/am-ndt-monitoring.png"/>
+<div aria-hidden="true" class="image-scan-beam"></div>
+<div class="image-caption mono"><span>LAYER-BY-LAYER BUILD</span><span>ULTRASONIC DEFECT RESPONSE</span></div>
+</div>
+</div>
+</div>
+</details>
+<details class="project-dossier reveal" name="project-dossiers">
+<summary class="project-toggle">
+<span class="project-number mono">02</span>
+<span class="project-heading"><span class="project-kicker mono">WAAM · ULTRASONICS · MATERIALS</span><strong>Ultrasound-Assisted WAAM of SS316L</strong></span>
+<span class="project-brief">Acoustic treatment, solidification behavior, microstructure, and properties.</span>
+<span aria-hidden="true" class="project-toggle-icon"></span>
+</summary>
+<div class="project-detail">
+<div class="project-detail-inner">
+<div class="project-detail-copy"><div class="case-grid">
+<div><span class="case-label mono">PROBLEM</span><p>WAAM thermal history and heat accumulation influence solidification, microstructure, and resulting mechanical behavior.</p></div>
+<div><span class="case-label mono">MY ROLE</span><p>Dissertation research spanning experimental planning, deposition, characterization, mechanical testing, and interpretation.</p></div>
+<div><span class="case-label mono">METHODS</span><p>WAAM, SS316L, ultrasound-assisted deposition, SEM/microscopy, mechanical testing, and acoustic streaming/cavitation concepts.</p></div>
+<div><span class="case-label mono">FOCUS</span><p>Connect ultrasonic treatment to melt-pool behavior, solidification response, microstructure, and performance.</p></div>
+</div></div>
+<div class="project-visual project-visual-waam">
+<div class="visual-label mono">WAAM / ACOUSTIC ENERGY COUPLING</div>
+<svg aria-label="Wire arc additive manufacturing with ultrasonic treatment schematic" role="img" viewBox="0 0 620 300">
+<g class="viz-grid"><path d="M20 55H600M20 105H600M20 155H600M20 205H600M20 255H600"></path><path d="M90 25V275M170 25V275M250 25V275M330 25V275M410 25V275M490 25V275M570 25V275"></path></g>
+<rect class="viz-platform" height="20" rx="3" width="470" x="75" y="230"></rect>
+<g class="waam-beads"><path d="M145 223Q185 203 225 223T305 223T385 223T465 223"></path><path d="M165 209Q200 190 235 209T305 209T375 209T445 209"></path><path d="M190 195Q220 177 250 195T310 195T370 195T430 195"></path></g>
+<g class="waam-torch"><path d="M260 52L324 52L310 128L275 128Z"></path><line class="wire-feed" x1="292" x2="292" y1="20" y2="134"></line><path d="M283 128L301 128L296 157L288 157Z"></path><line class="viz-laser" x1="292" x2="292" y1="157" y2="180"></line><ellipse class="viz-hot" cx="292" cy="183" rx="18" ry="6"></ellipse></g>
+<g class="ultra-source"><rect height="26" rx="4" width="73" x="472" y="143"></rect><line x1="472" x2="430" y1="156" y2="183"></line><path class="viz-wave" d="M458 157q-16 13 0 26M447 151q-27 19 0 38M436 145q-38 25 0 50"></path></g>
+<text class="viz-text" x="103" y="277">LAYER DEPOSITION / THERMAL HISTORY</text><text class="viz-text" x="409" y="117">ULTRASONIC INPUT</text>
+</svg>
+</div>
+</div>
+</div>
+</details>
+<details class="project-dossier reveal" name="project-dossiers">
+<summary class="project-toggle">
+<span class="project-number mono">03</span>
+<span class="project-heading"><span class="project-kicker mono">POLYMER AM · AEROSPACE-STYLE TESTING</span><strong>ULTEM 9085 Process &amp; Part Qualification</strong></span>
+<span class="project-brief">FDM fabrication, mechanical testing, dimensional inspection, and thermographic contrast.</span>
+<span aria-hidden="true" class="project-toggle-icon"></span>
+</summary>
+<div class="project-detail">
+<div class="project-detail-inner">
+<div class="project-detail-copy"><div class="case-grid">
+<div><span class="case-label mono">PROBLEM</span><p>High-performance polymer AM requires repeatable print quality and confidence that interruptions or defects do not compromise part behavior.</p></div>
+<div><span class="case-label mono">MY ROLE</span><p>Specimen fabrication, dimensional inspection, mechanical testing, defect-focused evaluation, and qualification-style documentation.</p></div>
+<div><span class="case-label mono">METHODS</span><p>Stratasys FDM, ULTEM 9085, tensile/compression/impact testing, microscopy, thermography, and NDE concepts.</p></div>
+<div><span class="case-label mono">APPLICATION</span><p>Aerospace-oriented process and part evaluation with emphasis on anisotropy, print quality, and defect visibility.</p></div>
+</div></div>
+<div class="project-visual thermal-project">
+<div class="visual-label mono">THERMOGRAPHIC CONTRAST / ULTEM 9085</div>
+<div class="thermal-panel">
+<div class="thermal-specimen"><span class="thermal-defect"></span><span class="thermal-scan"></span></div>
+<div class="thermal-legend mono"><span>COOL</span><i></i><span>HOT</span></div>
+<div class="thermal-stats mono"><span>ROI A</span><strong>ΔT 3.8°C</strong><span>CONTRAST / FLAGGED</span></div>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="project-dossier reveal" name="project-dossiers">
+<summary class="project-toggle">
+<span class="project-number mono">04</span>
+<span class="project-heading"><span class="project-kicker mono">NDT · SIGNAL PROCESSING</span><strong>Ultrasonic &amp; Resonance-Based Part Evaluation</strong></span>
+<span class="project-brief">Time-of-flight, stiffness response, RUS, signal processing, and defect-sensitive behavior.</span>
+<span aria-hidden="true" class="project-toggle-icon"></span>
+</summary>
+<div class="project-detail">
+<div class="project-detail-inner">
+<div class="project-detail-copy"><div class="case-grid">
+<div><span class="case-label mono">PROBLEM</span><p>AM parts need nondestructive methods that can detect stiffness, density-related, and defect-sensitive changes without sectioning the component.</p></div>
+<div><span class="case-label mono">MY ROLE</span><p>Ultrasonic acquisition, peak selection, TOF analysis, wave-velocity calculations, RUS interpretation, and automated processing.</p></div>
+<div><span class="case-label mono">METHODS</span><p>Ultrasonics, 2.25 MHz transducers, RUS, filtering, peak detection, time-of-flight, velocity, and Python signal analysis.</p></div>
+<div><span class="case-label mono">OUTPUT</span><p>Quantitative NDT workflows linking signal response to stiffness and manufacturing-history variation.</p></div>
+</div></div>
+<div class="project-visual project-visual-signal">
+<div class="visual-label mono">ULTRASONIC A-SCAN / RESONANCE RESPONSE</div>
+<svg aria-label="Ultrasonic and resonance signal analysis visualization" role="img" viewBox="0 0 620 300">
+<g class="viz-grid"><path d="M30 50H590M30 100H590M30 150H590M30 200H590M30 250H590"></path><path d="M90 25V270M170 25V270M250 25V270M330 25V270M410 25V270M490 25V270M570 25V270"></path></g>
+<path class="signal-trace" d="M35 222 L70 219 L95 222 L120 215 L140 220 L160 194 L172 86 L184 212 L205 220 L235 218 L265 221 L290 212 L305 162 L318 214 L350 220 L388 216 L420 220 L455 214 L470 188 L481 220 L520 218 L560 221 L590 219"></path>
+<line class="signal-marker" x1="172" x2="172" y1="65" y2="240"></line><line class="signal-marker signal-marker-secondary" x1="305" x2="305" y1="145" y2="240"></line>
+<text class="viz-text" x="145" y="52">FIRST ARRIVAL</text><text class="viz-text" x="281" y="132">SECOND PEAK</text>
+<g class="resonance-bars"><rect height="76" width="13" x="395" y="80"></rect><rect height="44" width="13" x="420" y="112"></rect><rect height="92" width="13" x="445" y="64"></rect><rect height="58" width="13" x="470" y="98"></rect><rect height="28" width="13" x="495" y="128"></rect></g>
+<text class="viz-text" x="394" y="177">RUS MODES</text>
+</svg>
+</div>
+</div>
+</div>
+</details>
+<details class="project-dossier reveal" name="project-dossiers">
+<summary class="project-toggle">
+<span class="project-number mono">05</span>
+<span class="project-heading"><span class="project-kicker mono">INDUSTRY 4.0 · MACHINE VISION</span><strong>Data-Driven Inspection &amp; Digital Manufacturing</strong></span>
+<span class="project-brief">Machine vision, sensor-based inspection, digital twins, analytics, and automated decision support.</span>
+<span aria-hidden="true" class="project-toggle-icon"></span>
+</summary>
+<div class="project-detail">
+<div class="project-detail-inner">
+<div class="project-detail-copy"><div class="case-grid">
+<div><span class="case-label mono">PROBLEM</span><p>Manufacturing inspection data is often fragmented across sensors, images, test systems, and manual analysis workflows.</p></div>
+<div><span class="case-label mono">MY ROLE</span><p>Research contributions in machine vision, sensor-based quality inspection, digital-twin concepts, and manufacturing analytics.</p></div>
+<div><span class="case-label mono">METHODS</span><p>Computer vision, imaging, Python, statistical analysis, data visualization, IoT concepts, and digital manufacturing workflows.</p></div>
+<div><span class="case-label mono">VALUE</span><p>Connect physical manufacturing data to automated inspection, visualization, and engineering decision-making.</p></div>
+</div></div>
+<div class="project-visual project-visual-digital">
+<div class="visual-label mono">PHYSICAL PROCESS ↔ DIGITAL THREAD</div>
+<svg aria-label="Digital manufacturing network and machine vision schematic" role="img" viewBox="0 0 620 300">
+<g class="viz-grid"><path d="M30 50H590M30 100H590M30 150H590M30 200H590M30 250H590"></path><path d="M90 25V270M170 25V270M250 25V270M330 25V270M410 25V270M490 25V270M570 25V270"></path></g>
+<g class="digital-links"><path d="M126 151L245 92L336 151L472 88M126 151L250 218L336 151L475 219M245 92L250 218M472 88L475 219"></path></g>
+<g class="digital-nodes"><circle cx="126" cy="151" r="28"></circle><circle cx="245" cy="92" r="22"></circle><circle cx="250" cy="218" r="22"></circle><circle cx="336" cy="151" r="32"></circle><circle cx="472" cy="88" r="22"></circle><circle cx="475" cy="219" r="22"></circle></g>
+<g class="digital-labels"><text x="105" y="155">AM</text><text x="225" y="96">VISION</text><text x="229" y="222">NDT</text><text x="309" y="155">DATA</text><text x="449" y="92">TWIN</text><text x="451" y="223">QC</text></g>
+<circle class="digital-pulse" cx="336" cy="151" r="48"></circle>
+</svg>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- COMPUTATIONAL -->
+<section class="section-code" id="code"><div aria-hidden="true" class="section-symbol section-symbol-code-wave"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M2 13h3l2-6 4 12 4-16 4 10h3"></path>
+</svg></div><div aria-hidden="true" class="section-symbol section-symbol-code-brackets symbol-copper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="m8 5-5 7 5 7M16 5l5 7-5 7M14 3l-4 18"></path>
+</svg></div>
 
-    <!-- POSITIONING -->
-    <section class="section-light intro-section">
-      <div class="section-symbol section-symbol-rocket symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M34 8c10 5 15 15 15 28L38 47 27 36c0-13 5-23 15-28z"/><circle cx="34" cy="22" r="4"/><path d="M27 36 17 40l6-10M38 47l-4 10 10-6M31 33l6 6"/></svg></div>
-      <div class="page-shell intro-grid">
-        <div class="section-label reveal">
-          <span class="section-index mono">01</span>
-          <p class="mono">PROFILE</p>
-        </div>
-        <div class="intro-statement reveal" data-delay="80">
-          <p class="eyebrow">ENGINEERING AT THE INTERSECTION</p>
-          <h2>Not just additive manufacturing.<br><em>An integrated engineering skill set.</em></h2>
-          <p>I am an Advanced Manufacturing Engineering Ph.D. candidate with multidisciplinary experience spanning additive manufacturing, materials characterization, mechanical testing, nondestructive evaluation, process monitoring, programming, statistics, machine learning, laboratory operations, and engineering education.</p>
-          <p>My work follows the complete engineering loop: <strong>design → fabricate → monitor → test → inspect → analyze → automate → communicate.</strong> That lets me approach manufacturing problems from both the physical and computational sides.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- EXPERTISE -->
-    <section class="section-dark expertise-section expertise-section-dark ambient-dark" id="expertise">
-      <div class="section-symbol section-symbol-sensor" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="5"/><path d="M20 22a17 17 0 0 0 0 20M44 22a17 17 0 0 1 0 20M14 16a25 25 0 0 0 0 32M50 16a25 25 0 0 1 0 32"/></svg></div>
-      <div class="section-symbol section-symbol-microscope symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M27 10h12v8H27zM33 18v9l-8 8M24 36c0 8 6 14 14 14h8M20 52h28M39 32l6 6M17 23l10 10"/></svg></div>
-      <div class="section-symbol section-symbol-ultrasound symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M9 32h10M20 32c5-12 10-12 15 0s10 12 15 0M50 32h5"/><path d="M16 18c-5 4-8 9-8 14s3 10 8 14M48 18c5 4 8 9 8 14s-3 10-8 14"/></svg></div>
-      <div class="section-symbol section-symbol-thermo" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M28 14a4 4 0 0 1 8 0v18a10 10 0 1 1-8 0z"/><path d="M32 24v14"/><circle cx="32" cy="44" r="5"/></svg></div>
-      <div class="page-shell">
-        <div class="section-heading section-heading-dark reveal">
-          <div>
-            <span class="section-index mono">02</span>
-            <p class="mono eyebrow">CORE EXPERTISE</p>
-          </div>
-          <h2>Five disciplines.<br><em>One engineering system.</em></h2>
-          <p class="section-copy">A recruiter should be able to place me in manufacturing, materials, NDT, digital manufacturing, R&amp;D, or technical-leadership conversations without changing the story.</p>
-        </div>
 
-        <div class="bento-grid">
-          <article class="bento-card bento-large reveal">
-            <div class="card-number mono">A / 01</div>
-            <h3>Advanced Manufacturing</h3>
-            <p>L-PBF / SLM, WAAM, FDM / FFF, SLA, build preparation, process-parameter studies, process interruptions, qualification-oriented research, heat treatment, CNC and wire-EDM support.</p>
-            <div class="tag-row"><span>L-PBF</span><span>WAAM</span><span>FDM</span><span>SLA</span></div>
-          </article>
-
-          <article class="bento-card reveal" data-delay="60">
-            <div class="card-number mono">B / 02</div>
-            <h3>Materials &amp; Testing</h3>
-            <p>SS316L, Ti-6Al-4V, ULTEM 9085, tensile, compression, bending, nanoindentation, microscopy, SEM, profilometry, micro-mechanical property mapping.</p>
-          </article>
-
-          <article class="bento-card reveal" data-delay="100">
-            <div class="card-number mono">C / 03</div>
-            <h3>NDT &amp; Process Monitoring</h3>
-            <p>Ultrasonic testing, Resonant Ultrasound Spectroscopy, thermography, acoustic emission, eddy current, in-situ monitoring, defect evaluation, and stiffness assessment.</p>
-            <div class="tag-row"><span>UT</span><span>RUS</span><span>THERMOGRAPHY</span><span>AE</span></div>
-          </article>
-
-          <article class="bento-card reveal" data-delay="140">
-            <div class="card-number mono">D / 04</div>
-            <h3>Computational Engineering</h3>
-            <p>Python, MATLAB, signal processing, engineering-data pipelines, automated test analysis, statistics, visualization, machine learning, machine vision.</p>
-          </article>
-
-          <article class="bento-card bento-wide reveal" data-delay="180">
-            <div class="card-number mono">E / 05</div>
-            <h3>Technical Leadership &amp; Communication</h3>
-            <p>Research project execution, laboratory scheduling, equipment setup, operator training, student mentoring, course instruction, technical writing, conference presentation, cross-functional problem solving.</p>
-            <div class="leadership-line"><span>RESEARCH</span><span>LAB OPS</span><span>TEACHING</span><span>MENTORING</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section-dark projects-section ambient-dark" id="projects">
-      <div class="section-symbol section-symbol-probe symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="8" y="12" width="22" height="13" rx="3"/><path d="M30 18h10M40 18l8 8M47 29c8 5 8 11 0 16M42 25c14 8 14 22 0 30M10 50h34"/></svg></div>
-      <div class="section-symbol section-symbol-laser" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M25 9h14v13l-4 5h-6l-4-5zM32 27v14M22 49h20M18 55h28"/><circle cx="32" cy="44" r="3"/></svg></div>
-      <div class="section-symbol section-symbol-layers symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M12 22h40M16 30h32M20 38h24M24 46h16"/><path d="M32 14v8"/></svg></div>
-      <div class="page-shell">
-        <div class="section-heading section-heading-dark reveal">
-          <div>
-            <span class="section-index mono">03</span>
-            <p class="mono eyebrow">SELECTED ENGINEERING WORK</p>
-          </div>
-          <h2>Explore the work.<br><em>Open the engineering.</em></h2>
-          <p class="section-copy">Each project opens like a technical dossier—problem, contribution, methods, outcome, and a project-specific visualization.</p>
-        </div>
-
-        <div class="project-accordion">
-          <details class="project-dossier reveal" name="project-dossiers" open>
-            <summary class="project-toggle">
-              <span class="project-number mono">01</span>
-              <span class="project-heading">
-                <span class="project-kicker mono">METAL AM · L-PBF · ML</span>
-                <strong>Detecting the engineering signature of L-PBF process interruptions</strong>
-              </span>
-              <span class="project-brief">Property variation, interruption regions, qualification-oriented analysis.</span>
-              <span class="project-toggle-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="project-detail">
-              <div class="project-detail-inner">
-                <div class="project-detail-copy">
-                  <div class="case-grid">
-                    <div><span class="case-label mono">PROBLEM</span><p>Interruptions alter local thermal history and can create property variation that may not be obvious through visual inspection.</p></div>
-                    <div><span class="case-label mono">MY ROLE</span><p>Experimental planning, build preparation, fabrication, mechanical-property mapping, characterization, statistics, and technical reporting.</p></div>
-                    <div><span class="case-label mono">METHODS</span><p>L-PBF, SS316L/Ti-6Al-4V, nanoindentation, SEM, profilometry, tensile testing, ANOVA/Tukey analysis, and machine learning.</p></div>
-                    <div><span class="case-label mono">OUTCOME</span><p>Developed a data-driven workflow for identifying interruption-affected regions; peer-reviewed journal publication in 2026.</p></div>
-                  </div>
-                </div>
-                <div class="project-visual project-visual-lpbf project-visual-image">
-                  <div class="visual-label mono">ADDITIVE MANUFACTURING / NDT MONITORING</div>
-                  <img src="assets/visuals/am-ndt-monitoring.png" alt="Additive manufacturing and ultrasonic NDT monitoring visualization showing layer-by-layer deposition, defect localization, and signal response." loading="lazy" />
-                  <div class="image-scan-beam" aria-hidden="true"></div>
-                  <div class="image-caption mono"><span>LAYER-BY-LAYER BUILD</span><span>ULTRASONIC DEFECT RESPONSE</span></div>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <details class="project-dossier reveal" name="project-dossiers">
-            <summary class="project-toggle">
-              <span class="project-number mono">02</span>
-              <span class="project-heading"><span class="project-kicker mono">WAAM · ULTRASONICS · MATERIALS</span><strong>Ultrasound-Assisted WAAM of SS316L</strong></span>
-              <span class="project-brief">Acoustic treatment, solidification behavior, microstructure, and properties.</span>
-              <span class="project-toggle-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="project-detail">
-              <div class="project-detail-inner">
-                <div class="project-detail-copy"><div class="case-grid">
-                  <div><span class="case-label mono">PROBLEM</span><p>WAAM thermal history and heat accumulation influence solidification, microstructure, and resulting mechanical behavior.</p></div>
-                  <div><span class="case-label mono">MY ROLE</span><p>Dissertation research spanning experimental planning, deposition, characterization, mechanical testing, and interpretation.</p></div>
-                  <div><span class="case-label mono">METHODS</span><p>WAAM, SS316L, ultrasound-assisted deposition, SEM/microscopy, mechanical testing, and acoustic streaming/cavitation concepts.</p></div>
-                  <div><span class="case-label mono">FOCUS</span><p>Connect ultrasonic treatment to melt-pool behavior, solidification response, microstructure, and performance.</p></div>
-                </div></div>
-                <div class="project-visual project-visual-waam">
-                  <div class="visual-label mono">WAAM / ACOUSTIC ENERGY COUPLING</div>
-                  <svg viewBox="0 0 620 300" role="img" aria-label="Wire arc additive manufacturing with ultrasonic treatment schematic">
-                    <g class="viz-grid"><path d="M20 55H600M20 105H600M20 155H600M20 205H600M20 255H600"/><path d="M90 25V275M170 25V275M250 25V275M330 25V275M410 25V275M490 25V275M570 25V275"/></g>
-                    <rect x="75" y="230" width="470" height="20" rx="3" class="viz-platform"/>
-                    <g class="waam-beads"><path d="M145 223Q185 203 225 223T305 223T385 223T465 223"/><path d="M165 209Q200 190 235 209T305 209T375 209T445 209"/><path d="M190 195Q220 177 250 195T310 195T370 195T430 195"/></g>
-                    <g class="waam-torch"><path d="M260 52L324 52L310 128L275 128Z"/><line x1="292" y1="20" x2="292" y2="134" class="wire-feed"/><path d="M283 128L301 128L296 157L288 157Z"/><line x1="292" y1="157" x2="292" y2="180" class="viz-laser"/><ellipse cx="292" cy="183" rx="18" ry="6" class="viz-hot"/></g>
-                    <g class="ultra-source"><rect x="472" y="143" width="73" height="26" rx="4"/><line x1="472" y1="156" x2="430" y2="183"/><path d="M458 157q-16 13 0 26M447 151q-27 19 0 38M436 145q-38 25 0 50" class="viz-wave"/></g>
-                    <text x="103" y="277" class="viz-text">LAYER DEPOSITION / THERMAL HISTORY</text><text x="409" y="117" class="viz-text">ULTRASONIC INPUT</text>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <details class="project-dossier reveal" name="project-dossiers">
-            <summary class="project-toggle">
-              <span class="project-number mono">03</span>
-              <span class="project-heading"><span class="project-kicker mono">POLYMER AM · AEROSPACE-STYLE TESTING</span><strong>ULTEM 9085 Process &amp; Part Qualification</strong></span>
-              <span class="project-brief">FDM fabrication, mechanical testing, dimensional inspection, and thermographic contrast.</span>
-              <span class="project-toggle-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="project-detail">
-              <div class="project-detail-inner">
-                <div class="project-detail-copy"><div class="case-grid">
-                  <div><span class="case-label mono">PROBLEM</span><p>High-performance polymer AM requires repeatable print quality and confidence that interruptions or defects do not compromise part behavior.</p></div>
-                  <div><span class="case-label mono">MY ROLE</span><p>Specimen fabrication, dimensional inspection, mechanical testing, defect-focused evaluation, and qualification-style documentation.</p></div>
-                  <div><span class="case-label mono">METHODS</span><p>Stratasys FDM, ULTEM 9085, tensile/compression/impact testing, microscopy, thermography, and NDE concepts.</p></div>
-                  <div><span class="case-label mono">APPLICATION</span><p>Aerospace-oriented process and part evaluation with emphasis on anisotropy, print quality, and defect visibility.</p></div>
-                </div></div>
-                <div class="project-visual thermal-project">
-                  <div class="visual-label mono">THERMOGRAPHIC CONTRAST / ULTEM 9085</div>
-                  <div class="thermal-panel">
-                    <div class="thermal-specimen"><span class="thermal-defect"></span><span class="thermal-scan"></span></div>
-                    <div class="thermal-legend mono"><span>COOL</span><i></i><span>HOT</span></div>
-                    <div class="thermal-stats mono"><span>ROI A</span><strong>ΔT 3.8°C</strong><span>CONTRAST / FLAGGED</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <details class="project-dossier reveal" name="project-dossiers">
-            <summary class="project-toggle">
-              <span class="project-number mono">04</span>
-              <span class="project-heading"><span class="project-kicker mono">NDT · SIGNAL PROCESSING</span><strong>Ultrasonic &amp; Resonance-Based Part Evaluation</strong></span>
-              <span class="project-brief">Time-of-flight, stiffness response, RUS, signal processing, and defect-sensitive behavior.</span>
-              <span class="project-toggle-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="project-detail">
-              <div class="project-detail-inner">
-                <div class="project-detail-copy"><div class="case-grid">
-                  <div><span class="case-label mono">PROBLEM</span><p>AM parts need nondestructive methods that can detect stiffness, density-related, and defect-sensitive changes without sectioning the component.</p></div>
-                  <div><span class="case-label mono">MY ROLE</span><p>Ultrasonic acquisition, peak selection, TOF analysis, wave-velocity calculations, RUS interpretation, and automated processing.</p></div>
-                  <div><span class="case-label mono">METHODS</span><p>Ultrasonics, 2.25 MHz transducers, RUS, filtering, peak detection, time-of-flight, velocity, and Python signal analysis.</p></div>
-                  <div><span class="case-label mono">OUTPUT</span><p>Quantitative NDT workflows linking signal response to stiffness and manufacturing-history variation.</p></div>
-                </div></div>
-                <div class="project-visual project-visual-signal">
-                  <div class="visual-label mono">ULTRASONIC A-SCAN / RESONANCE RESPONSE</div>
-                  <svg viewBox="0 0 620 300" role="img" aria-label="Ultrasonic and resonance signal analysis visualization">
-                    <g class="viz-grid"><path d="M30 50H590M30 100H590M30 150H590M30 200H590M30 250H590"/><path d="M90 25V270M170 25V270M250 25V270M330 25V270M410 25V270M490 25V270M570 25V270"/></g>
-                    <path d="M35 222 L70 219 L95 222 L120 215 L140 220 L160 194 L172 86 L184 212 L205 220 L235 218 L265 221 L290 212 L305 162 L318 214 L350 220 L388 216 L420 220 L455 214 L470 188 L481 220 L520 218 L560 221 L590 219" class="signal-trace"/>
-                    <line x1="172" y1="65" x2="172" y2="240" class="signal-marker"/><line x1="305" y1="145" x2="305" y2="240" class="signal-marker signal-marker-secondary"/>
-                    <text x="145" y="52" class="viz-text">FIRST ARRIVAL</text><text x="281" y="132" class="viz-text">SECOND PEAK</text>
-                    <g class="resonance-bars"><rect x="395" y="80" width="13" height="76"/><rect x="420" y="112" width="13" height="44"/><rect x="445" y="64" width="13" height="92"/><rect x="470" y="98" width="13" height="58"/><rect x="495" y="128" width="13" height="28"/></g>
-                    <text x="394" y="177" class="viz-text">RUS MODES</text>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </details>
-
-          <details class="project-dossier reveal" name="project-dossiers">
-            <summary class="project-toggle">
-              <span class="project-number mono">05</span>
-              <span class="project-heading"><span class="project-kicker mono">INDUSTRY 4.0 · MACHINE VISION</span><strong>Data-Driven Inspection &amp; Digital Manufacturing</strong></span>
-              <span class="project-brief">Machine vision, sensor-based inspection, digital twins, analytics, and automated decision support.</span>
-              <span class="project-toggle-icon" aria-hidden="true"></span>
-            </summary>
-            <div class="project-detail">
-              <div class="project-detail-inner">
-                <div class="project-detail-copy"><div class="case-grid">
-                  <div><span class="case-label mono">PROBLEM</span><p>Manufacturing inspection data is often fragmented across sensors, images, test systems, and manual analysis workflows.</p></div>
-                  <div><span class="case-label mono">MY ROLE</span><p>Research contributions in machine vision, sensor-based quality inspection, digital-twin concepts, and manufacturing analytics.</p></div>
-                  <div><span class="case-label mono">METHODS</span><p>Computer vision, imaging, Python, statistical analysis, data visualization, IoT concepts, and digital manufacturing workflows.</p></div>
-                  <div><span class="case-label mono">VALUE</span><p>Connect physical manufacturing data to automated inspection, visualization, and engineering decision-making.</p></div>
-                </div></div>
-                <div class="project-visual project-visual-digital">
-                  <div class="visual-label mono">PHYSICAL PROCESS ↔ DIGITAL THREAD</div>
-                  <svg viewBox="0 0 620 300" role="img" aria-label="Digital manufacturing network and machine vision schematic">
-                    <g class="viz-grid"><path d="M30 50H590M30 100H590M30 150H590M30 200H590M30 250H590"/><path d="M90 25V270M170 25V270M250 25V270M330 25V270M410 25V270M490 25V270M570 25V270"/></g>
-                    <g class="digital-links"><path d="M126 151L245 92L336 151L472 88M126 151L250 218L336 151L475 219M245 92L250 218M472 88L475 219"/></g>
-                    <g class="digital-nodes"><circle cx="126" cy="151" r="28"/><circle cx="245" cy="92" r="22"/><circle cx="250" cy="218" r="22"/><circle cx="336" cy="151" r="32"/><circle cx="472" cy="88" r="22"/><circle cx="475" cy="219" r="22"/></g>
-                    <g class="digital-labels"><text x="105" y="155">AM</text><text x="225" y="96">VISION</text><text x="229" y="222">NDT</text><text x="309" y="155">DATA</text><text x="449" y="92">TWIN</text><text x="451" y="223">QC</text></g>
-                    <circle cx="336" cy="151" r="48" class="digital-pulse"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPUTATIONAL -->
-    <section class="section-code" id="code">
-      <div class="section-symbol section-symbol-wave" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M4 34h10l5-15 8 31 8-38 8 27 5-12h12"/></svg></div>
-      <div class="section-symbol section-symbol-data symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="14" cy="18" r="4"/><circle cx="46" cy="14" r="4"/><circle cx="50" cy="46" r="4"/><circle cx="18" cy="49" r="4"/><path d="M18 18l24-3M17 22l-1 23M22 48l24-2M47 18l2 24M20 21l26 22"/></svg></div>
-      <div class="section-symbol section-symbol-code" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M24 18 12 32l12 14M40 18l12 14-12 14M36 12 28 52"/></svg></div>
-      <div class="page-shell code-layout">
-        <div class="code-copy reveal">
-          <span class="section-index mono">04</span>
-          <p class="mono eyebrow">COMPUTATIONAL ENGINEERING</p>
-          <h2>I do not just collect data.<br><em>I build the analysis around it.</em></h2>
-          <p>Programming is part of my engineering workflow: automating calculations, processing test and sensor data, comparing multiple specimens, applying statistics, and converting raw measurements into interpretable results.</p>
-
-          <div class="code-capabilities">
-            <div><strong>Mechanical test automation</strong><span>Stress–strain, modulus, 0.2% offset yield, UTS, elongation, multi-file comparison.</span></div>
-            <div><strong>Ultrasonic signal processing</strong><span>Peak detection, filtering/smoothing, time-of-flight, wave velocity, visual validation.</span></div>
-            <div><strong>Statistics &amp; ML</strong><span>ANOVA, Tukey comparisons, regression, classification, parameter correlation, visualization.</span></div>
-            <div><strong>Research workflow automation</strong><span>Reusable scripts, batch processing, result export, plotting, engineering decision support.</span></div>
-          </div>
-        </div>
-
-        <div class="terminal reveal" data-delay="120">
-          <div class="terminal-bar">
-            <span></span><span></span><span></span>
-            <p class="mono">ultrasonic_tof_analysis.py</p>
-          </div>
-          <pre aria-label="Illustrative Python engineering workflow"><code><span class="code-comment"># Engineering data → interpretable result</span>
+<div class="page-shell code-layout">
+<div class="code-copy reveal">
+<span class="section-index mono">04</span>
+<p class="mono eyebrow">COMPUTATIONAL ENGINEERING</p>
+<h2>I do not just collect data.<br/><em>I build the analysis around it.</em></h2>
+<p>Programming is part of my engineering workflow: automating calculations, processing test and sensor data, comparing multiple specimens, applying statistics, and converting raw measurements into interpretable results.</p>
+<div class="code-capabilities">
+<div><strong>Mechanical test automation</strong><span>Stress–strain, modulus, 0.2% offset yield, UTS, elongation, multi-file comparison.</span></div>
+<div><strong>Ultrasonic signal processing</strong><span>Peak detection, filtering/smoothing, time-of-flight, wave velocity, visual validation.</span></div>
+<div><strong>Statistics &amp; ML</strong><span>ANOVA, Tukey comparisons, regression, classification, parameter correlation, visualization.</span></div>
+<div><strong>Research workflow automation</strong><span>Reusable scripts, batch processing, result export, plotting, engineering decision support.</span></div>
+</div>
+</div>
+<div class="terminal reveal" data-delay="120">
+<div class="terminal-bar">
+<span></span><span></span><span></span>
+<p class="mono">ultrasonic_tof_analysis.py</p>
+</div>
+<pre aria-label="Illustrative Python engineering workflow"><code><span class="code-comment"># Engineering data → interpretable result</span>
 <span class="code-key">def</span> <span class="code-fn">analyze_signal</span>(time, amplitude, thickness):
     filtered = smooth(amplitude)
     peaks = detect_peaks(filtered)
@@ -369,234 +385,240 @@
     }
 
 <span class="code-comment"># Repeatable. Reviewable. Exportable.</span></code></pre>
-          <div class="terminal-footer mono"><span>PYTHON</span><span>SIGNAL PROCESSING</span><span>AUTOMATION</span></div>
-        </div>
-      </div>
-    </section>
+<div class="terminal-footer mono"><span>PYTHON</span><span>SIGNAL PROCESSING</span><span>AUTOMATION</span></div>
+</div>
+</div>
+</section>
+<!-- EXPERIENCE -->
+<section class="section-light experience-section" id="experience"><div aria-hidden="true" class="section-symbol section-symbol-experience-gear symbol-copper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="3.6"></circle>
+<path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"></path>
+<path d="m5.3 5.3 2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"></path>
+</svg></div><div aria-hidden="true" class="section-symbol section-symbol-experience-caliper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M4 4v16M4 7h13M4 17h10"></path>
+<path d="M17 7v5h-3M14 17v-4h-3"></path>
+<path d="M8 4v3M11 4v3"></path>
+</svg></div>
 
-    <!-- EXPERIENCE -->
-    <section class="section-light experience-section" id="experience">
-      <div class="section-symbol section-symbol-gear symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="10"/><path d="M32 7v8M32 49v8M7 32h8M49 32h8M14 14l6 6M44 44l6 6M50 14l-6 6M20 44l-6 6"/></svg></div>
-      <div class="section-symbol section-symbol-caliper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M12 16v32M12 21h34M12 43h27M46 21v10M39 43v-8M20 16v6M26 16v6M32 16v6"/></svg></div>
-      <div class="page-shell experience-layout">
-        <div class="experience-side reveal">
-          <span class="section-index mono">05</span>
-          <p class="mono eyebrow">EXPERIENCE</p>
-          <h2>Research depth.<br><em>Teaching clarity.</em><br>Hands-on execution.</h2>
-          <p>My background combines independent research, laboratory operations, engineering instruction, student support, and manufacturing-industry exposure.</p>
-        </div>
 
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-date mono">AUG 2025 — PRESENT</div>
-            <div class="timeline-content">
-              <h3>Course Instructor · Engineering Mechanics for MFGE</h3>
-              <p class="timeline-org">Georgia Southern University</p>
-              <p>Design and deliver sophomore-level instruction in statics, dynamics, and mechanics of materials; lead problem-solving, assessment, and technical communication.</p>
-            </div>
-          </article>
+<div class="page-shell experience-layout">
+<div class="experience-side reveal">
+<span class="section-index mono">05</span>
+<p class="mono eyebrow">EXPERIENCE</p>
+<h2>Research depth.<br/><em>Teaching clarity.</em><br/>Hands-on execution.</h2>
+<p>My background combines independent research, laboratory operations, engineering instruction, student support, and manufacturing-industry exposure.</p>
+</div>
+<div class="timeline">
+<article class="timeline-item reveal">
+<div class="timeline-date mono">AUG 2025 — PRESENT</div>
+<div class="timeline-content">
+<h3>Course Instructor · Engineering Mechanics for MFGE</h3>
+<p class="timeline-org">Georgia Southern University</p>
+<p>Design and deliver sophomore-level instruction in statics, dynamics, and mechanics of materials; lead problem-solving, assessment, and technical communication.</p>
+</div>
+</article>
+<article class="timeline-item reveal">
+<div class="timeline-date mono">JAN 2022 — PRESENT</div>
+<div class="timeline-content">
+<h3>Graduate Research Assistant</h3>
+<p class="timeline-org">Metal AM Lab &amp; LANDTIE · Georgia Southern University</p>
+<ul>
+<li>Lead dissertation research on ultrasonic-treatment effects in SS316L WAAM.</li>
+<li>Fabricate and characterize L-PBF and WAAM parts using mechanical testing, nanoindentation, microscopy, and SEM.</li>
+<li>Develop ML and statistical workflows for process-interruption classification and materials-property analysis.</li>
+<li>Apply ultrasonic testing, thermography, acoustic emission, and related methods for defect and quality evaluation.</li>
+<li>Coordinate equipment scheduling, machine setup, and operator training across AM systems.</li>
+</ul>
+</div>
+</article>
+<article class="timeline-item reveal">
+<div class="timeline-date mono">JAN 2023 — MAY 2025</div>
+<div class="timeline-content">
+<h3>Teaching Assistant</h3>
+<p class="timeline-org">Georgia Southern University</p>
+<p>Supported undergraduate and graduate manufacturing courses through laboratory instruction, project/assignment evaluation, and technical problem-solving sessions.</p>
+</div>
+</article>
+<article class="timeline-item reveal">
+<div class="timeline-date mono">JAN — DEC 2022</div>
+<div class="timeline-content">
+<h3>Graduate Assistant · SARC</h3>
+<p class="timeline-org">Georgia Southern University</p>
+<p>Supported student-services operations, documentation workflows, and activity planning for approximately 400 students at the Armstrong Campus.</p>
+</div>
+</article>
+<article class="timeline-item reveal">
+<div class="timeline-date mono">APR — MAY 2021</div>
+<div class="timeline-content">
+<h3>Maintenance &amp; Quality Control Engineer Intern</h3>
+<p class="timeline-org">Kristna Engineering Works · India</p>
+<p>Supported quality-control and maintenance activities in a production manufacturing environment.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- LEADERSHIP STRIP -->
+<section class="leadership-strip">
+<div class="page-shell leadership-grid">
+<div class="leadership-heading reveal">
+<p class="mono eyebrow">TECHNICAL LEADERSHIP</p>
+<h2>I can contribute as an engineer,<br/><em>and grow as a technical leader.</em></h2>
+</div>
+<div class="leadership-points reveal" data-delay="100">
+<div><span class="mono">01</span><p><strong>Laboratory operations</strong> — equipment scheduling, setup, safe use, and experimental coordination.</p></div>
+<div><span class="mono">02</span><p><strong>Training &amp; mentoring</strong> — students and researchers on AM systems, testing, and engineering workflows.</p></div>
+<div><span class="mono">03</span><p><strong>Project execution</strong> — from research question and fabrication through analysis, publication, and presentation.</p></div>
+<div><span class="mono">04</span><p><strong>Engineering education</strong> — independent course delivery, assessment, technical explanation, and student support.</p></div>
+</div>
+</div>
+</section>
+<!-- RESEARCH / PUBLICATIONS -->
+<section class="section-dark research-section ambient-dark" id="research"><div aria-hidden="true" class="section-symbol section-symbol-research-crystal"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="m12 3 6 4v10l-6 4-6-4V7Z"></path>
+<path d="m6 7 6 4 6-4M12 11v10M6 17l6-6 6 6"></path>
+</svg></div><div aria-hidden="true" class="section-symbol section-symbol-research-wave symbol-copper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M2 13h3l2-6 4 12 4-16 4 10h3"></path>
+</svg></div>
 
-          <article class="timeline-item reveal">
-            <div class="timeline-date mono">JAN 2022 — PRESENT</div>
-            <div class="timeline-content">
-              <h3>Graduate Research Assistant</h3>
-              <p class="timeline-org">Metal AM Lab &amp; LANDTIE · Georgia Southern University</p>
-              <ul>
-                <li>Lead dissertation research on ultrasonic-treatment effects in SS316L WAAM.</li>
-                <li>Fabricate and characterize L-PBF and WAAM parts using mechanical testing, nanoindentation, microscopy, and SEM.</li>
-                <li>Develop ML and statistical workflows for process-interruption classification and materials-property analysis.</li>
-                <li>Apply ultrasonic testing, thermography, acoustic emission, and related methods for defect and quality evaluation.</li>
-                <li>Coordinate equipment scheduling, machine setup, and operator training across AM systems.</li>
-              </ul>
-            </div>
-          </article>
 
-          <article class="timeline-item reveal">
-            <div class="timeline-date mono">JAN 2023 — MAY 2025</div>
-            <div class="timeline-content">
-              <h3>Teaching Assistant</h3>
-              <p class="timeline-org">Georgia Southern University</p>
-              <p>Supported undergraduate and graduate manufacturing courses through laboratory instruction, project/assignment evaluation, and technical problem-solving sessions.</p>
-            </div>
-          </article>
+<div class="page-shell">
+<div class="section-heading section-heading-dark reveal">
+<div>
+<span class="section-index mono">06</span>
+<p class="mono eyebrow">RESEARCH OUTPUT</p>
+</div>
+<h2>Published work across AM,<br/><em>inspection &amp; digital manufacturing.</em></h2>
+<p class="section-copy">Selected journal, conference, and thesis work. Full publication profile is available on Google Scholar.</p>
+</div>
+<div class="publication-feature reveal">
+<div class="pub-year mono">2026</div>
+<div>
+<p class="pub-type mono">PEER-REVIEWED JOURNAL</p>
+<h3>Identifying process interruption regions in laser powder bed fusion through mechanical property classification.</h3>
+<p>Chigurupati, P.C., Dababneh, F., Bahreman, M., Ezazi, M., Taheri, H.</p>
+<a href="https://doi.org/10.1007/s00170-026-17800-8" rel="noopener" target="_blank">International Journal of Advanced Manufacturing Technology · DOI ↗</a>
+</div>
+</div>
+<div class="publication-list" id="publication-list">
+<article class="publication-item reveal"><span class="mono">2025</span><div><h3>Prediction of mechanical property of metal 3D printed parts affected by process interruptions using machine learning method.</h3><p>ASME IMECE2025-165198</p></div><a href="https://doi.org/10.1115/IMECE2025-165198" rel="noopener" target="_blank">↗</a></article>
+<article class="publication-item reveal"><span class="mono">2025</span><div><h3>An affordable IoT platform for sensor-based quality inspection of cast components in Industry 4.0.</h3><p>ASME IMECE2025-165538</p></div><a href="https://doi.org/10.1115/IMECE2025-165538" rel="noopener" target="_blank">↗</a></article>
+<article class="publication-item reveal"><span class="mono">2024</span><div><h3>Micro-mechanical property evaluation of heat-treated metal 3D printed parts affected by process interruptions.</h3><p>ASME IMECE2024-144295</p></div><a href="https://doi.org/10.1115/IMECE2024-144295" rel="noopener" target="_blank">↗</a></article>
+<article class="publication-item publication-extra reveal"><span class="mono">2024</span><div><h3>Development of a geometric accuracy machine vision application for metal castings.</h3><p>ASME IMECE2024-143240</p></div><a href="https://doi.org/10.1115/IMECE2024-143240" rel="noopener" target="_blank">↗</a></article>
+<article class="publication-item publication-extra reveal"><span class="mono">2024</span><div><h3>Digital twin model for property assessment of metal additive manufacturing.</h3><p>ASME IMECE2024-146882</p></div><a href="https://doi.org/10.1115/IMECE2024-146882" rel="noopener" target="_blank">↗</a></article>
+<article class="publication-item publication-extra reveal"><span class="mono">2024</span><div><h3>Understanding the impact of process interruption on mechanical properties in metal additive manufacturing: a comprehensive investigation.</h3><p>M.S. Thesis · Georgia Southern University</p></div><a href="https://galileo-georgiasouthern.primo.exlibrisgroup.com/permalink/01GALI_GASOUTH/1r4bu70/alma9916583650302950" rel="noopener" target="_blank">↗</a></article>
+</div>
+<div class="publication-actions reveal">
+<button class="button button-secondary" id="toggle-publications" type="button">Show all publications</button>
+<a class="text-link mono" href="https://scholar.google.com/citations?user=KPpHr_8AAAAJ&amp;hl=en" rel="noopener" target="_blank">GOOGLE SCHOLAR ↗</a>
+</div>
+</div>
+</section>
+<!-- GALLERY -->
+<section class="section-light gallery-section" id="gallery">
+<div class="page-shell">
+<div class="section-heading reveal">
+<div>
+<span class="section-index mono">07</span>
+<p class="mono eyebrow">ENGINEERING GALLERY</p>
+</div>
+<h2>From machine floor<br/><em>to measurement.</em></h2>
+<p class="section-copy">A visual look at fabrication, mechanical testing, and nondestructive evaluation work.</p>
+</div>
+<div class="gallery-grid">
+<button class="gallery-card gallery-card-large reveal" data-gallery="printing" type="button">
+<span class="gallery-image printing-image"></span>
+<span class="gallery-overlay"><span class="mono">01 / FABRICATION</span><strong>Additive Manufacturing</strong><em>Open gallery ↗</em></span>
+</button>
+<button class="gallery-card reveal" data-gallery="testing" type="button">
+<span class="gallery-image testing-image"></span>
+<span class="gallery-overlay"><span class="mono">02 / VALIDATION</span><strong>Mechanical Testing</strong><em>Open gallery ↗</em></span>
+</button>
+<button class="gallery-card reveal" data-gallery="ndt" type="button">
+<span class="gallery-image ndt-image"></span>
+<span class="gallery-overlay"><span class="mono">03 / INSPECTION</span><strong>NDT &amp; Monitoring</strong><em>Open gallery ↗</em></span>
+</button>
+</div>
+</div>
+</section>
+<!-- EDUCATION -->
+<section class="section-light education-section" id="education"><div aria-hidden="true" class="section-symbol section-symbol-education-cap symbol-copper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="m3 9 9-5 9 5-9 5Z"></path>
+<path d="M6 11v5c3.2 2.5 8.8 2.5 12 0v-5M21 9v6"></path>
+</svg></div><div aria-hidden="true" class="section-symbol section-symbol-education-triangle"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M4 20 12 5l8 15Z"></path>
+<path d="M8 16h8M10 12h4"></path>
+</svg></div>
 
-          <article class="timeline-item reveal">
-            <div class="timeline-date mono">JAN — DEC 2022</div>
-            <div class="timeline-content">
-              <h3>Graduate Assistant · SARC</h3>
-              <p class="timeline-org">Georgia Southern University</p>
-              <p>Supported student-services operations, documentation workflows, and activity planning for approximately 400 students at the Armstrong Campus.</p>
-            </div>
-          </article>
 
-          <article class="timeline-item reveal">
-            <div class="timeline-date mono">APR — MAY 2021</div>
-            <div class="timeline-content">
-              <h3>Maintenance &amp; Quality Control Engineer Intern</h3>
-              <p class="timeline-org">Kristna Engineering Works · India</p>
-              <p>Supported quality-control and maintenance activities in a production manufacturing environment.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- LEADERSHIP STRIP -->
-    <section class="leadership-strip">
-      <div class="page-shell leadership-grid">
-        <div class="leadership-heading reveal">
-          <p class="mono eyebrow">TECHNICAL LEADERSHIP</p>
-          <h2>I can contribute as an engineer,<br><em>and grow as a technical leader.</em></h2>
-        </div>
-        <div class="leadership-points reveal" data-delay="100">
-          <div><span class="mono">01</span><p><strong>Laboratory operations</strong> — equipment scheduling, setup, safe use, and experimental coordination.</p></div>
-          <div><span class="mono">02</span><p><strong>Training &amp; mentoring</strong> — students and researchers on AM systems, testing, and engineering workflows.</p></div>
-          <div><span class="mono">03</span><p><strong>Project execution</strong> — from research question and fabrication through analysis, publication, and presentation.</p></div>
-          <div><span class="mono">04</span><p><strong>Engineering education</strong> — independent course delivery, assessment, technical explanation, and student support.</p></div>
-        </div>
-      </div>
-    </section>
+<div class="page-shell education-layout">
+<div class="education-heading reveal">
+<span class="section-index mono">08</span>
+<p class="mono eyebrow">EDUCATION &amp; CREDENTIALS</p>
+<h2>Engineering foundation.<br/><em>Manufacturing specialization.</em></h2>
+</div>
+<div class="degree-list reveal" data-delay="80">
+<article class="degree"><div><span class="mono">EXPECTED MAY 2027</span><h3>Ph.D. · Engineering — Advanced Manufacturing Engineering</h3><p>Georgia Southern University</p><small>Dissertation: Influence of Ultrasound-Assisted WAAM on SS316L Microstructure</small></div><strong>3.90 GPA</strong></article>
+<article class="degree"><div><span class="mono">2024</span><h3>M.S. · Applied Engineering — Advanced Manufacturing Engineering</h3><p>Georgia Southern University</p><small>Thesis: Process interruption effects on mechanical properties in metal additive manufacturing</small></div><strong>3.66 GPA</strong></article>
+<article class="degree"><div><span class="mono">2021</span><h3>B.Tech. · Mechanical Engineering</h3><p>Velagapudi Ramakrishna Siddhartha Engineering College</p></div><strong>3.11 GPA</strong></article>
+</div>
+</div>
+<div class="page-shell credentials-grid reveal">
+<div class="credential-column"><p class="mono credential-title">CERTIFICATIONS</p><ul><li>EOS M290 Operations — EOS</li><li>Additive Manufacturing Associate — Dassault Systèmes</li><li>NX Software Completion — Siemens</li><li>CATIA Software Completion — Dassault Systèmes</li><li>Data Visualization with Tableau — UC Davis</li></ul></div>
+<div class="credential-column"><p class="mono credential-title">HONORS &amp; AWARDS</p><ul><li>Allen E. Paulson Student Scholarship Endowment — 2026</li><li>Gene Haas Foundation Manufacturing Engineering Scholarship — 2024 &amp; 2026</li><li>Nominated, 2026 Averitt Awards of Excellence</li></ul></div>
+<div class="credential-column"><p class="mono credential-title">LEADERSHIP &amp; MEMBERSHIPS</p><ul><li>Officer, ASNT — Georgia Southern University Chapter (2024–2025)</li><li>Member, ASNT (2023–Present)</li><li>Member, SME / AFS / FEF</li><li>Member, ASME (2017–2021)</li></ul></div>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="contact-section" id="contact"><div aria-hidden="true" class="section-symbol section-symbol-contact-circuit"><svg aria-hidden="true" viewBox="0 0 24 24">
+<circle cx="5" cy="6" r="1.7"></circle><circle cx="19" cy="5" r="1.7"></circle>
+<circle cx="6" cy="19" r="1.7"></circle><circle cx="18" cy="18" r="1.7"></circle>
+<path d="M6.7 6h6.2l4.4-1M6 7.7v9.6M7.7 19h6.1l2.5-1M12 6v12"></path>
+</svg></div><div aria-hidden="true" class="section-symbol section-symbol-contact-location symbol-copper"><svg aria-hidden="true" viewBox="0 0 24 24">
+<path d="M12 21s6-5.8 6-11a6 6 0 1 0-12 0c0 5.2 6 11 6 11Z"></path>
+<circle cx="12" cy="10" r="2"></circle>
+</svg></div>
 
-    <!-- RESEARCH / PUBLICATIONS -->
-    <section class="section-dark research-section ambient-dark" id="research">
-      <div class="section-symbol section-symbol-atom" aria-hidden="true"><svg viewBox="0 0 64 64"><ellipse cx="32" cy="32" rx="25" ry="10"/><ellipse cx="32" cy="32" rx="25" ry="10" transform="rotate(60 32 32)"/><ellipse cx="32" cy="32" rx="25" ry="10" transform="rotate(120 32 32)"/><circle cx="32" cy="32" r="3"/></svg></div>
-      <div class="section-symbol section-symbol-document symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M20 10h18l10 10v34H20z"/><path d="M38 10v12h12M26 32h16M26 40h16"/></svg></div>
-      <div class="page-shell">
-        <div class="section-heading section-heading-dark reveal">
-          <div>
-            <span class="section-index mono">06</span>
-            <p class="mono eyebrow">RESEARCH OUTPUT</p>
-          </div>
-          <h2>Published work across AM,<br><em>inspection &amp; digital manufacturing.</em></h2>
-          <p class="section-copy">Selected journal, conference, and thesis work. Full publication profile is available on Google Scholar.</p>
-        </div>
 
-        <div class="publication-feature reveal">
-          <div class="pub-year mono">2026</div>
-          <div>
-            <p class="pub-type mono">PEER-REVIEWED JOURNAL</p>
-            <h3>Identifying process interruption regions in laser powder bed fusion through mechanical property classification.</h3>
-            <p>Chigurupati, P.C., Dababneh, F., Bahreman, M., Ezazi, M., Taheri, H.</p>
-            <a href="https://doi.org/10.1007/s00170-026-17800-8" target="_blank" rel="noopener">International Journal of Advanced Manufacturing Technology · DOI ↗</a>
-          </div>
-        </div>
 
-        <div class="publication-list" id="publication-list">
-          <article class="publication-item reveal"><span class="mono">2025</span><div><h3>Prediction of mechanical property of metal 3D printed parts affected by process interruptions using machine learning method.</h3><p>ASME IMECE2025-165198</p></div><a href="https://doi.org/10.1115/IMECE2025-165198" target="_blank" rel="noopener">↗</a></article>
-          <article class="publication-item reveal"><span class="mono">2025</span><div><h3>An affordable IoT platform for sensor-based quality inspection of cast components in Industry 4.0.</h3><p>ASME IMECE2025-165538</p></div><a href="https://doi.org/10.1115/IMECE2025-165538" target="_blank" rel="noopener">↗</a></article>
-          <article class="publication-item reveal"><span class="mono">2024</span><div><h3>Micro-mechanical property evaluation of heat-treated metal 3D printed parts affected by process interruptions.</h3><p>ASME IMECE2024-144295</p></div><a href="https://doi.org/10.1115/IMECE2024-144295" target="_blank" rel="noopener">↗</a></article>
-          <article class="publication-item publication-extra reveal"><span class="mono">2024</span><div><h3>Development of a geometric accuracy machine vision application for metal castings.</h3><p>ASME IMECE2024-143240</p></div><a href="https://doi.org/10.1115/IMECE2024-143240" target="_blank" rel="noopener">↗</a></article>
-          <article class="publication-item publication-extra reveal"><span class="mono">2024</span><div><h3>Digital twin model for property assessment of metal additive manufacturing.</h3><p>ASME IMECE2024-146882</p></div><a href="https://doi.org/10.1115/IMECE2024-146882" target="_blank" rel="noopener">↗</a></article>
-          <article class="publication-item publication-extra reveal"><span class="mono">2024</span><div><h3>Understanding the impact of process interruption on mechanical properties in metal additive manufacturing: a comprehensive investigation.</h3><p>M.S. Thesis · Georgia Southern University</p></div><a href="https://galileo-georgiasouthern.primo.exlibrisgroup.com/permalink/01GALI_GASOUTH/1r4bu70/alma9916583650302950" target="_blank" rel="noopener">↗</a></article>
-        </div>
-
-        <div class="publication-actions reveal">
-          <button class="button button-secondary" id="toggle-publications" type="button">Show all publications</button>
-          <a class="text-link mono" href="https://scholar.google.com/citations?user=KPpHr_8AAAAJ&hl=en" target="_blank" rel="noopener">GOOGLE SCHOLAR ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="section-light gallery-section" id="gallery">
-      <div class="page-shell">
-        <div class="section-heading reveal">
-          <div>
-            <span class="section-index mono">07</span>
-            <p class="mono eyebrow">ENGINEERING GALLERY</p>
-          </div>
-          <h2>From machine floor<br><em>to measurement.</em></h2>
-          <p class="section-copy">A visual look at fabrication, mechanical testing, and nondestructive evaluation work.</p>
-        </div>
-
-        <div class="gallery-grid">
-          <button class="gallery-card gallery-card-large reveal" data-gallery="printing" type="button">
-            <span class="gallery-image printing-image"></span>
-            <span class="gallery-overlay"><span class="mono">01 / FABRICATION</span><strong>Additive Manufacturing</strong><em>Open gallery ↗</em></span>
-          </button>
-          <button class="gallery-card reveal" data-gallery="testing" type="button">
-            <span class="gallery-image testing-image"></span>
-            <span class="gallery-overlay"><span class="mono">02 / VALIDATION</span><strong>Mechanical Testing</strong><em>Open gallery ↗</em></span>
-          </button>
-          <button class="gallery-card reveal" data-gallery="ndt" type="button">
-            <span class="gallery-image ndt-image"></span>
-            <span class="gallery-overlay"><span class="mono">03 / INSPECTION</span><strong>NDT &amp; Monitoring</strong><em>Open gallery ↗</em></span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section class="section-light education-section" id="education">
-      <div class="section-symbol section-symbol-cap symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M8 24l24-12 24 12-24 12z"/><path d="M18 30v14c8 7 20 7 28 0V30M56 25v16"/></svg></div>
-      <div class="section-symbol section-symbol-book" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M12 14h18c6 0 10 3 10 8v28c0-5-4-8-10-8H12zM52 14H40v36c0-5 4-8 10-8h2z"/></svg></div>
-      <div class="section-symbol section-symbol-triangle symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 48 32 16l18 32z"/><path d="M22 34h20M27 26h10"/></svg></div>
-      <div class="page-shell education-layout">
-        <div class="education-heading reveal">
-          <span class="section-index mono">08</span>
-          <p class="mono eyebrow">EDUCATION &amp; CREDENTIALS</p>
-          <h2>Engineering foundation.<br><em>Manufacturing specialization.</em></h2>
-        </div>
-
-        <div class="degree-list reveal" data-delay="80">
-          <article class="degree"><div><span class="mono">EXPECTED MAY 2027</span><h3>Ph.D. · Engineering — Advanced Manufacturing Engineering</h3><p>Georgia Southern University</p><small>Dissertation: Influence of Ultrasound-Assisted WAAM on SS316L Microstructure</small></div><strong>3.90 GPA</strong></article>
-          <article class="degree"><div><span class="mono">2024</span><h3>M.S. · Applied Engineering — Advanced Manufacturing Engineering</h3><p>Georgia Southern University</p><small>Thesis: Process interruption effects on mechanical properties in metal additive manufacturing</small></div><strong>3.66 GPA</strong></article>
-          <article class="degree"><div><span class="mono">2021</span><h3>B.Tech. · Mechanical Engineering</h3><p>Velagapudi Ramakrishna Siddhartha Engineering College</p></div><strong>3.11 GPA</strong></article>
-        </div>
-      </div>
-
-      <div class="page-shell credentials-grid reveal">
-        <div class="credential-column"><p class="mono credential-title">CERTIFICATIONS</p><ul><li>EOS M290 Operations — EOS</li><li>Additive Manufacturing Associate — Dassault Systèmes</li><li>NX Software Completion — Siemens</li><li>CATIA Software Completion — Dassault Systèmes</li><li>Data Visualization with Tableau — UC Davis</li></ul></div>
-        <div class="credential-column"><p class="mono credential-title">HONORS &amp; AWARDS</p><ul><li>Allen E. Paulson Student Scholarship Endowment — 2026</li><li>Gene Haas Foundation Manufacturing Engineering Scholarship — 2024 &amp; 2026</li><li>Nominated, 2026 Averitt Awards of Excellence</li></ul></div>
-        <div class="credential-column"><p class="mono credential-title">LEADERSHIP &amp; MEMBERSHIPS</p><ul><li>Officer, ASNT — Georgia Southern University Chapter (2024–2025)</li><li>Member, ASNT (2023–Present)</li><li>Member, SME / AFS / FEF</li><li>Member, ASME (2017–2021)</li></ul></div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
-      <div class="section-symbol section-symbol-circuit" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="14" cy="18" r="4"/><circle cx="50" cy="16" r="4"/><circle cx="18" cy="48" r="4"/><circle cx="48" cy="46" r="4"/><path d="M18 18h18l10-2M18 46h14l12 0M32 18v28"/></svg></div>
-      <div class="section-symbol section-symbol-location symbol-copper" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 55s15-14 15-28a15 15 0 1 0-30 0c0 14 15 28 15 28z"/><circle cx="32" cy="27" r="5"/></svg></div>
-      <div class="section-symbol section-symbol-chat" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 18h36v22H29l-11 10v-10H14z"/><path d="M22 26h20M22 32h14"/></svg></div>
-      <div class="contact-grid" aria-hidden="true"></div>
-      <div class="page-shell contact-layout">
-        <div class="contact-copy reveal">
-          <p class="mono eyebrow">OPEN TO ENGINEERING, R&amp;D &amp; TECHNICAL-LEADERSHIP OPPORTUNITIES</p>
-          <h2>Building reliable manufacturing systems requires more than one discipline.</h2>
-          <p>I bring manufacturing, materials, inspection, experimental research, and computational thinking into the same engineering conversation.</p>
-        </div>
-        <div class="contact-actions reveal" data-delay="100">
-          <p class="contact-actions-label mono">START A CONVERSATION</p>
-          <div class="contact-inline-links mono">
-            <a href="mailto:Poojithchigurupati99@gmail.com"><svg class="inline-link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg><span>Email</span></a>
-            <a href="tel:+14793263481"><svg class="inline-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.5 3 3.8 5.3 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.1.4 2.2.6 3.4.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1-1.1 1C10.6 21 3 13.4 3 4.1 3 3.5 3.4 3 4 3h3.4c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.3.6 3.4.1.4 0 .8-.2 1.1z"/></svg><span>Phone</span></a>
-            <a href="https://www.linkedin.com/in/poojith-chowdary-chigurupati-46b5041a4" target="_blank" rel="noopener"><svg class="inline-link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7.2v.1M12 17v-4.2c0-1.8 1.2-3 2.8-3s2.7 1.1 2.7 3V17M12 11v6"/></svg><span>LinkedIn</span></a>
-            <a href="https://scholar.google.com/citations?user=KPpHr_8AAAAJ&hl=en" target="_blank" rel="noopener"><svg class="inline-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5M22 9v6"/></svg><span>Google Scholar</span></a>
-          </div>
-          <div class="contact-location mono"><svg class="inline-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Statesboro, GA, USA</span></div>
-        </div>
-      </div>
-
-      <div class="page-shell footer-line mono">
-        <span>POOJITH CHOWDARY CHIGURUPATI</span>
-        <span>STATESBORO, GA · USA</span>
-        <span>© 2026</span>
-      </div>
-    </section>
-  </main>
-
-  <!-- GALLERY MODAL -->
-  <div class="gallery-modal" id="gallery-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Engineering gallery">
-    <button class="modal-backdrop" type="button" aria-label="Close gallery"></button>
-    <div class="modal-panel">
-      <div class="modal-header">
-        <div><p class="mono" id="modal-kicker">GALLERY</p><h2 id="modal-title">Additive Manufacturing</h2></div>
-        <button class="modal-close" type="button" aria-label="Close gallery">×</button>
-      </div>
-      <div class="modal-grid" id="modal-grid"></div>
-    </div>
-  </div>
-
-  <script>
+<div aria-hidden="true" class="contact-grid"></div>
+<div class="page-shell contact-layout">
+<div class="contact-copy reveal">
+<p class="mono eyebrow">OPEN TO ENGINEERING, R&amp;D &amp; TECHNICAL-LEADERSHIP OPPORTUNITIES</p>
+<h2>Building reliable manufacturing systems requires more than one discipline.</h2>
+<p>I bring manufacturing, materials, inspection, experimental research, and computational thinking into the same engineering conversation.</p>
+</div>
+<div class="contact-actions reveal" data-delay="100">
+<p class="contact-actions-label mono">START A CONVERSATION</p>
+<div class="contact-inline-links mono">
+<a href="mailto:Poojithchigurupati99@gmail.com"><svg aria-hidden="true" class="inline-link-icon" viewBox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M4 7l8 6 8-6"></path></svg><span>Email</span></a>
+<a href="tel:+14793263481"><svg aria-hidden="true" class="inline-link-icon" viewBox="0 0 24 24"><path d="M6.6 10.8c1.5 3 3.8 5.3 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.1.4 2.2.6 3.4.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1-1.1 1C10.6 21 3 13.4 3 4.1 3 3.5 3.4 3 4 3h3.4c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.3.6 3.4.1.4 0 .8-.2 1.1z"></path></svg><span>Phone</span></a>
+<a href="https://www.linkedin.com/in/poojith-chowdary-chigurupati-46b5041a4" rel="noopener" target="_blank"><svg aria-hidden="true" class="inline-link-icon" viewBox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M8 10v7M8 7.2v.1M12 17v-4.2c0-1.8 1.2-3 2.8-3s2.7 1.1 2.7 3V17M12 11v6"></path></svg><span>LinkedIn</span></a>
+<a href="https://scholar.google.com/citations?user=KPpHr_8AAAAJ&amp;hl=en" rel="noopener" target="_blank"><svg aria-hidden="true" class="inline-link-icon" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5M22 9v6"></path></svg><span>Google Scholar</span></a>
+</div>
+<div class="contact-location mono"><svg aria-hidden="true" class="inline-link-icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg><span>Statesboro, GA, USA</span></div>
+</div>
+</div>
+<div class="page-shell footer-line mono">
+<span>POOJITH CHOWDARY CHIGURUPATI</span>
+<span>STATESBORO, GA · USA</span>
+<span>© 2026</span>
+</div>
+</section>
+</main>
+<!-- GALLERY MODAL -->
+<div aria-hidden="true" aria-label="Engineering gallery" aria-modal="true" class="gallery-modal" id="gallery-modal" role="dialog">
+<button aria-label="Close gallery" class="modal-backdrop" type="button"></button>
+<div class="modal-panel">
+<div class="modal-header">
+<div><p class="mono" id="modal-kicker">GALLERY</p><h2 id="modal-title">Additive Manufacturing</h2></div>
+<button aria-label="Close gallery" class="modal-close" type="button">×</button>
+</div>
+<div class="modal-grid" id="modal-grid"></div>
+</div>
+</div>
+<script>
     // Critical UI fallback: cursor glow works even if the external script is cached or unavailable.
     (() => {
       const glow = document.querySelector('.cursor-glow');
@@ -609,7 +631,7 @@
       document.documentElement.classList.add('pointer-glow-ready');
     })();
   </script>
-  <script src="script.js"></script>
-  <script data-goatcounter="https://pcchigurupati99.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="script.js"></script>
+<script async="" data-goatcounter="https://pcchigurupati99.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
