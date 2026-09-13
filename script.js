@@ -246,26 +246,51 @@ document.querySelectorAll('[data-scroll-top="true"]').forEach(link => {
   });
 });
 
-// Magnetic portrait chips.
-// The chip follows the pointer slightly, then springs back when the pointer leaves.
-if (window.matchMedia('(pointer:fine)').matches) {
-  document.querySelectorAll('[data-magnetic="true"]').forEach(chip => {
-    const strength = 0.18;
 
-    chip.addEventListener('pointermove', (event) => {
-      const rect = chip.getBoundingClientRect();
-      const x = event.clientX - (rect.left + rect.width / 2);
-      const y = event.clientY - (rect.top + rect.height / 2);
 
-      chip.style.setProperty('--mag-x', `${x * strength}px`);
-      chip.style.setProperty('--mag-y', `${y * strength}px`);
-      chip.classList.add('is-magnetic');
-    });
+// Reliable PC / brand scroll-to-top
+document.querySelectorAll('[data-scroll-top="true"]').forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
-    chip.addEventListener('pointerleave', () => {
-      chip.style.setProperty('--mag-x', '0px');
-      chip.style.setProperty('--mag-y', '0px');
-      chip.classList.remove('is-magnetic');
-    });
+    const navLinks = document.querySelector('.nav-links');
+    const navToggle = document.querySelector('.nav-toggle');
+    navLinks?.classList.remove('open');
+    navToggle?.setAttribute('aria-expanded', 'false');
   });
+});
+
+// Repelling hero focus chips:
+// when the pointer gets near a chip, it moves slightly AWAY from the pointer.
+if (window.matchMedia('(pointer:fine)').matches) {
+  const repelItems = [...document.querySelectorAll('[data-repel="true"]')];
+
+  window.addEventListener('pointermove', (event) => {
+    repelItems.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+
+      const dx = cx - event.clientX;
+      const dy = cy - event.clientY;
+      const distance = Math.hypot(dx, dy);
+      const radius = 150;
+
+      if (distance < radius && distance > 0) {
+        const force = (radius - distance) / radius;
+        const maxShift = 24;
+        const x = (dx / distance) * force * maxShift;
+        const y = (dy / distance) * force * maxShift;
+
+        item.style.setProperty('--repel-x', `${x}px`);
+        item.style.setProperty('--repel-y', `${y}px`);
+        item.classList.add('is-repelled');
+      } else {
+        item.style.setProperty('--repel-x', '0px');
+        item.style.setProperty('--repel-y', '0px');
+        item.classList.remove('is-repelled');
+      }
+    });
+  }, { passive:true });
 }

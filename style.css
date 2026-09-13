@@ -1839,3 +1839,142 @@ html{
   }
   html{scroll-behavior:auto}
 }
+
+
+/* =========================================================
+   TRUE CIRCULAR PC HOME CONTROL
+   ========================================================= */
+
+/* Remove the rectangular shell around the brand */
+.site-header .brand{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:14px !important;
+  padding:0 !important;
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  text-decoration:none !important;
+}
+
+/* This is the ONLY shape around PC */
+.site-header .brand-mark{
+  width:52px !important;
+  height:52px !important;
+  min-width:52px !important;
+  padding:0 !important;
+  margin:0 !important;
+  display:grid !important;
+  place-items:center !important;
+  border-radius:50% !important;
+  border:1px solid rgba(201,145,79,.72) !important;
+  background:rgba(10,16,32,.96) !important;
+  color:var(--copper) !important;
+  box-shadow:
+    0 0 0 7px rgba(201,145,79,.045),
+    inset 0 0 0 1px rgba(201,145,79,.06) !important;
+  overflow:hidden !important;
+}
+
+.site-header .brand:hover .brand-mark,
+.site-header .brand:focus-visible .brand-mark{
+  border-color:rgba(201,145,79,1) !important;
+  box-shadow:
+    0 0 0 9px rgba(201,145,79,.07),
+    0 8px 24px rgba(0,0,0,.22) !important;
+}
+
+.site-header .brand-copy{
+  background:transparent !important;
+  border:0 !important;
+}
+
+/* =========================================================
+   HERO FOCUS CHIPS — moved OFF the portrait
+   ========================================================= */
+
+.hero-portrait-card .portrait-index,
+.hero-portrait-card .portrait-caption,
+.hero-portrait-card .portrait-chip-layer{
+  display:none !important;
+}
+
+.hero-floaters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:22px 0 24px;
+  max-width:760px;
+}
+
+.hero-floater{
+  --repel-x:0px;
+  --repel-y:0px;
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:8px 12px;
+  border:1px solid rgba(117,184,232,.24);
+  border-radius:999px;
+  background:rgba(15,28,48,.62);
+  color:#aeb9c7;
+  font-size:7px;
+  font-weight:500;
+  letter-spacing:.08em;
+  line-height:1;
+  white-space:nowrap;
+  box-shadow:
+    0 8px 22px rgba(0,0,0,.12),
+    inset 0 0 0 1px rgba(255,255,255,.012);
+  transform:translate3d(var(--repel-x),var(--repel-y),0);
+  transition:
+    transform .20s ease-out,
+    border-color .2s ease,
+    color .2s ease,
+    background .2s ease;
+  will-change:transform;
+}
+
+.hero-floater::before{
+  content:"";
+  width:5px;
+  height:5px;
+  flex:0 0 5px;
+  margin-right:8px;
+  border-radius:50%;
+  background:var(--copper);
+  box-shadow:0 0 10px rgba(201,145,79,.55);
+}
+
+.hero-floater:hover,
+.hero-floater.is-repelled{
+  color:#eef3f7;
+  border-color:rgba(201,145,79,.58);
+  background:rgba(20,35,58,.82);
+}
+
+/* portrait now stays clean */
+.hero-portrait-card{
+  overflow:hidden !important;
+}
+
+@media (max-width:760px){
+  .site-header .brand-mark{
+    width:42px !important;
+    height:42px !important;
+    min-width:42px !important;
+  }
+
+  .hero-floaters{
+    gap:7px;
+    margin:18px 0 20px;
+  }
+
+  .hero-floater{
+    min-height:30px;
+    padding:7px 9px;
+    font-size:6.2px;
+    letter-spacing:.06em;
+    transform:none !important;
+  }
+}
