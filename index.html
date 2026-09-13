@@ -60,7 +60,6 @@
 </div>
 <div class="hero-links mono">
 <a href="mailto:Poojithchigurupati99@gmail.com"><svg aria-hidden="true" class="inline-link-icon" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M4 7l8 6 8-6"></path></svg><span>Email</span></a>
-<a class="meta-item" href="tel:+14793263481"><svg class="inline-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6.6 10.8c1.4 2.7 3.7 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1z"/></svg>Phone</a>
 <a href="https://www.linkedin.com/in/poojith-chowdary-chigurupati-46b5041a4" rel="noopener" target="_blank"><svg aria-hidden="true" class="inline-link-icon" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M8 10v7M8 7.2v.1M12 17v-4.2c0-1.8 1.2-3 2.8-3s2.7 1.1 2.7 3V17M12 11v6"></path></svg><span>LinkedIn</span></a>
 <a href="https://scholar.google.com/citations?user=KPpHr_8AAAAJ&amp;hl=en" rel="noopener" target="_blank"><svg aria-hidden="true" class="inline-link-icon" viewbox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"></path><path d="M6 11v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5M22 9v6"></path></svg><span>Google Scholar</span></a>
 </div>
@@ -179,15 +178,62 @@
 <div><span class="case-label mono">METHODS</span><p>WAAM, SS316L, ultrasound-assisted deposition, SEM/microscopy, mechanical testing, and acoustic streaming/cavitation concepts.</p></div>
 <div><span class="case-label mono">FOCUS</span><p>Connect ultrasonic treatment to melt-pool behavior, solidification response, microstructure, and performance.</p></div>
 </div></div>
-<div class="project-visual project-visual-waam">
-<div class="visual-label mono">WAAM / ACOUSTIC ENERGY COUPLING</div>
-<svg aria-label="Wire arc additive manufacturing with ultrasonic treatment schematic" role="img" viewbox="0 0 620 300">
-<g class="viz-grid"><path d="M20 55H600M20 105H600M20 155H600M20 205H600M20 255H600"></path><path d="M90 25V275M170 25V275M250 25V275M330 25V275M410 25V275M490 25V275M570 25V275"></path></g>
-<rect class="viz-platform" height="20" rx="3" width="470" x="75" y="230"></rect>
-<g class="waam-beads"><path d="M145 223Q185 203 225 223T305 223T385 223T465 223"></path><path d="M165 209Q200 190 235 209T305 209T375 209T445 209"></path><path d="M190 195Q220 177 250 195T310 195T370 195T430 195"></path></g>
-<g class="waam-torch"><path d="M260 52L324 52L310 128L275 128Z"></path><line class="wire-feed" x1="292" x2="292" y1="20" y2="134"></line><path d="M283 128L301 128L296 157L288 157Z"></path><line class="viz-laser" x1="292" x2="292" y1="157" y2="180"></line><ellipse class="viz-hot" cx="292" cy="183" rx="18" ry="6"></ellipse></g>
-<g class="ultra-source"><!-- transducer body --><rect height="26" rx="4" width="73" x="472" y="182"></rect><!-- coupling shoe touching the base --><path d="M490 208H527L520 230H497Z"></path><!-- ultrasonic waves --><path class="viz-wave" d="M458 194q-16 13 0 26M447 188q-27 19 0 38M436 182q-38 25 0 50"></path></g>
-<text class="viz-text" x="103" y="277">LAYER DEPOSITION / THERMAL HISTORY</text><text class="viz-text" x="409" y="117">ULTRASONIC INPUT</text>
+<div class="project-visual project-visual-gmaw"><div class="visual-label mono">GMAW-WAAM / ULTRASONIC COUPLING</div>
+<svg aria-label="GMAW-based wire arc additive manufacturing with an ultrasonic transducer coupled to the underside of the base plate" role="img" viewbox="0 0 760 390">
+<defs>
+<lineargradient id="waamPlate" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#28486c"></stop>
+<stop offset="100%" stop-color="#142640"></stop>
+</lineargradient>
+<radialgradient cx="50%" cy="50%" id="waamHeat" r="50%">
+<stop offset="0%" stop-color="#ffd38d" stop-opacity="1"></stop>
+<stop offset="35%" stop-color="#c9914f" stop-opacity=".9"></stop>
+<stop offset="100%" stop-color="#c9914f" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+<g class="viz-grid">
+<path d="M40 70H720M40 120H720M40 170H720M40 220H720M40 270H720M40 320H720"></path>
+<path d="M110 40V345M190 40V345M270 40V345M350 40V345M430 40V345M510 40V345M590 40V345M670 40V345"></path>
+</g>
+<!-- base plate -->
+<rect class="gmaw-baseplate" height="34" rx="4" width="530" x="92" y="278"></rect>
+<text class="viz-text" x="94" y="332">BASE PLATE</text>
+<!-- deposited WAAM beads -->
+<g class="gmaw-beads">
+<path d="M145 270 Q180 251 218 270 T294 270 T370 270 T446 270 T522 270"></path>
+<path d="M165 254 Q198 236 231 254 T297 254 T363 254 T429 254 T495 254"></path>
+<path d="M188 238 Q218 221 248 238 T308 238 T368 238 T428 238 T488 238"></path>
+<path d="M215 222 Q241 207 267 222 T319 222 T371 222 T423 222 T475 222"></path>
+</g>
+<text class="viz-text" x="102" y="224">DEPOSITED LAYERS</text>
+<!-- GMAW gun: wire is part of gun, no separate feeder -->
+<g class="gmaw-gun">
+<path class="gmaw-gun-body" d="M308 52 L384 52 L365 128 L327 128 Z"></path>
+<path class="gmaw-contact-tip" d="M327 128 L365 128 L356 169 L336 169 Z"></path>
+<line class="gmaw-wire" x1="346" x2="346" y1="62" y2="191"></line>
+<text class="viz-text" x="391" y="82">GMAW WELDING GUN</text>
+<text class="viz-text" x="391" y="105">CONSUMABLE WIRE ELECTRODE</text>
+</g>
+<!-- arc / melt pool -->
+<path class="gmaw-arc" d="M346 190 Q337 201 342 216 Q350 205 357 216 Q361 202 346 190Z"></path>
+<ellipse class="gmaw-meltpool" cx="349" cy="221" rx="27" ry="8"></ellipse>
+<circle class="gmaw-heat" cx="349" cy="221" r="41"></circle>
+<text class="viz-text" x="389" y="207">ARC</text>
+<text class="viz-text" x="389" y="229">MELT POOL</text>
+<!-- ultrasonic transducer coupled to underside of plate -->
+<g class="gmaw-ultrasonic">
+<rect class="gmaw-transducer" height="36" rx="8" width="86" x="308" y="319"></rect>
+<rect class="gmaw-couplant" height="10" rx="4" width="56" x="323" y="310"></rect>
+<path class="gmaw-us-wave" d="M330 306 Q351 284 372 306M318 304 Q351 270 384 304M305 302 Q351 254 397 302"></path>
+<line class="gmaw-cable" x1="394" x2="445" y1="337" y2="337"></line>
+<text class="viz-text" x="452" y="332">ULTRASONIC TRANSDUCER</text>
+<text class="viz-text" x="452" y="349">COUPLED TO BASE PLATE</text>
+</g>
+<!-- callout ribbon -->
+<g class="gmaw-ribbon mono">
+<rect height="24" rx="3" width="530" x="92" y="357"></rect>
+<text x="109" y="373">GMAW → MELT POOL → LAYER BUILD → ULTRASONIC ENERGY COUPLING</text>
+</g>
 </svg>
 </div>
 </div>
@@ -221,8 +267,6 @@
 </div>
 </div>
 </details>
-
-
 <details class="project-dossier reveal" name="project-dossiers">
 <summary class="project-toggle">
 <span class="project-number mono">03</span>
@@ -238,13 +282,76 @@
 <div><span class="case-label mono">METHODS</span><p>Stratasys FDM, ULTEM 9085, tensile/compression/impact testing, microscopy, thermography, and NDE concepts.</p></div>
 <div><span class="case-label mono">APPLICATION</span><p>Aerospace-oriented process and part evaluation with emphasis on anisotropy, print quality, and defect visibility.</p></div>
 </div></div>
-<div class="project-visual thermal-project">
-<div class="visual-label mono">THERMOGRAPHIC CONTRAST / ULTEM 9085</div>
-<div class="thermal-panel">
-<div class="thermal-specimen"><span class="thermal-defect"></span><span class="thermal-scan"></span></div>
-<div class="thermal-legend mono"><span>COOL</span><i></i><span>HOT</span></div>
-<div class="thermal-stats mono"><span>ROI A</span><strong>ΔT 3.8°C</strong><span>CONTRAST / FLAGGED</span></div>
-</div>
+<div class="project-visual project-visual-thermal-dashboard"><div class="visual-label mono">ULTEM 9085 / THERMOGRAPHIC QUALIFICATION</div>
+<svg aria-label="Visible and thermographic evaluation of an ULTEM 9085 tensile coupon with two regions of interest" role="img" viewbox="0 0 760 390">
+<defs>
+<lineargradient id="couponMetal" x1="0" x2="1">
+<stop offset="0%" stop-color="#70839a"></stop>
+<stop offset="50%" stop-color="#d0d7df"></stop>
+<stop offset="100%" stop-color="#70839a"></stop>
+</lineargradient>
+<lineargradient id="thermalMap" x1="0" x2="1">
+<stop offset="0%" stop-color="#2845a9"></stop>
+<stop offset="20%" stop-color="#6e3fc7"></stop>
+<stop offset="45%" stop-color="#d24a7c"></stop>
+<stop offset="70%" stop-color="#ef8b3e"></stop>
+<stop offset="100%" stop-color="#ffd05b"></stop>
+</lineargradient>
+<lineargradient id="thermalLegend" x1="0" x2="0" y1="1" y2="0">
+<stop offset="0%" stop-color="#21439a"></stop>
+<stop offset="35%" stop-color="#6b45c4"></stop>
+<stop offset="65%" stop-color="#dd4b76"></stop>
+<stop offset="82%" stop-color="#f18f3f"></stop>
+<stop offset="100%" stop-color="#ffd85f"></stop>
+</lineargradient>
+</defs>
+<rect class="thermal-box" height="192" rx="4" width="328" x="30" y="48"></rect>
+<rect class="thermal-box" height="192" rx="4" width="328" x="374" y="48"></rect>
+<text class="thermal-title" x="48" y="74">VISIBLE SPECIMEN</text>
+<text class="thermal-title" x="392" y="74">THERMOGRAPHIC RESPONSE</text>
+<!-- dogbone coupon -->
+<path class="thermal-visible-coupon" d="M70 116
+    L120 116 Q145 116 160 129
+    L196 129 Q211 116 236 116
+    L316 116 L316 174 L236 174
+    Q211 174 196 161 L160 161
+    Q145 174 120 174 L70 174 Z"></path>
+<text class="thermal-small" x="70" y="202">ULTEM 9085 / FDM TENSILE COUPON</text>
+<!-- thermographic coupon -->
+<path class="thermal-ir-coupon" d="M394 116
+    L444 116 Q469 116 484 129
+    L520 129 Q535 116 560 116
+    L680 116 L680 174 L560 174
+    Q535 174 520 161 L484 161
+    Q469 174 444 174 L394 174 Z"></path>
+<rect class="thermal-roi" height="48" width="54" x="486" y="121"></rect>
+<rect class="thermal-roi" height="48" width="54" x="594" y="121"></rect>
+<text class="thermal-small" x="492" y="111">ROI A</text>
+<text class="thermal-small" x="600" y="111">ROI B</text>
+<!-- legend -->
+<rect fill="url(#thermalLegend)" height="121" rx="2" width="14" x="715" y="82"></rect>
+<text class="thermal-small" x="708" y="72">HOT</text>
+<text class="thermal-small" x="705" y="218">COOL</text>
+<!-- diagnostic row -->
+<g class="thermal-result-card">
+<rect height="92" rx="4" width="210" x="30" y="258"></rect>
+<text x="48" y="284">ROI A</text>
+<text class="thermal-result-strong" x="48" y="309">SURFACE RESPONSE</text>
+<text x="48" y="332">CONTRAST MAPPED</text>
+</g>
+<g class="thermal-result-card">
+<rect height="92" rx="4" width="210" x="254" y="258"></rect>
+<text x="272" y="284">ROI B</text>
+<text class="thermal-result-strong" x="272" y="309">LOCAL RESPONSE</text>
+<text x="272" y="332">COMPARE / QUALIFY</text>
+</g>
+<g class="thermal-result-card">
+<rect height="92" rx="4" width="224" x="478" y="258"></rect>
+<text x="496" y="284">INSPECTION WORKFLOW</text>
+<text class="thermal-result-strong" x="496" y="309">VISIBLE + THERMAL</text>
+<text x="496" y="332">PROCESS / PART ASSESSMENT</text>
+</g>
+</svg>
 </div>
 </div>
 </div>
@@ -264,51 +371,71 @@
 <div><span class="case-label mono">METHODS</span><p>Ultrasonics, 2.25 MHz transducers, RUS, filtering, peak detection, time-of-flight, velocity, and Python signal analysis.</p></div>
 <div><span class="case-label mono">OUTPUT</span><p>Quantitative NDT workflows linking signal response to stiffness and manufacturing-history variation.</p></div>
 </div></div>
-<div class="project-visual project-visual-ndt-dashboard"><div class="visual-label mono">ULTRASONIC RESPONSE / RESONANCE DIAGNOSTICS</div>
-<svg aria-label="Ultrasonic A-scan and resonance diagnostics panel" role="img" viewbox="0 0 760 360">
-<g class="ndt-dash-frame">
-<rect height="250" rx="4" width="452" x="28" y="44"></rect>
-<rect height="250" rx="4" width="232" x="500" y="44"></rect>
+<div class="project-visual project-visual-ndt-pro"><div class="visual-label mono">ULTRASONIC A-SCAN / RUS RESPONSE</div>
+<svg aria-label="Professional ultrasonic A-scan and resonant ultrasound spectroscopy comparison dashboard" role="img" viewbox="0 0 760 390">
+<rect class="ndt-pro-panel" height="240" rx="4" width="338" x="28" y="48"></rect>
+<rect class="ndt-pro-panel" height="240" rx="4" width="342" x="390" y="48"></rect>
+<text class="ndt-pro-title" x="46" y="74">A-SCAN / TIME-OF-FLIGHT</text>
+<text class="ndt-pro-title" x="408" y="74">RUS / RESONANCE SPECTRUM</text>
+<g class="ndt-pro-grid">
+<path d="M50 105H344M50 145H344M50 185H344M50 225H344M50 265H344"></path>
+<path d="M95 88V274M155 88V274M215 88V274M275 88V274M335 88V274"></path>
+<path d="M412 105H710M412 145H710M412 185H710M412 225H710M412 265H710"></path>
+<path d="M462 88V274M522 88V274M582 88V274M642 88V274M702 88V274"></path>
 </g>
-<g class="ndt-panel-title mono">
-<text x="48" y="72">A-SCAN / TIME DOMAIN</text>
-<text x="520" y="72">RUS / MODAL RESPONSE</text>
+<path class="ndt-pro-ascan" d="M50 244
+    L70 242 L88 244 L104 240 L118 243
+    L130 236 L140 220 L150 112
+    L160 232 L176 242 L196 239
+    L220 242 L242 238 L258 222
+    L268 176 L279 234 L300 241
+    L320 238 L344 241"></path>
+<line class="ndt-pro-marker" x1="150" x2="150" y1="96" y2="268"></line>
+<line class="ndt-pro-marker ndt-pro-marker-2" x1="268" x2="268" y1="158" y2="268"></line>
+<text class="ndt-pro-note" x="122" y="92">FIRST ARRIVAL</text>
+<text class="ndt-pro-note" x="248" y="153">ECHO</text>
+<!-- RUS spectrum: two curves -->
+<path class="rus-curve rus-curve-blue" d="M412 251
+    C430 246 438 238 445 226
+    C452 244 462 250 476 248
+    C489 245 495 232 500 136
+    C505 230 515 246 528 249
+    C541 249 550 238 556 205
+    C563 238 573 247 587 248
+    C599 246 608 232 614 150
+    C620 230 631 246 646 249
+    C660 248 672 239 682 221
+    C690 239 699 247 710 248"></path>
+<path class="rus-curve rus-curve-copper" d="M412 254
+    C432 250 440 243 447 233
+    C454 248 465 253 478 252
+    C492 250 502 240 507 166
+    C513 239 522 250 535 252
+    C548 251 558 243 564 219
+    C571 244 581 251 594 251
+    C606 249 616 238 622 174
+    C628 239 640 250 654 252
+    C667 251 680 245 691 232
+    C697 244 704 250 710 251"></path>
+<g class="ndt-pro-legend">
+<line class="rus-curve-blue" x1="574" x2="596" y1="84" y2="84"></line>
+<text x="602" y="87">AS-BUILT</text>
+<line class="rus-curve-copper" x1="647" x2="669" y1="84" y2="84"></line>
+<text x="675" y="87">POST-PROCESS</text>
 </g>
-<g class="ndt-mini-grid">
-<path d="M48 104H458M48 146H458M48 188H458M48 230H458M48 272H458"></path>
-<path d="M105 88V278M180 88V278M255 88V278M330 88V278M405 88V278"></path>
-<path d="M520 104H712M520 146H712M520 188H712M520 230H712M520 272H712"></path>
-</g>
-<path class="ndt-ascan-trace" d="M48 252 L72 249 L94 251 L118 247 L143 250
-           L166 244 L181 214 L191 112 L201 238 L224 249
-           L250 247 L278 250 L304 244 L326 229 L339 170
-           L351 236 L377 248 L405 246 L432 250 L458 248"></path>
-<g class="ndt-arrival-marker">
-<line x1="191" x2="191" y1="98" y2="272"></line>
-<circle cx="191" cy="112" r="4"></circle>
-<text x="151" y="92">FIRST ARRIVAL</text>
-</g>
-<g class="ndt-echo-marker">
-<line x1="339" x2="339" y1="154" y2="272"></line>
-<circle cx="339" cy="170" r="4"></circle>
-<text x="309" y="148">ECHO</text>
-</g>
-<g class="rus-spectrum">
-<rect height="44" width="16" x="538" y="218"></rect>
-<rect height="86" width="16" x="572" y="176"></rect>
-<rect height="136" width="16" x="606" y="126"></rect>
-<rect height="108" width="16" x="640" y="154"></rect>
-<rect height="60" width="16" x="674" y="202"></rect>
-</g>
-<g class="ndt-metric mono">
-<rect height="30" rx="3" width="122" x="48" y="306"></rect>
-<text x="60" y="325">TOF  14.04 µs</text>
-<rect height="30" rx="3" width="134" x="182" y="306"></rect>
-<text x="194" y="325">VELOCITY  5.70 km/s</text>
-<rect height="30" rx="3" width="130" x="328" y="306"></rect>
-<text x="340" y="325">ECHO  FLAGGED</text>
-<rect height="30" rx="3" width="192" x="520" y="306"></rect>
-<text x="532" y="325">MODE SHIFT  /  STIFFNESS</text>
+<g class="ndt-pro-metrics">
+<rect height="48" rx="4" width="160" x="28" y="307"></rect>
+<text x="44" y="327">TOF / THICKNESS</text>
+<text class="ndt-pro-value" x="44" y="346">14.04 µs</text>
+<rect height="48" rx="4" width="160" x="200" y="307"></rect>
+<text x="216" y="327">LONGITUDINAL VELOCITY</text>
+<text class="ndt-pro-value" x="216" y="346">≈ 5.70 km/s</text>
+<rect height="48" rx="4" width="160" x="390" y="307"></rect>
+<text x="406" y="327">MODE RESPONSE</text>
+<text class="ndt-pro-value" x="406" y="346">COMPARE / TRACK</text>
+<rect height="48" rx="4" width="170" x="562" y="307"></rect>
+<text x="578" y="327">QUALITY INTERPRETATION</text>
+<text class="ndt-pro-value" x="578" y="346">STIFFNESS / DEFECT</text>
 </g>
 </svg>
 </div>
@@ -330,52 +457,76 @@
 <div><span class="case-label mono">METHODS</span><p>Computer vision, imaging, Python, statistical analysis, data visualization, IoT concepts, and digital manufacturing workflows.</p></div>
 <div><span class="case-label mono">VALUE</span><p>Connect physical manufacturing data to automated inspection, visualization, and engineering decision-making.</p></div>
 </div></div>
-<div class="project-visual project-visual-digital-thread"><div class="visual-label mono">PHYSICAL PROCESS → DIGITAL THREAD → DECISION</div>
-<svg aria-label="Digital manufacturing thread from physical process through sensing and analytics to engineering decisions" role="img" viewbox="0 0 760 360">
-<g class="thread-rail">
-<line x1="78" x2="684" y1="178" y2="178"></line>
+<div class="project-visual project-visual-digital-pro"><div class="visual-label mono">BUILD → INSPECT → PROCESS → ANALYZE → DECIDE</div>
+<svg aria-label="Five-stage digital manufacturing workflow from build process through multimodal inspection, data processing, analytics, and digital twin quality decision" role="img" viewbox="0 0 760 390">
+<g class="digital-flow-line">
+<line x1="76" x2="685" y1="196" y2="196"></line>
 </g>
-<g class="thread-stage stage-process">
-<rect height="132" rx="5" width="118" x="46" y="112"></rect>
-<path d="M76 208h58M82 195h46M88 182h34"></path>
-<path d="M96 128h20v20l-4 6h-12l-4-6zM106 154v18"></path>
-<text x="105" y="226">PHYSICAL</text>
-<text x="105" y="239">PROCESS</text>
+<!-- 1 -->
+<g class="digital-stage" transform="translate(28,72)">
+<rect height="226" rx="5" width="126"></rect>
+<text class="digital-stage-num" x="14" y="24">01 / BUILD PROCESS</text>
+<path class="digital-stage-icon" d="M28 137h70M35 126h56M42 115h42M49 104h28"></path>
+<path class="digital-stage-icon digital-hot" d="M59 50h18v22l-4 6H63l-4-6zM68 78v23"></path>
+<circle class="digital-hot-fill" cx="68" cy="103" r="5"></circle>
+<text class="digital-stage-copy" x="14" y="176">PROCESS PARAMETERS</text>
+<text class="digital-stage-copy" x="14" y="194">LAYER-WISE DATA</text>
 </g>
-<g class="thread-arrow"><path d="M172 178h42"></path><path d="m207 171 8 7-8 7"></path></g>
-<g class="thread-stage stage-sense">
-<rect height="132" rx="5" width="118" x="224" y="112"></rect>
-<circle cx="283" cy="166" r="7"></circle>
-<path d="M266 149a24 24 0 0 0 0 34M300 149a24 24 0 0 1 0 34"></path>
-<path d="M283 173v24M272 197h22"></path>
-<text x="283" y="226">SENSE /</text>
-<text x="283" y="239">INSPECT</text>
+<g class="digital-arrow"><path d="M160 196h26"></path><path d="m179 189 8 7-8 7"></path></g>
+<!-- 2 -->
+<g class="digital-stage" transform="translate(192,72)">
+<rect height="226" rx="5" width="126"></rect>
+<text class="digital-stage-num" x="14" y="24">02 / INSPECTION</text>
+<rect class="digital-stage-icon" height="24" rx="4" width="31" x="24" y="55"></rect>
+<circle class="digital-stage-icon" cx="39" cy="67" r="7"></circle>
+<rect class="digital-stage-icon" height="20" rx="4" width="28" x="72" y="58"></rect>
+<path class="digital-stage-icon" d="M86 78v28M77 106h18"></path>
+<path class="digital-stage-icon" d="M21 125c8-10 16-10 24 0M67 125c8-10 16-10 24 0"></path>
+<text class="digital-stage-copy" x="14" y="176">VISION / THERMAL</text>
+<text class="digital-stage-copy" x="14" y="194">ULTRASONIC / AE</text>
 </g>
-<g class="thread-arrow"><path d="M350 178h42"></path><path d="m385 171 8 7-8 7"></path></g>
-<g class="thread-stage stage-analyze">
-<rect height="132" rx="5" width="118" x="402" y="112"></rect>
-<path d="M426 189h9l7-28 10 45 10-58 11 41h18"></path>
-<text x="461" y="226">ANALYZE</text>
-<text x="461" y="239">DATA</text>
+<g class="digital-arrow"><path d="M324 196h26"></path><path d="m343 189 8 7-8 7"></path></g>
+<!-- 3 -->
+<g class="digital-stage" transform="translate(356,72)">
+<rect height="226" rx="5" width="126"></rect>
+<text class="digital-stage-num" x="14" y="24">03 / PROCESS DATA</text>
+<path class="digital-stage-icon" d="M21 70h84l-12 14H33zM26 92h74l-11 13H37zM32 113h62l-10 12H42z"></path>
+<path class="digital-stage-icon digital-wave" d="M25 139h12l7-13 9 24 11-34 9 22 10-10h18"></path>
+<text class="digital-stage-copy" x="14" y="176">FEATURE EXTRACTION</text>
+<text class="digital-stage-copy" x="14" y="194">DATA FUSION</text>
 </g>
-<g class="thread-arrow"><path d="M528 178h42"></path><path d="m563 171 8 7-8 7"></path></g>
-<g class="thread-stage stage-decision">
-<rect height="132" rx="5" width="134" x="580" y="112"></rect>
-<circle cx="647" cy="164" r="24"></circle>
-<path d="M636 164l8 8 16-19"></path>
-<text x="647" y="226">DIGITAL TWIN /</text>
-<text x="647" y="239">DECISION</text>
+<g class="digital-arrow"><path d="M488 196h26"></path><path d="m507 189 8 7-8 7"></path></g>
+<!-- 4 -->
+<g class="digital-stage" transform="translate(520,72)">
+<rect height="226" rx="5" width="126"></rect>
+<text class="digital-stage-num" x="14" y="24">04 / AI ANALYTICS</text>
+<g class="digital-network">
+<circle cx="31" cy="79" r="4"></circle><circle cx="62" cy="55" r="4"></circle><circle cx="92" cy="76" r="4"></circle>
+<circle cx="42" cy="112" r="4"></circle><circle cx="78" cy="114" r="4"></circle><circle cx="62" cy="142" r="4"></circle>
+<path d="M31 79 62 55 92 76 78 114 62 142 42 112 31 79M31 79 78 114M92 76 42 112M62 55 62 142"></path>
 </g>
-<g class="thread-status mono">
-<rect height="34" rx="3" width="552" x="104" y="286"></rect>
-<circle cx="124" cy="303" r="4"></circle>
-<text x="138" y="307">BUILD DATA</text>
-<circle cx="256" cy="303" r="4"></circle>
-<text x="270" y="307">VISION / NDT</text>
-<circle cx="407" cy="303" r="4"></circle>
-<text x="421" y="307">ANALYTICS</text>
-<circle cx="542" cy="303" r="4"></circle>
-<text x="556" y="307">QUALITY ACTION</text>
+<text class="digital-stage-copy" x="14" y="176">ANOMALY DETECTION</text>
+<text class="digital-stage-copy" x="14" y="194">PROPERTY PREDICTION</text>
+</g>
+<g class="digital-arrow"><path d="M652 196h20"></path><path d="m665 189 8 7-8 7"></path></g>
+<!-- 5 -->
+<g class="digital-stage digital-stage-final" transform="translate(678,72)">
+<rect height="226" rx="5" width="72" x="-2"></rect>
+<text class="digital-stage-num" x="8" y="24">05</text>
+<path class="digital-twin" d="M12 82 34 69l22 13v28l-22 13-22-13zM12 82l22 13 22-13M34 95v28"></path>
+<circle class="digital-check" cx="52" cy="143" r="11"></circle>
+<path class="digital-check-mark" d="m47 143 4 4 7-9"></path>
+<text class="digital-stage-copy" x="8" y="176">QUALITY</text>
+<text class="digital-stage-copy" x="8" y="194">DECISION</text>
+</g>
+<g class="digital-footer mono">
+<rect height="34" rx="3" width="690" x="28" y="325"></rect>
+<text x="54" y="346">PHYSICAL PROCESS</text>
+<path d="M174 342h62"></path>
+<text x="254" y="346">MULTIMODAL DATA</text>
+<path d="M389 342h62"></path>
+<text x="469" y="346">ENGINEERING INTELLIGENCE</text>
+<path d="M639 342h50"></path>
 </g>
 </svg>
 </div>
@@ -675,5 +826,3 @@
 <script async="" data-goatcounter="https://pcchigurupati99.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
-
-<!-- redeploy -->
