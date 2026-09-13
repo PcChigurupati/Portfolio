@@ -158,41 +158,69 @@ document.addEventListener('keydown', e => {
 
 
 // Project image preview
-const imagePreviewModal = document.getElementById('image-preview-modal');
-const imagePreviewFull = document.getElementById('image-preview-full');
+function initProjectImagePreview() {
+  const imagePreviewModal = document.getElementById('image-preview-modal');
+  const imagePreviewFull = document.getElementById('image-preview-full');
 
-function closeImagePreview() {
-  if (!imagePreviewModal || !imagePreviewFull) return;
-  imagePreviewModal.classList.remove('open');
-  imagePreviewModal.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('image-preview-open');
-  window.setTimeout(() => {
-    if (!imagePreviewModal.classList.contains('open')) {
-      imagePreviewFull.src = '';
-      imagePreviewFull.alt = '';
+  if (!imagePreviewModal || !imagePreviewFull) {
+    console.warn('Project preview modal was not found.');
+    return;
+  }
+
+  function closeImagePreview() {
+    imagePreviewModal.classList.remove('open');
+    imagePreviewModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('image-preview-open');
+
+    window.setTimeout(() => {
+      if (!imagePreviewModal.classList.contains('open')) {
+        imagePreviewFull.removeAttribute('src');
+        imagePreviewFull.alt = '';
+      }
+    }, 220);
+  }
+
+  // Event delegation makes preview work even if project blocks are edited later.
+  document.addEventListener('click', (event) => {
+    const previewButton = event.target.closest('.project-preview-btn');
+
+    if (previewButton) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const src = previewButton.dataset.previewSrc;
+      if (!src) return;
+
+      imagePreviewFull.src = src;
+      imagePreviewFull.alt =
+        previewButton.dataset.previewAlt || 'Project image preview';
+
+      imagePreviewModal.classList.add('open');
+      imagePreviewModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('image-preview-open');
+      return;
     }
-  }, 220);
+
+    if (
+      event.target.closest('.image-preview-close') ||
+      event.target.closest('.image-preview-backdrop')
+    ) {
+      closeImagePreview();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (
+      event.key === 'Escape' &&
+      imagePreviewModal.classList.contains('open')
+    ) {
+      closeImagePreview();
+    }
+  });
 }
 
-document.querySelectorAll('.project-preview-btn').forEach(button => {
-  button.addEventListener('click', (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    if (!imagePreviewModal || !imagePreviewFull) return;
-
-    imagePreviewFull.src = button.dataset.previewSrc || '';
-    imagePreviewFull.alt = button.dataset.previewAlt || 'Project image preview';
-    imagePreviewModal.classList.add('open');
-    imagePreviewModal.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('image-preview-open');
-  });
-});
-
-document.querySelector('.image-preview-close')?.addEventListener('click', closeImagePreview);
-document.querySelector('.image-preview-backdrop')?.addEventListener('click', closeImagePreview);
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && imagePreviewModal?.classList.contains('open')) {
-    closeImagePreview();
-  }
-});
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initProjectImagePreview);
+} else {
+  initProjectImagePreview();
+}

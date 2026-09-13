@@ -1451,3 +1451,208 @@ body.image-preview-open{
     padding:8px 8px 8px 12px;
   }
 }
+
+
+/* =========================================================
+   HEADER HOME CONTROL
+   ========================================================= */
+.brand-mark{
+  width:42px;
+  height:42px;
+  min-width:42px;
+  display:grid;
+  place-items:center;
+  border-radius:50% !important;
+  border:1px solid rgba(201,145,79,.70);
+  background:rgba(10,16,32,.86);
+  color:var(--copper);
+  box-shadow:
+    0 0 0 7px rgba(201,145,79,.045),
+    inset 0 0 0 1px rgba(201,145,79,.08);
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+.brand:hover .brand-mark,
+.brand:focus-visible .brand-mark{
+  transform:translateY(-1px);
+  border-color:rgba(201,145,79,1);
+  background:rgba(16,26,48,.96);
+  box-shadow:
+    0 0 0 8px rgba(201,145,79,.07),
+    0 8px 24px rgba(0,0,0,.22);
+}
+.brand:focus-visible{
+  outline:none;
+}
+
+/* =========================================================
+   HERO PORTRAIT FLOATERS
+   ========================================================= */
+.hero-portrait-card{
+  position:relative;
+  overflow:visible;
+}
+.hero-portrait-card .portrait-image{
+  position:relative;
+  z-index:1;
+}
+.portrait-floater{
+  position:absolute;
+  z-index:4;
+  top:18px;
+  left:18px;
+  width:auto !important;
+  max-width:calc(100% - 36px);
+  margin:0 !important;
+  padding:9px 12px !important;
+  border:1px solid rgba(117,184,232,.22);
+  background:rgba(8,16,30,.72);
+  color:#a7b2c3;
+  backdrop-filter:blur(9px);
+  letter-spacing:.06em;
+  box-shadow:0 10px 30px rgba(0,0,0,.16);
+}
+.portrait-caption-overlay{
+  position:absolute;
+  z-index:4;
+  left:18px;
+  right:18px;
+  bottom:18px;
+  display:flex !important;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  border:0 !important;
+  background:transparent !important;
+  padding:0 !important;
+}
+.portrait-caption-overlay span{
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:7px 10px;
+  border:1px solid rgba(117,184,232,.18);
+  background:rgba(8,16,30,.72);
+  color:#c0c8d4;
+  backdrop-filter:blur(8px);
+  font-family:var(--mono);
+  font-size:8px;
+  letter-spacing:.06em;
+  box-shadow:0 9px 24px rgba(0,0,0,.14);
+}
+.portrait-caption-overlay span:last-child{
+  text-align:right;
+}
+
+/* =========================================================
+   ENGINEERING FLOW — replaces long inline-arrow sentence
+   ========================================================= */
+.engineering-flow{
+  margin-top:34px;
+  padding-top:28px;
+  border-top:1px solid rgba(20,34,59,.14);
+}
+.engineering-flow-lead{
+  max-width:930px;
+  margin:0 0 24px;
+  font-size:clamp(1.05rem,1.65vw,1.35rem);
+  line-height:1.6;
+  color:#39465a;
+}
+.engineering-flow-rail{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  width:100%;
+  padding:14px 0 15px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.engineering-flow-rail::-webkit-scrollbar{display:none}
+.flow-step{
+  flex:0 0 auto;
+  padding:8px 10px;
+  border:1px solid rgba(64,124,166,.20);
+  background:rgba(117,184,232,.055);
+  color:#263a55;
+  font-size:8px;
+  letter-spacing:.08em;
+  white-space:nowrap;
+}
+.flow-connector{
+  flex:0 0 auto;
+  color:var(--copper);
+  font-size:15px;
+  line-height:1;
+}
+.engineering-flow-outcome{
+  max-width:960px;
+  margin:22px 0 0;
+  color:#46536a;
+  font-size:1rem;
+  line-height:1.75;
+}
+
+/* Keep floating hero labels controlled on smaller screens */
+@media (max-width:760px){
+  .brand-mark{
+    width:38px;
+    height:38px;
+    min-width:38px;
+  }
+
+  .portrait-floater{
+    top:10px;
+    left:10px;
+    max-width:calc(100% - 20px);
+    padding:7px 9px !important;
+    font-size:7px;
+  }
+
+  .portrait-caption-overlay{
+    left:10px;
+    right:10px;
+    bottom:10px;
+    gap:8px;
+  }
+
+  .portrait-caption-overlay span{
+    min-height:30px;
+    padding:6px 8px;
+    font-size:6.5px;
+  }
+
+  .engineering-flow{
+    margin-top:26px;
+    padding-top:22px;
+  }
+
+  .engineering-flow-lead{
+    font-size:1rem;
+    line-height:1.65;
+  }
+
+  .engineering-flow-rail{
+    gap:6px;
+    margin-right:-18px;
+    padding-right:18px;
+  }
+
+  .flow-step{
+    padding:7px 8px;
+    font-size:7px;
+  }
+
+  .flow-connector{
+    font-size:13px;
+  }
+
+  .engineering-flow-outcome{
+    margin-top:18px;
+    font-size:.95rem;
+    line-height:1.7;
+  }
+}
