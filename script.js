@@ -1,3 +1,4 @@
+document.documentElement.classList.add('motion-ready');
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -45,12 +46,17 @@ togglePubs?.addEventListener('click', () => {
   togglePubs.textContent = expanded ? 'Show fewer publications' : 'Show all publications';
 });
 
+
+
 const cursorGlow = document.querySelector('.cursor-glow');
-window.addEventListener('pointermove', e => {
-  if (!cursorGlow) return;
-  cursorGlow.style.left = `${e.clientX}px`;
-  cursorGlow.style.top = `${e.clientY}px`;
-});
+if (cursorGlow && window.matchMedia('(pointer:fine)').matches) {
+  window.addEventListener('pointermove', e => {
+    cursorGlow.style.left = `${e.clientX}px`;
+    cursorGlow.style.top = `${e.clientY}px`;
+    cursorGlow.classList.add('active');
+  }, { passive:true });
+}
+
 
 const galleries = {
   printing: {

@@ -40,7 +40,6 @@
   <main>
     <!-- HERO -->
     <section class="hero section-dark">
-      <div class="tech-grid" aria-hidden="true"></div>
       <div class="hero-orbit orbit-a" aria-hidden="true"></div>
       <div class="hero-orbit orbit-b" aria-hidden="true"></div>
 
@@ -63,17 +62,57 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal" data-delay="120">
-          <div class="portrait-card">
+        <div class="hero-visual hero-tech-cluster reveal" data-delay="120">
+          <div class="hero-orbit-line orbit-line-a" aria-hidden="true"></div>
+          <div class="hero-orbit-line orbit-line-b" aria-hidden="true"></div>
+
+          <div class="portrait-card hero-portrait-card">
             <div class="portrait-image" role="img" aria-label="Portrait of Poojith Chigurupati"></div>
-            <div class="portrait-index mono">01 / PROFILE</div>
+            <div class="portrait-index mono">ENGINEER / RESEARCHER</div>
             <div class="portrait-caption">
-              <span>Statesboro, Georgia</span>
-              <span>Research + Engineering</span>
+              <span>Advanced Manufacturing</span>
+              <span>NDT + Data</span>
             </div>
           </div>
-          <div class="floating-note note-one mono">L-PBF / WAAM / FDM</div>
-          <div class="floating-note note-two mono">PYTHON / NDT / ML</div>
+
+          <div class="tech-badge badge-rocket" aria-label="Aerospace and advanced manufacturing">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M34 8c8 7 12 16 12 27l-9 9-11-11 2-15z"/>
+              <path d="M27 35l-9 2-5 8 12 1M37 44l-2 9-8 5-1-12"/>
+              <circle cx="36" cy="24" r="4"/>
+              <path class="badge-flame" d="M22 43c-5 3-8 7-9 13 6-1 10-4 13-9"/>
+            </svg>
+            <span class="mono">AEROSPACE</span>
+          </div>
+
+          <div class="tech-badge badge-sensor" aria-label="Sensors and process monitoring">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="6"/>
+              <path d="M20 22a17 17 0 0 0 0 20M44 22a17 17 0 0 1 0 20M14 16a25 25 0 0 0 0 32M50 16a25 25 0 0 1 0 32"/>
+              <path d="M32 38v14M25 52h14"/>
+            </svg>
+            <span class="mono">SENSORS</span>
+          </div>
+
+          <div class="tech-badge badge-probe" aria-label="Ultrasonic nondestructive testing">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="9" y="12" width="22" height="13" rx="3"/>
+              <path d="M31 18h10M41 18l8 8"/>
+              <path class="probe-wave" d="M48 29c7 4 7 10 0 14M43 25c13 7 13 20 0 27"/>
+              <path d="M10 49h34"/>
+            </svg>
+            <span class="mono">NDT PROBE</span>
+          </div>
+
+          <div class="tech-badge badge-am" aria-label="Additive manufacturing process">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M17 48h30M20 42h24M23 36h18M26 30h12"/>
+              <path d="M26 10h12v10l-3 4h-6l-3-4z"/>
+              <path class="am-beam" d="M32 24v8"/>
+              <circle cx="32" cy="34" r="2"/>
+            </svg>
+            <span class="mono">AM PROCESS</span>
+          </div>
         </div>
       </div>
 
@@ -103,7 +142,6 @@
 
     <!-- EXPERTISE -->
     <section class="section-dark expertise-section expertise-section-dark ambient-dark" id="expertise">
-      <div class="section-tech-grid" aria-hidden="true"></div>
       <div class="page-shell">
         <div class="section-heading section-heading-dark reveal">
           <div>
@@ -166,7 +204,6 @@
 
     <!-- PROJECTS -->
     <section class="section-dark projects-section ambient-dark" id="projects">
-      <div class="section-tech-grid" aria-hidden="true"></div>
       <div class="page-shell">
         <div class="section-heading section-heading-dark reveal">
           <div>
@@ -178,8 +215,8 @@
         </div>
 
         <div class="project-accordion">
-          <article class="project-dossier open reveal">
-            <button class="project-toggle" type="button" aria-expanded="true">
+          <details class="project-dossier reveal" name="project-dossiers" open>
+            <summary class="project-toggle">
               <span class="project-number mono">01</span>
               <span class="project-heading">
                 <span class="project-kicker mono">METAL AM · L-PBF · ML</span>
@@ -187,7 +224,7 @@
               </span>
               <span class="project-brief">Property variation, interruption regions, qualification-oriented analysis.</span>
               <span class="project-toggle-icon" aria-hidden="true"></span>
-            </button>
+            </summary>
             <div class="project-detail">
               <div class="project-detail-inner">
                 <div class="project-detail-copy">
@@ -198,33 +235,23 @@
                     <div><span class="case-label mono">OUTCOME</span><p>Developed a data-driven workflow for identifying interruption-affected regions; peer-reviewed journal publication in 2026.</p></div>
                   </div>
                 </div>
-                <div class="project-visual project-visual-lpbf">
-                  <div class="visual-label mono">AM BUILD → NDT VERIFY</div>
-                  <svg viewBox="0 0 620 300" role="img" aria-label="L-PBF build and ultrasonic inspection schematic">
-                    <defs>
-                      <linearGradient id="lpbfFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#75b8e8" stop-opacity=".34"/><stop offset="1" stop-color="#75b8e8" stop-opacity=".05"/></linearGradient>
-                    </defs>
-                    <g class="viz-grid"><path d="M20 55H600M20 105H600M20 155H600M20 205H600M20 255H600"/><path d="M90 25V275M170 25V275M250 25V275M330 25V275M410 25V275M490 25V275M570 25V275"/></g>
-                    <rect x="55" y="236" width="245" height="18" rx="3" class="viz-platform"/>
-                    <path d="M98 236V204Q102 179 125 168Q148 157 155 136Q164 109 188 99Q218 87 241 105Q266 123 272 158Q277 183 277 236Z" fill="url(#lpbfFill)" class="viz-part"/>
-                    <g class="viz-layers"><path d="M103 224H273M103 212H273M106 200H271M111 188H269M118 176H266M127 164H263M140 152H258M151 140H252M161 128H244M173 116H233M187 104H221"/></g>
-                    <g class="viz-head"><rect x="112" y="47" width="155" height="15" rx="3"/><rect x="180" y="62" width="19" height="35" rx="3"/><path d="M184 97H195L191 111H188Z"/><line x1="190" y1="111" x2="190" y2="139" class="viz-laser"/><ellipse cx="190" cy="141" rx="8" ry="3.5" class="viz-hot"/></g>
-                    <g class="viz-ndt"><rect x="393" y="65" width="112" height="17" rx="3"/><rect x="377" y="81" width="37" height="23" rx="4"/><rect x="395" y="193" width="150" height="52" rx="4" class="viz-specimen"/><path d="M390 104Q370 132 365 170M390 104Q391 137 391 179M390 104Q419 134 430 176" class="viz-wave"/><line x1="448" y1="219" x2="461" y2="207" class="viz-defect"/><circle cx="455" cy="213" r="5" class="viz-hot"/><circle cx="455" cy="213" r="15" class="viz-ring"/></g>
-                    <g class="viz-flow"><line x1="315" y1="149" x2="351" y2="149"/><polyline points="342,141 351,149 342,157"/></g>
-                    <text x="60" y="279" class="viz-text">LAYER-BY-LAYER BUILD</text><text x="389" y="279" class="viz-text">ULTRASONIC DEFECT RESPONSE</text>
-                  </svg>
+                <div class="project-visual project-visual-lpbf project-visual-image">
+                  <div class="visual-label mono">ADDITIVE MANUFACTURING / NDT MONITORING</div>
+                  <img src="assets/visuals/am-ndt-monitoring.png" alt="Additive manufacturing and ultrasonic NDT monitoring visualization showing layer-by-layer deposition, defect localization, and signal response." loading="lazy" />
+                  <div class="image-scan-beam" aria-hidden="true"></div>
+                  <div class="image-caption mono"><span>LAYER-BY-LAYER BUILD</span><span>ULTRASONIC DEFECT RESPONSE</span></div>
                 </div>
               </div>
             </div>
-          </article>
+          </details>
 
-          <article class="project-dossier reveal">
-            <button class="project-toggle" type="button" aria-expanded="false">
+          <details class="project-dossier reveal" name="project-dossiers">
+            <summary class="project-toggle">
               <span class="project-number mono">02</span>
               <span class="project-heading"><span class="project-kicker mono">WAAM · ULTRASONICS · MATERIALS</span><strong>Ultrasound-Assisted WAAM of SS316L</strong></span>
               <span class="project-brief">Acoustic treatment, solidification behavior, microstructure, and properties.</span>
               <span class="project-toggle-icon" aria-hidden="true"></span>
-            </button>
+            </summary>
             <div class="project-detail">
               <div class="project-detail-inner">
                 <div class="project-detail-copy"><div class="case-grid">
@@ -246,15 +273,15 @@
                 </div>
               </div>
             </div>
-          </article>
+          </details>
 
-          <article class="project-dossier reveal">
-            <button class="project-toggle" type="button" aria-expanded="false">
+          <details class="project-dossier reveal" name="project-dossiers">
+            <summary class="project-toggle">
               <span class="project-number mono">03</span>
               <span class="project-heading"><span class="project-kicker mono">POLYMER AM · AEROSPACE-STYLE TESTING</span><strong>ULTEM 9085 Process &amp; Part Qualification</strong></span>
               <span class="project-brief">FDM fabrication, mechanical testing, dimensional inspection, and thermographic contrast.</span>
               <span class="project-toggle-icon" aria-hidden="true"></span>
-            </button>
+            </summary>
             <div class="project-detail">
               <div class="project-detail-inner">
                 <div class="project-detail-copy"><div class="case-grid">
@@ -273,15 +300,15 @@
                 </div>
               </div>
             </div>
-          </article>
+          </details>
 
-          <article class="project-dossier reveal">
-            <button class="project-toggle" type="button" aria-expanded="false">
+          <details class="project-dossier reveal" name="project-dossiers">
+            <summary class="project-toggle">
               <span class="project-number mono">04</span>
               <span class="project-heading"><span class="project-kicker mono">NDT · SIGNAL PROCESSING</span><strong>Ultrasonic &amp; Resonance-Based Part Evaluation</strong></span>
               <span class="project-brief">Time-of-flight, stiffness response, RUS, signal processing, and defect-sensitive behavior.</span>
               <span class="project-toggle-icon" aria-hidden="true"></span>
-            </button>
+            </summary>
             <div class="project-detail">
               <div class="project-detail-inner">
                 <div class="project-detail-copy"><div class="case-grid">
@@ -303,15 +330,15 @@
                 </div>
               </div>
             </div>
-          </article>
+          </details>
 
-          <article class="project-dossier reveal">
-            <button class="project-toggle" type="button" aria-expanded="false">
+          <details class="project-dossier reveal" name="project-dossiers">
+            <summary class="project-toggle">
               <span class="project-number mono">05</span>
               <span class="project-heading"><span class="project-kicker mono">INDUSTRY 4.0 · MACHINE VISION</span><strong>Data-Driven Inspection &amp; Digital Manufacturing</strong></span>
               <span class="project-brief">Machine vision, sensor-based inspection, digital twins, analytics, and automated decision support.</span>
               <span class="project-toggle-icon" aria-hidden="true"></span>
-            </button>
+            </summary>
             <div class="project-detail">
               <div class="project-detail-inner">
                 <div class="project-detail-copy"><div class="case-grid">
@@ -332,7 +359,7 @@
                 </div>
               </div>
             </div>
-          </article>
+          </details>
         </div>
       </div>
     </section>
@@ -466,7 +493,6 @@
 
     <!-- RESEARCH / PUBLICATIONS -->
     <section class="section-dark research-section ambient-dark" id="research">
-      <div class="section-tech-grid" aria-hidden="true"></div>
       <div class="page-shell">
         <div class="section-heading section-heading-dark reveal">
           <div>
@@ -593,6 +619,19 @@
     </div>
   </div>
 
+  <script>
+    // Critical UI fallback: cursor glow works even if the external script is cached or unavailable.
+    (() => {
+      const glow = document.querySelector('.cursor-glow');
+      if (!glow || !window.matchMedia('(pointer:fine)').matches) return;
+      window.addEventListener('pointermove', (event) => {
+        glow.style.left = event.clientX + 'px';
+        glow.style.top = event.clientY + 'px';
+        glow.classList.add('active');
+      }, { passive:true });
+      document.documentElement.classList.add('pointer-glow-ready');
+    })();
+  </script>
   <script src="script.js"></script>
   <script data-goatcounter="https://pcchigurupati99.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
