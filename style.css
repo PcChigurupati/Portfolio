@@ -380,6 +380,26 @@ strong{font-weight:700}
 .expertise-section-dark .leadership-line span{border-color:var(--line-dark);color:var(--muted-dark)}
 
 /* Thermographic-contrast expertise card */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Project accordion: publication-like rows with expandable dossiers */
 .project-accordion{border-top:1px solid var(--line-dark);position:relative;z-index:2}
 .project-dossier{border-bottom:1px solid var(--line-dark)}
@@ -1094,3 +1114,340 @@ strong{font-weight:700}
 /* Keep project visual typography crisp */
 .project-visual .viz-text{fill:#9fb4c9;font-family:var(--mono);font-size:8px;letter-spacing:.05em}
 .project-visual .viz-grid path{fill:none;stroke:rgba(117,184,232,.07);stroke-width:1}
+
+
+/* =========================================================
+   UNIFIED PROJECT IMAGE BLOCKS — Projects 01/02/03/04/05
+   ========================================================= */
+.project-visual-image{
+  position:relative;
+  min-height:390px;
+  overflow:hidden;
+  background:#0a1222;
+  border:1px solid rgba(117,184,232,.22);
+}
+.project-visual-image img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  filter:saturate(.92) contrast(1.04) brightness(.90);
+}
+.project-visual-image::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:
+    linear-gradient(to bottom,rgba(8,16,30,.18),transparent 22%,transparent 70%,rgba(8,16,30,.72));
+}
+.project-image-vignette{
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+  box-shadow:inset 0 0 75px rgba(3,8,18,.18);
+}
+.project-visual-image .visual-label{
+  position:absolute;
+  z-index:4;
+  top:18px;
+  left:18px;
+  max-width:calc(100% - 36px);
+  background:rgba(8,16,30,.78);
+  border:1px solid rgba(117,184,232,.20);
+  padding:7px 9px;
+  backdrop-filter:blur(7px);
+  color:#8fc9f2;
+  font-size:8px;
+  line-height:1.35;
+  letter-spacing:.09em;
+}
+.project-visual-image .image-caption{
+  position:absolute;
+  z-index:4;
+  left:18px;
+  right:18px;
+  bottom:16px;
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  color:#a8b7c9;
+  font-size:7px;
+  letter-spacing:.07em;
+  text-shadow:0 1px 12px rgba(0,0,0,.65);
+}
+.project-image-01 img{object-position:center center}
+.project-image-03 img{object-position:center center}
+.project-image-04 img{object-position:center center}
+.project-image-05 img{object-position:center center}
+
+/* Publications: DOI text instead of arrow-only controls */
+.publication-item > a{
+  min-width:44px;
+  padding:7px 9px;
+  border:1px solid rgba(117,184,232,.20);
+  color:var(--blue);
+  font-family:var(--mono);
+  font-size:8px;
+  letter-spacing:.08em;
+  text-align:center;
+}
+.publication-item > a:hover{
+  color:var(--copper);
+  border-color:rgba(201,145,79,.40);
+}
+
+/* Mobile: simplify project visuals and external-link labels */
+@media (max-width:760px){
+  .project-visual-image{
+    min-height:0;
+    aspect-ratio:4 / 3;
+  }
+  .project-visual-image .visual-label{
+    top:10px;
+    left:10px;
+    max-width:calc(100% - 20px);
+    padding:5px 7px;
+    font-size:6.5px;
+    letter-spacing:.06em;
+  }
+  .project-visual-image .image-caption{
+    left:10px;
+    right:10px;
+    bottom:9px;
+    gap:10px;
+    font-size:5.5px;
+    line-height:1.3;
+  }
+  .project-visual-image .image-caption span:last-child{
+    text-align:right;
+  }
+  .publication-item{
+    grid-template-columns:50px minmax(0,1fr);
+    gap:12px;
+    position:relative;
+    padding-right:0;
+  }
+  .publication-item > a{
+    grid-column:2;
+    justify-self:start;
+    margin-top:8px;
+    min-width:auto;
+    padding:5px 8px;
+  }
+  .publication-feature a,
+  .text-link{
+    word-break:normal;
+    overflow-wrap:anywhere;
+  }
+  .gallery-overlay em{
+    font-size:8px;
+  }
+}
+
+
+/* =========================================================
+   PROJECT IMAGE PREVIEW + NO-CROP DISPLAY
+   ========================================================= */
+
+/* Technical diagrams should never be cropped */
+.project-visual-image{
+  position:relative;
+  min-height:390px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at center,rgba(117,184,232,.045),transparent 62%),
+    #08111f;
+}
+
+.project-visual-image img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain !important;
+  object-position:center;
+  display:block;
+  box-sizing:border-box;
+  padding:18px;
+}
+
+/* Project 2 already has a scan overlay; keep it above the image */
+.project-visual-image .image-scan-beam{
+  z-index:3;
+}
+
+/* Preview action */
+.project-preview-btn{
+  position:absolute;
+  z-index:6;
+  right:18px;
+  top:18px;
+  border:1px solid rgba(117,184,232,.34);
+  background:rgba(8,16,30,.82);
+  color:#a8d8f5;
+  padding:7px 10px;
+  border-radius:3px;
+  font-size:7px;
+  line-height:1;
+  letter-spacing:.10em;
+  cursor:pointer;
+  backdrop-filter:blur(8px);
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+.project-preview-btn:hover,
+.project-preview-btn:focus-visible{
+  color:#f0c47e;
+  border-color:rgba(201,145,79,.60);
+  background:rgba(13,24,42,.95);
+  transform:translateY(-1px);
+  outline:none;
+}
+
+/* Full-screen preview */
+.image-preview-modal{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:grid;
+  place-items:center;
+  padding:28px;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .22s ease, visibility .22s ease;
+}
+.image-preview-modal.open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+.image-preview-backdrop{
+  position:absolute;
+  inset:0;
+  border:0;
+  background:rgba(2,7,15,.88);
+  backdrop-filter:blur(14px);
+  cursor:zoom-out;
+}
+.image-preview-panel{
+  position:relative;
+  z-index:2;
+  width:min(1180px,96vw);
+  height:min(830px,90vh);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  border:1px solid rgba(117,184,232,.26);
+  border-radius:6px;
+  background:#07101d;
+  box-shadow:0 28px 90px rgba(0,0,0,.55);
+}
+.image-preview-toolbar{
+  min-height:50px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:10px 14px 10px 18px;
+  border-bottom:1px solid rgba(117,184,232,.16);
+  color:#8fa7bd;
+  font-size:8px;
+  letter-spacing:.10em;
+}
+.image-preview-close{
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(117,184,232,.22);
+  border-radius:50%;
+  background:transparent;
+  color:#e6edf4;
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+}
+.image-preview-close:hover,
+.image-preview-close:focus-visible{
+  color:#f0c47e;
+  border-color:rgba(201,145,79,.55);
+  outline:none;
+}
+.image-preview-stage{
+  flex:1;
+  min-height:0;
+  display:grid;
+  place-items:center;
+  overflow:auto;
+  padding:18px;
+  background:
+    linear-gradient(rgba(117,184,232,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(117,184,232,.025) 1px,transparent 1px),
+    #07101d;
+  background-size:28px 28px;
+}
+.image-preview-stage img{
+  display:block;
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+body.image-preview-open{
+  overflow:hidden;
+}
+
+@media (max-width:760px){
+  .project-visual-image{
+    min-height:0;
+    aspect-ratio:auto !important;
+    padding-top:0;
+  }
+
+  .project-visual-image img{
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain !important;
+    padding:42px 10px 34px;
+  }
+
+  .project-preview-btn{
+    top:10px;
+    right:10px;
+    padding:6px 8px;
+    font-size:6.5px;
+  }
+
+  .image-preview-modal{
+    padding:10px;
+  }
+
+  .image-preview-panel{
+    width:100%;
+    height:calc(100dvh - 20px);
+    border-radius:4px;
+  }
+
+  .image-preview-stage{
+    padding:8px;
+  }
+
+  .image-preview-toolbar{
+    min-height:46px;
+    padding:8px 8px 8px 12px;
+  }
+}
