@@ -1978,3 +1978,138 @@ html{
     transform:none !important;
   }
 }
+
+
+/* =========================================================
+   CLEAN PC CIRCLE — remove inherited inner-square decoration
+   ========================================================= */
+.site-header .brand-mark::before,
+.site-header .brand-mark::after{
+  content:none !important;
+  display:none !important;
+}
+
+.site-header .brand-mark{
+  border-radius:50% !important;
+  overflow:hidden !important;
+}
+
+/* =========================================================
+   HERO DISCIPLINES — one set only, using repelling floaters
+   ========================================================= */
+
+/* Remove any older duplicate floater styling from view */
+.hero-floaters{
+  display:none !important;
+}
+
+/* The former text line is now the floater container */
+.hero-title.hero-discipline-floaters{
+  display:flex !important;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  margin:24px 0 28px !important;
+  max-width:900px;
+  font-size:inherit !important;
+  line-height:1 !important;
+}
+
+/* Remove old hero-title separator/text styling */
+.hero-title.hero-discipline-floaters > span{
+  color:inherit;
+}
+
+/* Repelling discipline pills */
+.discipline-floater{
+  --repel-x:0px;
+  --repel-y:0px;
+
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+
+  min-height:38px;
+  padding:9px 14px;
+
+  border:1px solid rgba(117,184,232,.28);
+  border-radius:999px;
+
+  background:
+    linear-gradient(180deg,rgba(18,34,58,.74),rgba(10,20,37,.76));
+
+  color:#e7edf3 !important;
+
+  font-size:8px !important;
+  font-weight:500 !important;
+  line-height:1 !important;
+  letter-spacing:.075em !important;
+  white-space:nowrap;
+
+  box-shadow:
+    0 8px 22px rgba(0,0,0,.14),
+    inset 0 0 0 1px rgba(255,255,255,.012);
+
+  transform:translate3d(var(--repel-x),var(--repel-y),0);
+
+  transition:
+    transform .18s ease-out,
+    border-color .2s ease,
+    background .2s ease,
+    color .2s ease,
+    box-shadow .2s ease;
+
+  will-change:transform;
+}
+
+/* copper status dot */
+.discipline-floater::before{
+  content:"";
+  width:5px;
+  height:5px;
+  flex:0 0 5px;
+  margin-right:8px;
+  border-radius:50%;
+  background:var(--copper);
+  box-shadow:0 0 10px rgba(201,145,79,.58);
+}
+
+.discipline-floater:hover,
+.discipline-floater.is-repelled{
+  color:#fff !important;
+  border-color:rgba(201,145,79,.62);
+  background:
+    linear-gradient(180deg,rgba(24,43,69,.92),rgba(14,28,48,.92));
+  box-shadow:
+    0 13px 30px rgba(0,0,0,.24),
+    0 0 0 4px rgba(201,145,79,.035);
+}
+
+/* Portrait remains completely free of labels */
+.hero-portrait-card .portrait-index,
+.hero-portrait-card .portrait-caption,
+.hero-portrait-card .portrait-chip-layer{
+  display:none !important;
+}
+
+@media (max-width:760px){
+  .hero-title.hero-discipline-floaters{
+    gap:7px;
+    margin:18px 0 22px !important;
+  }
+
+  .discipline-floater{
+    min-height:31px;
+    padding:7px 10px;
+    font-size:6.5px !important;
+    letter-spacing:.055em !important;
+    transform:none !important;
+  }
+
+  .discipline-floater::before{
+    width:4px;
+    height:4px;
+    flex-basis:4px;
+    margin-right:6px;
+  }
+}
