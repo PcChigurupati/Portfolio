@@ -180,523 +180,141 @@
             </div>
           </div>
           <div class="feature-project-visual">
-  <div class="signal-plot am-ndt-plot">
-
-    <div class="plot-label mono">
-      ADDITIVE MANUFACTURING / NDT MONITORING
-    </div>
-
-    <svg
-      class="am-ndt-svg"
-      viewBox="0 0 640 360"
-      role="img"
-      aria-label="Animated metal additive manufacturing process with ultrasonic nondestructive testing and defect detection"
-    >
-
-      <defs>
-
-        <!-- Printed part -->
-        <linearGradient id="partGradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#75b8e8" stop-opacity=".28"/>
-          <stop offset="100%" stop-color="#75b8e8" stop-opacity=".05"/>
-        </linearGradient>
-
-        <!-- NDT scanning beam -->
-        <linearGradient id="scanGradient" x1="0" x2="1">
-          <stop offset="0%" stop-color="#75b8e8" stop-opacity="0"/>
-          <stop offset="50%" stop-color="#75b8e8" stop-opacity=".22"/>
-          <stop offset="100%" stop-color="#75b8e8" stop-opacity="0"/>
-        </linearGradient>
-
-        <!-- Glow -->
-        <filter id="amGlow">
-          <feGaussianBlur stdDeviation="3" result="blur"/>
-          <feMerge>
-            <feMergeNode in="blur"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
-
-      </defs>
-
-
-      <!-- =========================
-           ENGINEERING GRID
-      ========================== -->
-
-      <g class="am-grid">
-
-        <line x1="40" y1="70"  x2="600" y2="70"/>
-        <line x1="40" y1="120" x2="600" y2="120"/>
-        <line x1="40" y1="170" x2="600" y2="170"/>
-        <line x1="40" y1="220" x2="600" y2="220"/>
-        <line x1="40" y1="270" x2="600" y2="270"/>
-        <line x1="40" y1="320" x2="600" y2="320"/>
-
-        <line x1="100" y1="50" x2="100" y2="330"/>
-        <line x1="180" y1="50" x2="180" y2="330"/>
-        <line x1="260" y1="50" x2="260" y2="330"/>
-        <line x1="340" y1="50" x2="340" y2="330"/>
-        <line x1="420" y1="50" x2="420" y2="330"/>
-        <line x1="500" y1="50" x2="500" y2="330"/>
-        <line x1="580" y1="50" x2="580" y2="330"/>
-
-      </g>
-
-
-      <!-- =========================
-           BUILD DIRECTION
-      ========================== -->
-
-      <g class="build-direction-group">
-
-        <line
-          class="build-direction-line"
-          x1="72"
-          y1="285"
-          x2="72"
-          y2="115"
-        />
-
-        <polygon
-          class="build-direction-arrow"
-          points="72,103 66,117 78,117"
-        />
-
-        <text
-          class="am-axis-label"
-          x="49"
-          y="230"
-          transform="rotate(-90 49 230)"
-        >
-          BUILD DIRECTION
-        </text>
-
-      </g>
-
-
-      <!-- =========================
-           BUILD PLATFORM
-      ========================== -->
-
-      <g class="platform-group">
-
-        <rect
-          class="am-platform"
-          x="145"
-          y="288"
-          width="275"
-          height="22"
-          rx="3"
-        />
-
-        <rect
-          class="am-platform-base"
-          x="165"
-          y="310"
-          width="235"
-          height="8"
-          rx="2"
-        />
-
-      </g>
-
-
-      <!-- =========================
-           PRINTED METAL PART
-      ========================== -->
-
-      <g class="am-part">
-
-        <path
-          class="am-part-body"
-          d="
-            M195 288
-            L195 246
-            Q198 222 220 212
-            Q245 201 252 181
-            Q261 156 286 146
-            Q316 134 340 151
-            Q367 169 374 207
-            Q379 228 379 246
-            L379 288
-            Z
-          "
-        />
-
-        <!-- Layer lines -->
-
-        <g class="am-layer-lines">
-
-          <line x1="200" y1="278" x2="374" y2="278"/>
-          <line x1="200" y1="267" x2="374" y2="267"/>
-          <line x1="200" y1="256" x2="374" y2="256"/>
-
-          <line x1="202" y1="245" x2="373" y2="245"/>
-          <line x1="207" y1="234" x2="371" y2="234"/>
-          <line x1="213" y1="223" x2="368" y2="223"/>
-
-          <line x1="222" y1="212" x2="365" y2="212"/>
-          <line x1="236" y1="201" x2="361" y2="201"/>
-          <line x1="246" y1="190" x2="356" y2="190"/>
-
-          <line x1="255" y1="179" x2="348" y2="179"/>
-          <line x1="265" y1="168" x2="339" y2="168"/>
-          <line x1="278" y1="157" x2="325" y2="157"/>
-
-        </g>
-
-      </g>
-
-
-      <!-- =========================
-           AM PRINT HEAD
-      ========================== -->
-
-      <g class="am-print-head">
-
-        <!-- Gantry -->
-
-        <rect
-          class="am-gantry"
-          x="160"
-          y="58"
-          width="230"
-          height="18"
-          rx="3"
-        />
-
-        <!-- Carriage -->
-
-        <rect
-          class="am-carriage"
-          x="261"
-          y="76"
-          width="40"
-          height="25"
-          rx="4"
-        />
-
-        <!-- Nozzle / energy source -->
-
-        <rect
-          class="am-nozzle-body"
-          x="269"
-          y="100"
-          width="24"
-          height="43"
-          rx="3"
-        />
-
-        <polygon
-          class="am-nozzle-tip"
-          points="
-            273,143
-            289,143
-            285,160
-            277,160
-          "
-        />
-
-        <!-- Melt pool -->
-
-        <ellipse
-          class="am-melt-pool"
-          cx="281"
-          cy="164"
-          rx="8"
-          ry="4"
-          filter="url(#amGlow)"
-        />
-
-
-        <!-- Sparks / heat particles -->
-
-        <circle class="am-spark spark-a" cx="269" cy="168" r="1.8"/>
-        <circle class="am-spark spark-b" cx="295" cy="171" r="1.6"/>
-        <circle class="am-spark spark-c" cx="286" cy="176" r="1.4"/>
-        <circle class="am-spark spark-d" cx="274" cy="176" r="1.3"/>
-
-      </g>
-
-
-      <!-- =========================
-           ULTRASONIC NDT PROBE
-      ========================== -->
-
-      <g class="ndt-probe-group">
-
-        <!-- Arm -->
-
-        <rect
-          class="ndt-arm"
-          x="470"
-          y="115"
-          width="110"
-          height="20"
-          rx="4"
-        />
-
-        <!-- Probe -->
-
-        <rect
-          class="ndt-probe"
-          x="437"
-          y="133"
-          width="46"
-          height="26"
-          rx="5"
-        />
-
-        <circle
-          class="ndt-probe-element"
-          cx="443"
-          cy="146"
-          r="3"
-        />
-
-      </g>
-
-
-      <!-- =========================
-           ULTRASONIC WAVES
-      ========================== -->
-
-      <g class="ultrasonic-wave-group">
-
-        <path
-          class="ndt-wave wave-one"
-          d="M440 146 Q415 149 393 160"
-        />
-
-        <path
-          class="ndt-wave wave-two"
-          d="M440 146 Q408 165 383 184"
-        />
-
-        <path
-          class="ndt-wave wave-three"
-          d="M440 146 Q402 183 373 208"
-        />
-
-        <path
-          class="ndt-wave wave-four"
-          d="M440 146 Q397 200 367 233"
-        />
-
-      </g>
-
-
-      <!-- =========================
-           INTERNAL ULTRASONIC ECHO
-      ========================== -->
-
-      <g class="internal-echo-group">
-
-        <path
-          class="internal-echo echo-one"
-          d="M363 200 Q335 214 308 233"
-        />
-
-        <path
-          class="internal-echo echo-two"
-          d="M350 183 Q322 198 298 217"
-        />
-
-      </g>
-
-
-      <!-- =========================
-           DEFECT INDICATION
-      ========================== -->
-
-      <g class="defect-group">
-
-        <circle
-          class="defect-core"
-          cx="303"
-          cy="230"
-          r="5"
-        />
-
-        <circle
-          class="defect-pulse defect-pulse-one"
-          cx="303"
-          cy="230"
-          r="13"
-        />
-
-        <circle
-          class="defect-pulse defect-pulse-two"
-          cx="303"
-          cy="230"
-          r="23"
-        />
-
-        <line
-          class="defect-leader"
-          x1="317"
-          y1="220"
-          x2="366"
-          y2="192"
-        />
-
-        <text
-          class="defect-text"
-          x="372"
-          y="190"
-        >
-          DEFECT
-        </text>
-
-      </g>
-
-
-      <!-- =========================
-           MOVING SCAN BEAM
-      ========================== -->
-
-      <g class="scan-beam-group">
-
-        <rect
-          class="scan-zone"
-          x="192"
-          y="145"
-          width="190"
-          height="143"
-        />
-
-        <rect
-          class="moving-scan-beam"
-          x="192"
-          y="145"
-          width="55"
-          height="143"
-          fill="url(#scanGradient)"
-        />
-
-      </g>
-
-
-      <!-- =========================
-           ULTRASONIC A-SCAN PANEL
-      ========================== -->
-
-      <g class="ndt-signal-panel">
-
-        <rect
-          class="ndt-signal-box"
-          x="440"
-          y="205"
-          width="160"
-          height="115"
-          rx="5"
-        />
-
-        <text
-          class="ndt-panel-title"
-          x="452"
-          y="224"
-        >
-          ULTRASONIC A-SCAN
-        </text>
-
-
-        <!-- mini grid -->
-
-        <g class="ndt-panel-grid">
-
-          <line x1="452" y1="242" x2="588" y2="242"/>
-          <line x1="452" y1="261" x2="588" y2="261"/>
-          <line x1="452" y1="280" x2="588" y2="280"/>
-
-          <line x1="480" y1="235" x2="480" y2="292"/>
-          <line x1="515" y1="235" x2="515" y2="292"/>
-          <line x1="550" y1="235" x2="550" y2="292"/>
-
-        </g>
-
-
-        <!-- ultrasound waveform -->
-
-        <path
-          class="ndt-waveform"
-          d="
-            M452 282
-            L462 281
-            L472 282
-            L482 279
-            L494 282
-            L505 277
-            L514 268
-            L522 247
-            L529 236
-            L536 258
-            L542 277
-            L553 281
-            L565 278
-            L575 281
-            L588 280
-          "
-        />
-
-
-        <!-- detected peak -->
-
-        <line
-          class="ndt-peak-marker"
-          x1="529"
-          y1="235"
-          x2="529"
-          y2="292"
-        />
-
-        <text
-          class="ndt-alert-text"
-          x="542"
-          y="248"
-        >
-          DEFECT
-        </text>
-
-
-        <!-- data -->
-
-        <text
-          class="ndt-data"
-          x="452"
-          y="304"
-        >
-          DEPTH 12.4 mm
-        </text>
-
-        <text
-          class="ndt-data ndt-flag"
-          x="535"
-          y="304"
-        >
-          FLAGGED
-        </text>
-
-      </g>
-
-    </svg>
-
-
-    <div class="plot-foot mono">
-
-      <span>
-        LAYER-BY-LAYER BUILD →
-      </span>
-
-      <span>
-        NDT QUALITY SIGNAL ↑
-      </span>
-
-    </div>
-
-  </div>
-</div>
+            <div class="signal-plot am-ndt-plot">
+              <div class="plot-label mono">ADDITIVE MANUFACTURING / NDT MONITORING</div>
+
+              <svg class="am-ndt-svg" viewBox="0 0 640 360" role="img" aria-label="Animated metal additive manufacturing process with ultrasonic nondestructive testing and defect detection">
+                <defs>
+                  <linearGradient id="partGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#75b8e8" stop-opacity=".28"/>
+                    <stop offset="100%" stop-color="#75b8e8" stop-opacity=".05"/>
+                  </linearGradient>
+                  <linearGradient id="scanGradient" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#75b8e8" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#75b8e8" stop-opacity=".22"/>
+                    <stop offset="100%" stop-color="#75b8e8" stop-opacity="0"/>
+                  </linearGradient>
+                  <filter id="amGlow">
+                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <g class="am-grid">
+                  <line x1="40" y1="70" x2="600" y2="70"/>
+                  <line x1="40" y1="120" x2="600" y2="120"/>
+                  <line x1="40" y1="170" x2="600" y2="170"/>
+                  <line x1="40" y1="220" x2="600" y2="220"/>
+                  <line x1="40" y1="270" x2="600" y2="270"/>
+                  <line x1="40" y1="320" x2="600" y2="320"/>
+                  <line x1="100" y1="50" x2="100" y2="330"/>
+                  <line x1="180" y1="50" x2="180" y2="330"/>
+                  <line x1="260" y1="50" x2="260" y2="330"/>
+                  <line x1="340" y1="50" x2="340" y2="330"/>
+                  <line x1="420" y1="50" x2="420" y2="330"/>
+                  <line x1="500" y1="50" x2="500" y2="330"/>
+                  <line x1="580" y1="50" x2="580" y2="330"/>
+                </g>
+
+                <g class="build-direction-group">
+                  <line class="build-direction-line" x1="72" y1="285" x2="72" y2="115"/>
+                  <polygon class="build-direction-arrow" points="72,103 66,117 78,117"/>
+                  <text class="am-axis-label" x="49" y="230" transform="rotate(-90 49 230)">BUILD DIRECTION</text>
+                </g>
+
+                <g class="platform-group">
+                  <rect class="am-platform" x="145" y="288" width="275" height="22" rx="3"/>
+                  <rect class="am-platform-base" x="165" y="310" width="235" height="8" rx="2"/>
+                </g>
+
+                <g class="am-part">
+                  <path class="am-part-body" d="M195 288 L195 246 Q198 222 220 212 Q245 201 252 181 Q261 156 286 146 Q316 134 340 151 Q367 169 374 207 Q379 228 379 246 L379 288 Z"/>
+                  <g class="am-layer-lines">
+                    <line x1="200" y1="278" x2="374" y2="278"/>
+                    <line x1="200" y1="267" x2="374" y2="267"/>
+                    <line x1="200" y1="256" x2="374" y2="256"/>
+                    <line x1="202" y1="245" x2="373" y2="245"/>
+                    <line x1="207" y1="234" x2="371" y2="234"/>
+                    <line x1="213" y1="223" x2="368" y2="223"/>
+                    <line x1="222" y1="212" x2="365" y2="212"/>
+                    <line x1="236" y1="201" x2="361" y2="201"/>
+                    <line x1="246" y1="190" x2="356" y2="190"/>
+                    <line x1="255" y1="179" x2="348" y2="179"/>
+                    <line x1="265" y1="168" x2="339" y2="168"/>
+                    <line x1="278" y1="157" x2="325" y2="157"/>
+                  </g>
+                </g>
+
+                <g class="am-print-head">
+                  <rect class="am-gantry" x="160" y="58" width="230" height="18" rx="3"/>
+                  <rect class="am-carriage" x="261" y="76" width="40" height="25" rx="4"/>
+                  <rect class="am-nozzle-body" x="269" y="100" width="24" height="43" rx="3"/>
+                  <polygon class="am-nozzle-tip" points="273,143 289,143 285,160 277,160"/>
+                  <ellipse class="am-melt-pool" cx="281" cy="164" rx="8" ry="4" filter="url(#amGlow)"/>
+                  <circle class="am-spark spark-a" cx="269" cy="168" r="1.8"/>
+                  <circle class="am-spark spark-b" cx="295" cy="171" r="1.6"/>
+                  <circle class="am-spark spark-c" cx="286" cy="176" r="1.4"/>
+                  <circle class="am-spark spark-d" cx="274" cy="176" r="1.3"/>
+                </g>
+
+                <g class="ndt-probe-group">
+                  <rect class="ndt-arm" x="470" y="115" width="110" height="20" rx="4"/>
+                  <rect class="ndt-probe" x="437" y="133" width="46" height="26" rx="5"/>
+                  <circle class="ndt-probe-element" cx="443" cy="146" r="3"/>
+                </g>
+
+                <g class="ultrasonic-wave-group">
+                  <path class="ndt-wave wave-one" d="M440 146 Q415 149 393 160"/>
+                  <path class="ndt-wave wave-two" d="M440 146 Q408 165 383 184"/>
+                  <path class="ndt-wave wave-three" d="M440 146 Q402 183 373 208"/>
+                  <path class="ndt-wave wave-four" d="M440 146 Q397 200 367 233"/>
+                </g>
+
+                <g class="internal-echo-group">
+                  <path class="internal-echo echo-one" d="M363 200 Q335 214 308 233"/>
+                  <path class="internal-echo echo-two" d="M350 183 Q322 198 298 217"/>
+                </g>
+
+                <g class="defect-group">
+                  <circle class="defect-core" cx="303" cy="230" r="5"/>
+                  <circle class="defect-pulse defect-pulse-one" cx="303" cy="230" r="13"/>
+                  <circle class="defect-pulse defect-pulse-two" cx="303" cy="230" r="23"/>
+                  <line class="defect-leader" x1="317" y1="220" x2="366" y2="192"/>
+                  <text class="defect-text" x="372" y="190">DEFECT</text>
+                </g>
+
+                <g class="scan-beam-group">
+                  <rect class="scan-zone" x="192" y="145" width="190" height="143"/>
+                  <rect class="moving-scan-beam" x="192" y="145" width="55" height="143" fill="url(#scanGradient)"/>
+                </g>
+
+                <g class="ndt-signal-panel">
+                  <rect class="ndt-signal-box" x="440" y="205" width="160" height="115" rx="5"/>
+                  <text class="ndt-panel-title" x="452" y="224">ULTRASONIC A-SCAN</text>
+                  <g class="ndt-panel-grid">
+                    <line x1="452" y1="242" x2="588" y2="242"/>
+                    <line x1="452" y1="261" x2="588" y2="261"/>
+                    <line x1="452" y1="280" x2="588" y2="280"/>
+                    <line x1="480" y1="235" x2="480" y2="292"/>
+                    <line x1="515" y1="235" x2="515" y2="292"/>
+                    <line x1="550" y1="235" x2="550" y2="292"/>
+                  </g>
+                  <path class="ndt-waveform" d="M452 282 L462 281 L472 282 L482 279 L494 282 L505 277 L514 268 L522 247 L529 236 L536 258 L542 277 L553 281 L565 278 L575 281 L588 280"/>
+                  <line class="ndt-peak-marker" x1="529" y1="235" x2="529" y2="292"/>
+                  <text class="ndt-alert-text" x="542" y="248">DEFECT</text>
+                  <text class="ndt-data" x="452" y="304">DEPTH 12.4 mm</text>
+                  <text class="ndt-data ndt-flag" x="535" y="304">FLAGGED</text>
+                </g>
+              </svg>
+
+              <div class="plot-foot mono">
+                <span>LAYER-BY-LAYER BUILD →</span>
+                <span>NDT QUALITY SIGNAL ↑</span>
+              </div>
+            </div>
           </div>
         </article>
 

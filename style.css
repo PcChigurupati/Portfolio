@@ -148,14 +148,30 @@ strong{font-weight:700}
 .grid-lines path{stroke:rgba(255,255,255,.08);stroke-width:1}
 .plot-fill{fill:url(#plotFill)}.plot-line{fill:none;stroke:var(--blue);stroke-width:3}.interrupt-line{stroke:var(--copper);stroke-width:1.5;stroke-dasharray:5 6}.signal-plot text{fill:var(--copper);font-family:var(--mono);font-size:10px}
 .plot-foot{display:flex;justify-content:space-between;font-size:8px;color:var(--muted-dark);margin-top:8px}
-.project-list{margin-top:22px;border-top:1px solid var(--line-dark)}
-.project-row{display:grid;grid-template-columns:70px 1.1fr 1.3fr 240px;gap:30px;padding:32px 0;border-bottom:1px solid var(--line-dark);align-items:start;transition:background .2s ease,padding .2s ease}
+.project-list{margin-top:22px;border-top:1px solid var(--line-dark);width:100%;max-width:100%;overflow:hidden}
+.project-row{display:grid;grid-template-columns:minmax(52px,70px) minmax(0,1.1fr) minmax(0,1.3fr) minmax(180px,240px);gap:30px;width:100%;max-width:100%;padding:32px 0;border-bottom:1px solid var(--line-dark);align-items:start;transition:background .2s ease,padding .2s ease}
+.project-row>*{min-width:0}
+.project-row-title h3,.project-row>p,.project-stack{overflow-wrap:anywhere}
 .project-row:hover{background:rgba(255,255,255,.025);padding-left:12px;padding-right:12px}
 .project-row-index{font-size:11px;color:var(--copper)}
 .project-row-title p{font-size:9px;color:var(--blue);letter-spacing:.09em;margin:0 0 8px}
 .project-row-title h3{font-family:var(--serif);font-size:29px;line-height:1.05;font-weight:500;margin:0}
 .project-row>p{font-size:13px;color:var(--muted-dark);margin:0}
 .project-stack{font-size:9px;line-height:1.7;color:#7f8ca0}
+
+/* AM/NDT visual legibility refinements */
+.am-platform{fill:#243756;stroke:rgba(117,184,232,.72);stroke-width:1.4}
+.am-platform-base{fill:#111b2d;stroke:rgba(117,184,232,.18);stroke-width:1}
+.am-part-body{fill:url(#partGradient);stroke:#75b8e8;stroke-width:1.7}
+.am-layer-lines line{stroke:rgba(151,204,243,.68);stroke-width:1}
+.am-gantry,.am-carriage,.am-nozzle-body,.am-nozzle-tip{fill:#213654;stroke:rgba(151,204,243,.78);stroke-width:1.2}
+.ndt-arm,.ndt-probe{fill:#213654;stroke:rgba(151,204,243,.78);stroke-width:1.2}
+.ndt-probe-element{fill:#9fd1f4}
+.ndt-wave{stroke:rgba(117,184,232,.95)}
+.internal-echo{stroke:rgba(117,184,232,.55)}
+.ndt-signal-box{fill:#0d1a2d;stroke:rgba(117,184,232,.52);stroke-width:1.2}
+.ndt-panel-grid line{stroke:rgba(117,184,232,.16)}
+.ndt-waveform{stroke:#8ac8f2;stroke-width:2}
 
 /* CODE */
 .section-code{background:#0d1729;color:var(--cream);padding:130px 0;position:relative;overflow:hidden}
