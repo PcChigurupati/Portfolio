@@ -2465,12 +2465,24 @@ html{
 
 }
 
+
 /* =========================================================
    FINAL HERO / PC OVERRIDE
-   Paste-safe final rules — keep at the END of style.css
+   Definitive rules kept at the END of this stylesheet
    ========================================================= */
 
-/* PC mark: one clean circular border, no inner square/ring */
+.site-header .brand{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:14px !important;
+  padding:0 !important;
+  border:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  text-decoration:none !important;
+  cursor:pointer;
+}
+
 .site-header .brand-mark{
   width:52px !important;
   height:52px !important;
@@ -2480,14 +2492,11 @@ html{
   display:grid !important;
   place-items:center !important;
   position:relative !important;
-
   border:1px solid var(--copper) !important;
   border-radius:50% !important;
-
   background:#0a1020 !important;
   color:var(--copper) !important;
-
-  outline:none !important;
+  outline:0 !important;
   box-shadow:none !important;
   overflow:hidden !important;
 }
@@ -2500,92 +2509,99 @@ html{
   box-shadow:none !important;
 }
 
-/* Main discipline row */
+.site-header .brand:hover .brand-mark,
+.site-header .brand:focus-visible .brand-mark{
+  border-color:#dfa55f !important;
+  box-shadow:none !important;
+  transform:scale(1.03);
+}
+
+.site-header .brand:focus-visible{
+  outline:none !important;
+}
+
+.hero-floaters{
+  display:none !important;
+}
+
 .hero-title.hero-discipline-floaters{
   display:flex !important;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:16px !important;
-
+  flex-wrap:wrap !important;
+  align-items:center !important;
+  gap:14px !important;
+  max-width:900px;
   margin:24px 0 28px !important;
-
   font-size:inherit !important;
   font-weight:400 !important;
   line-height:1 !important;
   letter-spacing:0 !important;
 }
 
-/* Circular discipline floaters */
 .discipline-floater{
   --repel-x:0px;
   --repel-y:0px;
-
-  display:flex !important;
-  align-items:center;
-  justify-content:center;
-
-  width:165px !important;
-  height:95px !important;
-  min-width:165px !important;
-  min-height:95px !important;
-
-  padding:0 14px !important;
-
-  border:1px solid rgba(201,145,79,.55) !important;
-  border-radius:6px !important;
-
-  background:rgba(12,23,41,.45) !important;
-  color:#c6cfda !important;
-
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:auto !important;
+  height:auto !important;
+  min-width:0 !important;
+  min-height:50px !important;
+  padding:0 20px !important;
+  border:1px solid rgba(117,184,232,.25) !important;
+  border-radius:999px !important;
+  background:rgba(28,42,68,.72) !important;
+  color:#cfd6df !important;
   font-family:var(--mono) !important;
-  font-size:11px !important;
+  font-size:10px !important;
   font-weight:400 !important;
-  line-height:1.3 !important;
-  letter-spacing:.05em !important;
-
-  text-align:center;
-  white-space:normal !important;
-
-  box-shadow:none !important;
-
+  line-height:1 !important;
+  letter-spacing:.065em !important;
+  text-align:center !important;
+  white-space:nowrap !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.03),
+    0 8px 22px rgba(0,0,0,.14) !important;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
   transform:translate3d(var(--repel-x),var(--repel-y),0);
-
   transition:
     transform .16s cubic-bezier(.2,.8,.2,1),
     border-color .18s ease,
     background .18s ease,
-    color .18s ease;
-
+    color .18s ease,
+    box-shadow .18s ease;
   will-change:transform;
 }
 
-/* Keep the copper status dot */
 .discipline-floater::before{
   content:"" !important;
-
-  width:5px !important;
-  height:5px !important;
-  flex:0 0 5px !important;
-
-  margin-right:7px !important;
-
+  width:6px !important;
+  height:6px !important;
+  flex:0 0 6px !important;
+  margin-right:9px !important;
   border-radius:50% !important;
   background:var(--copper) !important;
-
-  box-shadow:0 0 8px rgba(201,145,79,.45) !important;
+  box-shadow:0 0 8px rgba(201,145,79,.42) !important;
 }
 
-/* Hover / repel state */
 .discipline-floater:hover,
 .discipline-floater.is-repelled{
-  color:#eef3f7 !important;
-  border-color:rgba(201,145,79,.78) !important;
-  background:rgba(18,32,53,.86) !important;
+  color:#f4f6f8 !important;
+  border-color:rgba(201,145,79,.55) !important;
+  background:rgba(36,51,78,.90) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.04),
+    0 12px 28px rgba(0,0,0,.18) !important;
 }
 
-/* Mobile */
-@media (max-width:760px){
+.hero-portrait-card .portrait-index,
+.hero-portrait-card .portrait-caption,
+.hero-portrait-card .portrait-chip-layer{
+  display:none !important;
+}
 
+@media (max-width:760px){
   .site-header .brand-mark{
     width:42px !important;
     height:42px !important;
@@ -2593,19 +2609,27 @@ html{
   }
 
   .hero-title.hero-discipline-floaters{
-    gap:12px !important;
-    justify-content:center;
+    gap:9px !important;
+    justify-content:flex-start !important;
+    margin:18px 0 22px !important;
   }
 
   .discipline-floater{
-    width:135px !important;
-    height:78px !important;
-    min-width:135px !important;
-    min-height:78px !important;
-
+    min-height:42px !important;
+    padding:0 15px !important;
     font-size:8px !important;
-    line-height:1.2 !important;
-
-    padding:0 10px !important;
+    line-height:1 !important;
+    transform:none !important;
   }
+
+  .discipline-floater::before{
+    width:5px !important;
+    height:5px !important;
+    flex:0 0 5px !important;
+    margin-right:7px !important;
+  }
+}
+
+.project-visual-image .image-caption{
+  display:none !important;
 }
