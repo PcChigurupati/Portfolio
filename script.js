@@ -123,12 +123,9 @@ const galleries = {
     title:'NDT & Process Monitoring',
     items:[
       'assets/images/works/ndt/01.png',
-      'assets/images/works/ndt/02.png',
+      'assets/images/works/ndt/02.jpg',
       'assets/images/works/ndt/03.jpg',
-      'assets/images/works/ndt/04.JPEG',
-      'assets/images/works/ndt/05.JPEG',
-      'assets/images/works/ndt/06.JPEG',
-      {
+        {
         video:'assets/images/works/ndt/video-01.MOV',
         poster:'assets/images/works/ndt/video-01-poster.JPEG'
       }
