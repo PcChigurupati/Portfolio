@@ -122,9 +122,9 @@ const galleries = {
     kicker:'03 / INSPECTION',
     title:'NDT & Process Monitoring',
     items:[
-      'assets/images/works/ndt/01.JPEG',
-      'assets/images/works/ndt/02.JPEG',
-      'assets/images/works/ndt/03.JPEG',
+      'assets/images/works/ndt/01.png',
+      'assets/images/works/ndt/02.png',
+      'assets/images/works/ndt/03.jpg',
       'assets/images/works/ndt/04.JPEG',
       'assets/images/works/ndt/05.JPEG',
       'assets/images/works/ndt/06.JPEG',
